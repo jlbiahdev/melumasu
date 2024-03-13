@@ -240,7 +240,7 @@ hr {
 
 /* ---------------------------------------------- missions ---------------------------------------- */
 
-.missions {
+.section-missions {
     padding: 2rem;
 }
 
@@ -296,7 +296,7 @@ hr {
 
 /* ---------------------------------------------- donate ------------------------------------------ */
 
-.donate {
+.section-donate {
     background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3)), url(../img/children06.jpg);
     background-position: center;
     background-size: cover;
@@ -308,7 +308,7 @@ hr {
     grid-template-rows: repeat(2, 1fr);
 }
 
-.donate form {
+.section-donate form {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -319,11 +319,11 @@ hr {
     grid-row: 1 / span 2;
 }
 
-.donate fieldset {
+.section-donate fieldset {
     border: none;
 }
 
-.donate .header {
+.section-donate .header {
     background-color: #0d3c61;
     color: #fff;
     padding: 1rem;
@@ -371,11 +371,11 @@ hr {
     margin-bottom: 6px;
   }
   
-input {
+input, textarea {
     /* padding: 13px 0px 13px 25px; */
-    padding: .5rem 0;
+    padding: .5rem;
     width: 100%;
-    text-align: center;
+    text-align: left;
     border: none;
     /* border-radius: 5px; */
     letter-spacing: 1px;
@@ -385,13 +385,19 @@ input {
     color: #555555;
 }
 
+textarea {
+    resize: none;
+}
+
 select {
     width: 100%;
-    padding: 4px;
+    /* padding: 4px; */
     height: 2.2rem;
-    background: #eee;
+    background: #fff;
+    color: #555555;
     border: none;
     outline: none;
+    font-size: .9rem;
     display: inline-block;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -409,7 +415,7 @@ select {
     transform: rotate(90deg);
     right: 8px;
     top: 2px;
-    padding: 1rem 0 2px;
+    /* padding: 1rem 0 2px; */
     border-bottom: 1px solid #ddd;
     position: absolute;
     pointer-events: none;
@@ -452,6 +458,8 @@ select {
 .space {
     margin-bottom: 20px;
 }
+
+.space-r { margin-right: .1rem;}
 
 .icon-relative {
     position: relative;
@@ -685,4 +693,12 @@ cite img {
 	border-radius: 50%;
 	margin-right: 5%;
 	vertical-align: middle;
+}
+
+/* ---------------------------------------------- testimonials ------------------------------------ */
+
+#section-contact form {
+    background-color: #a5a58d;
+    margin: 3rem 10rem;
+    padding: 5rem;
 }

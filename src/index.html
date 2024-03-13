@@ -25,10 +25,11 @@
                         <i class="fa fa-solid fa-times" onclick="hideMenu()"></i>
                         <ul class="nav_links">
                             <li><a href="#about">association</a></li>
-                            <li><a href="#missions">missions</a></li>
-                            <li><a href="#numbers">chiffres</a></li>
-                            <li><a href="#news">actualité</a></li>
-                            <li><a href="#contactus">contact</a></li>
+                            <li><a href="#section-missions">missions</a></li>
+                            <li><a href="#section-projets">projets</a></li>
+                            <li><a href="#section-numbers">chiffres</a></li>
+                            <li><a href="#section-testimonials">témoignages</a></li>
+                            <li><a href="#section-contact">contact</a></li>
                         </ul>
                     </div>
                     <i class="fa fa-solid fa-basket-shopping cart"></i>
@@ -46,7 +47,7 @@
                         Grâce à vos dons, nous participons de manière effective à l’édification de l’Ebolowa de demain. Vos dons permettent de donner de l’espoir à de nombreux enfants, à de nombreuses familles.
                     </p>
     
-                    <a class="btn" href="#donate">Faites un don</a>
+                    <a class="btn" href="#section-donate">Faites un don</a>
     
                 </div>
                 <div class="hero-center">
@@ -72,7 +73,7 @@
 
         <div class="sections">
 
-            <section id="missions" class="missions">
+            <section id="section-missions" class="section-missions">
                 <h2>nos missions</h2>
                 <div class="task-rows">
                     <div class="task furnitures">
@@ -102,7 +103,7 @@
                 </div>
             </section>
 
-            <section id="projets" class="projets">
+            <section id="section-projets" class="section-projets">
                 <h2>nos projets</h2>
                 <div class="task-rows">
                     <div class="task orphanage">
@@ -132,7 +133,7 @@
                 </div>
             </section>
 
-            <section class="donate" id="donate">
+            <section class="section-donate" id="section-donate">
                 <div class="donate-header">
                     <h2>faites un don</h2>
                     <p>
@@ -307,7 +308,7 @@
                                 </div>
 
                             </div>
-                            <div class="btn">Valider</div>
+                            <input type="submit" class="btn" value="Valider" >
                         </fieldset>
                     </div>
                         
@@ -364,23 +365,60 @@
                 </div>
             </section>
 
+            <section id="section-contact" class="section-contact">
+                <div class="container">
+                    <h2>contactez-nous</h2>
+                    <form action="" class="contact-form">
+                        <div class="card-grp space">
+                            <label class="label-select civil">
+                                <select id="contact-civil" class="contact-civil">
+                                    <option value="0" selected="selected">Civilité *</option>
+                                    <option value="1">M</option>
+                                    <option value="2">Mme</option>
+                                    <option value="3">M & Mme</option>
+                                </select>    
+                            </label>
+                            <input type="text" id="contact-firstname" class="space-r" placeholder="Prénom *">
+                            <input type="text" id="contact-lastname" placeholder="Nom*">
+                        </div>
+                        <div class="card-grp space">
+                            <input type="text" id="contact-email" class="space-r" placeholder="Email*">
+                            <input type="text" id="contact-email-confirmed" placeholder="Confirmez l'email*">
+                        </div>
+                        <div class="card-grp space">
+                            <label for="contact-phonenumber" id="country-code" class="country-code">(+33)</label>
+                            <input type="tel" id="contact-phonenumber" placeholder="Téléphone">
+                        </div>
+                        <div class="card-grp space">
+                            <input type="text" id="contact-address" placeholder="Adresse*">
+                        </div>
+                        <div class="card-grp space">
+                            <input type="text" id="contact-city" class="space-r" placeholder="Ville*">
+                            <input type="text" id="contact-zipcode" placeholder="Code postal*">
+                        </div>
+                        <div class="card space">
+                            <label class="label-select">
+                                <select id="contact-country" class="contact-country">
+                                </select>
+                            </label>
+                        </div>
+                        <div class="card space">
+                            <label class="label-select">
+                                <select id="contact-subjects" class="contact-subjects">
+                                </select>
+                            </label>
+                        </div>
+                        <div class="card-grp space">
+                            <textarea id="msg-body" cols="30" rows="10" class="form-control" placeholder="Message*" aria-label="With textarea"></textarea>
+                        </div>
+                        <input type="submit" class="btn" value="Envoyer" >
+                    </form>
+                </div>
+            </section>
         </div>
 
-        <footer class="">
-            <div class="row">
-                <div class="col"></div>
-                 <div class="col-6">
-                     <ul class="social-links">
-                         <li class="fa-logo"><a href="#" class="fa-logo-twitter"><i class="fab fa-twitter"></i></a></li>
-                     </ul>
-                 </div>
-                <div class="col"></div>
-             </div>
-             <div class="row">
-                <div class="col">
-                    <p class="text-centered" >Copyright &copy; 2021 by Cyrano Conseil. All rights reserved</p>
-                </div>
-             </div>
+        <footer class="footer">
+            
         </footer>
 
         <!-- JAVASCRIPTS -->
@@ -388,20 +426,22 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
         <script type="text/javascript" src="wwwroot/js/mail.js"></script>
         <script type="text/javascript" src="wwwroot/js/main.js"></script>
-        <script type="text/javascript" src="wwwroot/data/countries.js"></script>
+        <script type="text/javascript" src="wwwroot/data/data.js"></script>
         
         <script>
             $(document).ready(() => {
 
-
                 const countries = initCountries();
-                console.log(countries);
+                const mailSubjects = initSubjects();
+
+                // console.log(countries);
 
                 setCountries(countries);
+                setSubjects(mailSubjects);
                 $('input[name^=payment-method]').change((e) => {
                     const id = e.target.id;
                     
-                    $('.checkboxes i').removeClass('green');
+                    $('.paymentmethods i').removeClass('green');
                     switch (id) {
                         case 'bank':
                             $(`.fa-${id}`).addClass('green');
@@ -478,8 +518,6 @@
                             break;
                     }
 
-                    $('.amount').css('margin','1rem !important');
-
                     console.log(`donate-times clicked ${id}`)
                 });
 
@@ -520,12 +558,33 @@
 
             function setCountries(countries) {
         
+                let defaultOpt = new Option("— Choisissez un pays —", 0);
+
                 $('#country').empty();
+                $('#contact-country').empty();
+
+                $('#country').append(defaultOpt);
+                $('#contact-country').append(defaultOpt);
         
+                $('#contact').val(0).change();
+                $('#contact-country').val(0).change();
+
                 countries.forEach(country => {
-                    $("#country").append(new Option(country.Name, country.PhoneCode));
+                    let countryOpt = new Option(country.Name, country.PhoneCode);
+                    $('#country').append(countryOpt);
+                    $('#contact-country').append(countryOpt);
                 });
             }
+
+            function setSubjects(subjects) {
+                
+                $('#contact-subjects').empty();
+
+                subjects.forEach(subject => {
+                    $("#contact-subjects").append(new Option(subject.title, subject.id));
+                });
+            }
+            
             
         </script>
     </body>
