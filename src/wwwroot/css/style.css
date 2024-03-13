@@ -46,6 +46,10 @@ header {
     padding: 0;
     margin: 0;
     margin-bottom: 10rem;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/children01.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+    background-color: #222;
 }
 
 .container {
@@ -57,7 +61,7 @@ header {
 /* ---------------------------------------------- nav --------------------------------------------- */
 
 .nav-container {
-    background-color: #fff;
+    background: transparent;
     /* position: fixed;
     top: 0; */
     width: 100%;
@@ -106,7 +110,8 @@ header {
 }
 
 .nav_links a {
-    color: var(--text-color);
+    color: #fff;
+    font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -582,4 +587,102 @@ input[type="checkbox"].custom-check {
     .btn {
         margin-top: 20px;
     }
+}
+
+/* ---------------------------------------------- numbers ------------------------------------------ */
+
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.number {
+    border: 1px solid var(--btn-red-color);
+    padding: 3rem;
+}
+
+.number i {
+    color: var(--btn-red-color);
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.number .num-count {
+    margin-bottom: 1rem;
+}
+
+.number .count {
+    font-size: 3rem;
+    margin-right: .5rem;
+}
+
+.number .what {
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+
+/* ---------------------------------------------- testimonials ------------------------------------ */
+
+.section-testimonials {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/testimonials.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+    background-color: #222;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.testimony {
+    transition: 1s ease;
+}
+
+.testimony:hover {
+    border: .5px solid var(--btn-red-color);
+}
+
+blockquote {
+	padding: 2%;
+	font-style: italic;
+	line-height: 145%;
+	position: relative;
+    /* border: 1px solid yellow; */
+}
+
+blockquote::before {
+	content: "\201C";
+	font-size: 500%;
+	display: block;
+	position: absolute;
+	top: 1;
+	left: -1rem;
+}
+
+blockquote::after {
+	content: "\201D";
+	font-size: 500%;
+	display: block;
+	position: absolute;
+	top: 1;
+	right: 1rem;
+}
+
+
+cite {
+	display: block;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+cite img {
+    width: 4rem;
+	border-radius: 50%;
+	margin-right: 5%;
+	vertical-align: middle;
 }
