@@ -246,7 +246,7 @@
                                 </label>
                             </div>
                             <div class="card-grp space">
-                                <label for="phonenumber" id="country-code" class="country-code">(+33)</label>
+                                <label for="phonenumber" id="country-code" class="country-code">(00)</label>
                                 <input type="tel" id="phonenumber" placeholder="Téléphone">
                             </div>
                         </fieldset>
@@ -386,21 +386,19 @@
                             <input type="text" id="contact-email-confirmed" placeholder="Confirmez l'email*">
                         </div>
                         <div class="card-grp space">
-                            <label for="contact-phonenumber" id="country-code" class="country-code">(+33)</label>
-                            <input type="tel" id="contact-phonenumber" placeholder="Téléphone">
-                        </div>
-                        <div class="card-grp space">
                             <input type="text" id="contact-address" placeholder="Adresse*">
                         </div>
                         <div class="card-grp space">
                             <input type="text" id="contact-city" class="space-r" placeholder="Ville*">
                             <input type="text" id="contact-zipcode" placeholder="Code postal*">
                         </div>
-                        <div class="card space">
-                            <label class="label-select">
+                        <div class="card-grp space">
+                            <label class="label-select space-r">
                                 <select id="contact-country" class="contact-country">
                                 </select>
                             </label>
+                            <label for="contact-phonenumber" id="contact-country-code" class="contact-country-code">(00)</label>
+                            <input type="tel" id="contact-phonenumber" placeholder="Téléphone">
                         </div>
                         <div class="card space">
                             <label class="label-select">
@@ -418,7 +416,57 @@
         </div>
 
         <footer class="footer">
-            
+            <div class="presentation">
+                <img src="wwwroot/img/logo.png" alt="" srcset="">
+                <h3>Aidons Ebolowa a grandir</h3>
+                <p>NZUANE France est une association loi 1901, apolitique et non confessionnelle, reconnue d’utilité publique. Nous luttons contre la pauvreté et les inégalités en apportant une aide à l'enfance et aux démunis.</p>
+            </div>
+            <div class="vosdons">
+                <h3>Donner en confiance</h3>
+                <p>Vos dons sont déductibles à 75% de vos impôts. Et leur utilisation est garantie par le label “Don en confiance”. Votre générosité est essentielle pour aider les populations qui en ont le plus besoin.</p>
+            </div>
+            <div class="vosespaces">
+                <h3>Vos espaces</h3>
+                <ul class="">
+                    <li><a href="#section-missions">missions</a></li>
+                    <li><a href="#section-projets">projets</a></li>
+                    <li><a href="#section-numbers">chiffres</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <i class="fa fa-brands fa-facebook"></i>
+                <i class="fa fa-brands fa-twitter"></i>
+                <i class="fa a-brands fa-linkedin"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa a-brands fa-youtube"></i>
+            </div>
+            <div class="newsletter">
+                <h2>S'informer,
+                    c'est s'engager
+                </h2>
+                <h4>Je m'abonne à la newsletter</h4>
+                <div class="form">
+                    <input type="text" id="newsletter-mail" placeholder="Votre Email*">
+                    <a class="btn">Souscrire</a>
+                </div>
+            </div>
+            <div class="address addfrance">
+                <h2>France</h2>
+                <div class="street">5 Avenue P.B</div>
+                <div class="zip">59280 Armentières</div>
+                <div class="phone">+33 643 XXX XXX</div>
+            </div>
+            <div class="address addcameroon">
+                <h2>Cameroun</h2>
+                <div class="street">15 Rue Mvondo Mebounou</div>
+                <div class="zip">BP 12 Ebolowa</div>
+                <div class="phone">+237 656 025 282</div>
+            </div>
+            <div class="copyright">
+                <span><a href="http://" target="_blank" rel="noopener noreferrer">Mentions légales</a></span>
+                <span>Crée par <a href="http://www.cyrano-conseil.com" target="_blank" rel="noopener" rel="noreferrer">Cyrano Conseil</a></span>
+                <span>Copyright &copy; Nzuane 2024</span>
+            </div>
         </footer>
 
         <!-- JAVASCRIPTS -->
@@ -543,6 +591,12 @@
                     console.log(this)
                     console.log(`country changed ${this.value}`)
                     $('#country-code').text(`(+${this.value})`)
+                });
+
+                $('#contact-country').change(function (e) {
+                    console.log(this)
+                    console.log(`country changed ${this.value}`)
+                    $('#contact-country-code').text(`(+${this.value})`)
                 });
             })
 
