@@ -101,7 +101,7 @@ select {
 }
 
 @media screen and (max-width: 300px){
-    section h2 {
+    section>h2 {
         font-size: 1.8rem;
     }
 }
@@ -870,16 +870,67 @@ input[type="checkbox"].custom-check {
 
 /* ---------------------------------------------- medias ------------------------------------------ */
 
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 1400px){
+
+    #section-numbers .container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .numbers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .number {
+        height: 15rem;
+        width: 15rem;
+        padding: 0;
+        margin: 0;
+    }
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 300px){
+
+    .number {
+        height: 13rem;
+        width: 13rem;
+    }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 260px){
+
+    .number {
+        height: 11rem;
+        width: 11rem;
+    }
+
+    .number .num-summary {
+        font-size: .8rem;
+    }
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 220px){
+
+    .number {
+        height: 9rem;
+        width: 9rem;
+    }
+
+    .number .count {
+        font-size: 1.5rem;
+    }
+
+    .number .what {
+        font-size: .6rem;
+    }
+
+    .number .num-summary {
+        font-size: .7rem;
+    }
 }
 
 /* ---------------------------------------------- testimonials ------------------------------------ */
@@ -949,16 +1000,12 @@ cite img {
 
 /* ---------------------------------------------- medias ------------------------------------------ */
 
-@media screen and (max-width: 1500px){
-}
+@media screen and (max-width: 770px){
 
-@media screen and (max-width: 680px){
-}
-
-@media screen and (max-width: 600px){
-}
-
-@media screen and (max-width: 420px){
+    .testimonials {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 /* ---------------------------------------------- contact ------------------------------------ */
