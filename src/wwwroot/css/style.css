@@ -388,7 +388,7 @@ textarea {
 
 select {
     width: 100%;
-    /* padding: 4px; */
+    padding: 4px;
     height: 2.2rem;
     background: #fff;
     color: var(--text-color);
@@ -434,6 +434,7 @@ select {
 
 .label-select {
     position: relative;
+    width: 50%;
 }
 
 .paymentmethods {

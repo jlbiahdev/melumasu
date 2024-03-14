@@ -210,8 +210,8 @@
                                 </label>
                             </div>
                             <div class="card-grp space">
-                                <label class="label-select civil">
-                                    <select id="" class="">
+                                <label class="label-select space-r">
+                                    <select id="civility" class="civility">
                                         <option value="0" selected="selected">Civilité *</option>
                                         <option value="1">M</option>
                                         <option value="2">Mme</option>
@@ -236,12 +236,8 @@
                                 <input type="text" id="city" placeholder="Ville*">
                             </div>
                             <div class="card space">
-                                <label class="label-select country">
+                                <label class="label-select">
                                     <select id="country" class="country">
-                                        <option value="0" selected="selected">France</option>
-                                        <option value="1">Belgique</option>
-                                        <option value="2">Allemagne</option>
-                                        <option value="3">Italie</option>
                                     </select>
                                 </label>
                             </div>
@@ -612,22 +608,19 @@
 
             function setCountries(countries) {
         
-                let defaultOpt = new Option("— Choisissez un pays —", 0);
-
                 $('#country').empty();
                 $('#contact-country').empty();
 
-                $('#country').append(defaultOpt);
-                $('#contact-country').append(defaultOpt);
-        
-                $('#contact').val(0).change();
-                $('#contact-country').val(0).change();
-
                 countries.forEach(country => {
-                    let countryOpt = new Option(country.Name, country.PhoneCode);
-                    $('#country').append(countryOpt);
-                    $('#contact-country').append(countryOpt);
+                    $('#country').append(new Option(country.Name, country.PhoneCode));
+                    $('#contact-country').append(new Option(country.Name, country.PhoneCode));
                 });
+
+                $('#country').prepend(new Option("— Choisissez un pays —", '00'));
+                $('#contact-country').prepend(new Option("— Choisissez un pays —", '00'));
+        
+                $('#country').val('00').change();
+                $('#contact-country').val('00').change();
             }
 
             function setSubjects(subjects) {
