@@ -3,11 +3,10 @@
 /* ---------------------------------------------- colors ------------------------------------------ */
 
 :root {
-    --primary-color:#4D281F;
+    --primary-color:#d9534f;
     --secondary-color: #0d3c61;
     --tertiary-color: #CCC;
-    --quaternary-color: #a5a58d;
-    --quinary-forecolor: #14213d;
+    --quaternary-color: #14213d;
     --text-color: #555;
     --dark-color: #222;
     --white-color: #fff;
@@ -15,7 +14,6 @@
     --success-color: #5cb85c;
     --error-color: #d9534f;
     --question-color: #F4B400;
-    --btn-red-color: #d9534f;
 }
 
 .green {
@@ -42,30 +40,47 @@ body {
     box-sizing: border-box;
 }
 
+body {
+    padding-top: 7rem;
+}
+
 header {
     padding: 0;
     margin: 0;
-    margin-bottom: 10rem;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/children01.jpg);
 	background-size: cover;
 	background-attachment: fixed;
     background-color: var(--dark-color);
+
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
 }
 
+p {
+    text-indent: 50px;
+}
 /* ---------------------------------------------- common ------------------------------------------ */
 
 .container {
     width: 70rem;
     margin: 0 auto;
-    /* border: 1px solid red; */
+}
+
+.btn {
+    background: var(--primary-color);
+    padding: 1rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--light-color);
+    cursor: pointer;
 }
 
 /* ---------------------------------------------- nav --------------------------------------------- */
 
 .nav-container {
     background: transparent;
-    /* position: fixed;
-    top: 0; */
     width: 100%;
     transition: 1s ease;
 }
@@ -75,16 +90,12 @@ header {
     grid-template-areas: "nav-header nav-header nav-header";
 }
 
-.nav-container.degrad {
-    background: #000;
-}
-
-.nav-container.degrad a {
-    color: var(--white-color);
-}
-
 .logo {
     grid-area: "nav-header";
+}
+
+.logo img {
+    height: 7rem;
 }
 
 .navs {
@@ -103,12 +114,17 @@ header {
     margin: 0;
     padding: 0;
     text-align: center;
-    /* border: 1px solid green; */
 }
 
 .nav_links li {
     display: inline-block;
     padding: 1rem;
+    background-color: transparent;
+    transition: 1s ease-out;
+}
+
+.nav_links li:hover {
+    background-color: var(--primary-color);
 }
 
 .nav_links a {
@@ -116,6 +132,10 @@ header {
     font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.nav_links li.active {
+    background-color: var(--primary-color);
 }
 
 .fa-times, .fa-bars {
@@ -129,8 +149,6 @@ header {
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
     padding: 0;
-    /* margin-top: 1rem; */
-    /* border: 1px solid magenta; */
 }
 
 .hero p {
@@ -141,22 +159,37 @@ header {
     padding: 1rem;
 }
 
-.hero-left .btn {
+.hero-left a {
     text-decoration: none;
-    background-color: var(--btn-red-color);
-    color: var(--white-color);
+    border: 1px solid var(--primary-color);
     padding: 1rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
 }
 
-.hero-left {
-    /* justify-content: space-around; */
+.hero-left a span {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: .5s;
+}
+
+.hero-left a:hover {
+    color: var(--primary-color);
+}
+
+.hero-left a:hover span {
+    width: 100%;
 }
 
 .hero-center img {
     width: 100%;
-}
-
-.hero-right {
 }
 
 /* ---------------------------------------------- missions ---------------------------------------- */
@@ -229,6 +262,39 @@ section h2 {
 .task:hover .task-desc {
     bottom: 10%;
     opacity: 1;
+}
+
+.task-plus {
+    text-align: right;
+}
+
+.task-plus a {
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.task-plus a span {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: .5s;
+}
+
+.task-plus a:hover {
+    color: var(--primary-color);
+}
+
+.task-plus a:hover span {
+    width: 100%;
 }
 
 hr {
@@ -308,6 +374,10 @@ hr {
     height: 91vh;
     padding: 3rem;
 
+    font-size: .8rem;
+    letter-spacing: .7px;
+    word-spacing: 3px;
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -342,6 +412,10 @@ hr {
     padding: .5rem;
     grid-column: 1/2;
     grid-row: 2/ 3;
+}
+
+.donate-header p {
+    text-align: left;
 }
 
 .hide { display: none; }
@@ -475,15 +549,6 @@ select {
     font-size: 20px;
     color: var(--text-color);
 }
-
-.btn {
-    background: var(--btn-red-color);
-    padding: 1rem;
-    font-weight: 500;
-    text-align: center;
-    color: var(--light-color);
-    cursor: pointer;
-}
 /* ---------------------------------------------- donation ------------------------------------------ */
 
 .donation {
@@ -502,13 +567,13 @@ input[type="checkbox"].custom-check {
 }
 
 .donate-one, .donate-repeat {
-    border: 1px solid var(--btn-red-color);
+    border: 1px solid var(--primary-color);
     padding: 1rem;
     transition: 1s ease;
 }
 
 .donate-times-checked, .amount-checked {
-    background-color: var(--btn-red-color) !important;
+    background-color: var(--primary-color) !important;
     color: var(--white-color) !important;
 }
 
@@ -607,12 +672,12 @@ input[type="checkbox"].custom-check {
 }
 
 .number {
-    border: 1px solid var(--btn-red-color);
+    border: 1px solid var(--primary-color);
     padding: 3rem;
 }
 
 .number i {
-    color: var(--btn-red-color);
+    color: var(--primary-color);
     font-size: 2rem;
     margin: 1rem;
 }
@@ -648,11 +713,13 @@ input[type="checkbox"].custom-check {
 }
 
 .testimony {
+    padding: 1rem;
+    border: .5px solid transparent;
     transition: 1s ease;
 }
 
 .testimony:hover {
-    border: .5px solid var(--btn-red-color);
+    border: .5px solid var(--primary-color);
 }
 
 blockquote {
@@ -697,7 +764,7 @@ cite img {
 /* ---------------------------------------------- testimonials ------------------------------------ */
 
 #section-contact form {
-    background-color: var(--quaternary-color);
+    background-color: var(--tertiary-color);
     margin: 3rem 10rem;
     padding: 5rem;
 }
@@ -761,6 +828,13 @@ footer p, footer a {
     font-weight: 500;
     text-decoration: none;
     text-transform: capitalize;
+    border-bottom: 1px solid transparent;
+    transition: 1s ease;
+}
+
+.vosespaces a:hover {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .social {
@@ -777,15 +851,15 @@ footer p, footer a {
     width: 40px;
     font-size: 20px;
     line-height: 40px;
-    border: 1px solid var(--btn-red-color);
+    border: 1px solid var(--primary-color);
     margin: 40px 5px 0;
-    color: var(--btn-red-color);
+    color: var(--primary-color);
     cursor: pointer;
     transition: .5s;
 }
 
 .social i:hover {
-    background: var(--btn-red-color);
+    background: var(--primary-color);
     color: var(--white-color);
     transform: translateY(-7px);
 }
@@ -812,7 +886,7 @@ footer p, footer a {
     place-content: center ;
     grid-column: 1 / span 4;
     grid-row: 3 / 4;
-    background-color: var(--quinary-forecolor);
+    background-color: var(--quaternary-color);
     color: var(--white-color);
     font-size: .7rem
 }

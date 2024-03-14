@@ -20,16 +20,16 @@
         <header class="header">
             <div class="nav-container">
                 <nav class="container nav">
-                    <a id="app-name" class="logo" href="#"><img src="./wwwroot/img/logo.png" style="height: 10rem;" alt="Nzuane" srcset=""></a>
+                    <a id="app-name" class="logo" href="#"><img src="./wwwroot/img/logo.png" alt="Nzuane" srcset=""></a>
                     <div class="navs" id="navLinks">
                         <i class="fa fa-solid fa-times" onclick="hideMenu()"></i>
                         <ul class="nav_links">
-                            <li><a href="#about">association</a></li>
-                            <li><a href="#section-missions">missions</a></li>
-                            <li><a href="#section-projets">projets</a></li>
-                            <li><a href="#section-numbers">chiffres</a></li>
-                            <li><a href="#section-testimonials">témoignages</a></li>
-                            <li><a href="#section-contact">contact</a></li>
+                            <li onclick="activateMenu(this.id)" id="about" class="active"><a href="#about">association</a></li>
+                            <li onclick="activateMenu(this.id)" id="missions"><a href="#section-missions">missions</a></li>
+                            <li onclick="activateMenu(this.id)" id="projets"><a href="#section-projets">projets</a></li>
+                            <li onclick="activateMenu(this.id)" id="numbers"><a href="#section-numbers">chiffres</a></li>
+                            <li onclick="activateMenu(this.id)" id="testimonials"><a href="#section-testimonials">témoignages</a></li>
+                            <li onclick="activateMenu(this.id)" id="contact"><a href="#section-contact">contact</a></li>
                         </ul>
                     </div>
                     <i class="fa fa-solid fa-basket-shopping cart"></i>
@@ -42,12 +42,11 @@
             <div class="hero">
                 <div class="hero-left">
                     <h2>Participer à l'avenir d'Ebolowa. Telle est la mission que nous nous sommes donnés</h2>
-    
                     <p>
                         Grâce à vos dons, nous participons de manière effective à l’édification de l’Ebolowa de demain. Vos dons permettent de donner de l’espoir à de nombreux enfants, à de nombreuses familles.
                     </p>
     
-                    <a class="btn" href="#section-donate">Faites un don</a>
+                    <a class="btn" href="#section-donate"><span></span>Faites un don</a>
     
                 </div>
                 <div class="hero-center">
@@ -81,7 +80,7 @@
                         <div class="task-title">Education - Fourniture de matériels<hr></div>
                         <div class="task-desc">
                             <p>Fournitures de tables-bancs aux écoles et collèges de la région</p>
-                            <div class="task-plus"><a href="#" class="link more">en savoir plus</a></div>
+                            <div class="task-plus"><a href="#" class="btn"><span></span>+</a></div>
                         </div>
                     </div>
                     <div class="task water">
@@ -89,7 +88,7 @@
                         <div class="task-title">Puits - Accès à l'eau<hr></div>
                         <div class="task-desc">
                             <p>Construction de forages</p>
-                            <div class="task-plus"><a href="#" class="link more">en savoir plus</a></div>
+                            <div class="task-plus"><a href="#" class="btn"><span></span>+</a></div>
                         </div>
                     </div>
                     <div class="task help">
@@ -97,7 +96,7 @@
                         <div class="task-title">Aide Humanitaire d'Urgence<hr></div>
                         <div class="task-desc">
                             <p>Répondre au plus vite à leurs besoins vitaux</p>
-                            <div class="task-plus"><a href="#" class="link more">en savoir plus</a></div>
+                            <div class="task-plus"><a href="#" class="btn"><span></span>+</a></div>
                         </div>
                     </div>
                 </div>
@@ -111,7 +110,7 @@
                         <div class="task-title">Soutenez notre Orphelinat<hr></div>
                         <div class="task-desc">
                             <p>Un Complexe Intégré : Orphelinat, Ecole, Centre Médical</p>
-                            <div class="task-plus"><a href="#" class="link more">en savoir plus</a></div>
+                            <div class="task-plus"><a href="#" class="btn"><span></span>+</a></div>
                         </div>
                     </div>
                     <div class="task sponsorship">
@@ -119,7 +118,7 @@
                         <div class="task-title">Parrainage d'orphelins<hr></div>
                         <div class="task-desc">
                             <p>Offrez leur un avenir meilleur avec notre programme de parrainage.</p>
-                            <div class="task-plus"><a href="#" class="link more">en savoir plus</a></div>
+                            <div class="task-plus"><a href="#" class="btn"><span></span>+</a></div>
                         </div>
                     </div>
                     <div class="task farms">
@@ -127,7 +126,7 @@
                         <div class="task-title">Fermes Agroécologiques<hr></div>
                         <div class="task-desc">
                             <p>Assurer l'autonomie pour des familles pauvres (plantation d'arbres, élevage...)</p>
-                            <div class="task-plus"><a href="#" class="link more">en savoir plus</a></div>
+                            <div class="task-plus"><a href="#" class="btn"><span></span>+</a></div>
                         </div>
                     </div>
                 </div>
@@ -138,8 +137,9 @@
                     <h2>faites un don</h2>
                     <p>
                         En tant qu’organisme reconnu d’intérêt général, Zuane, association déclarée sous le numéro WXXXXXXXXX,  délivre un reçu fiscal pour chaque don.
-                        <br />
-                        Pour chaque don versé à notre association, vous pouvez bénéficier d’une réduction d’impôt jusqu’à 66% du montant de votre don, pour en savoir plus cliquez-ici.
+                    </p>
+                    <p>
+                        Pour chaque don versé à notre association, vous pouvez bénéficier d’une réduction d’impôt jusqu’à 66% du montant de votre don.
                     </p>
                 </div>
 
@@ -343,19 +343,19 @@
                     <div class="testimony">
                         <cite><img src="./wwwroot/img/people/nadegeo.jpg" alt="Photo by Prince Akachi on Unsplash">Sonia E.</cite>
                         <blockquote>
-                            Après de nombreuses années loin de mon village, j'ai voulu lui rendre un peu de ce qu'il mavait donné. Grâce à Nzuane, j'ai rencontré la petite Sylvie, orpheline de père et de mère. Je la parainne depuis bientôt 4 ans et sa scolarité va bon train. Ses yeux ont recommencé à briller.
+                            <p>Après de nombreuses années loin de mon village, j'ai voulu lui rendre un peu de ce qu'il mavait donné. Grâce à Nzuane, j'ai rencontré la petite Sylvie, orpheline de père et de mère. Je la parainne depuis bientôt 4 ans et sa scolarité va bon train. Ses yeux ont recommencé à briller.</p>
                         </blockquote>
                     </div>
                     <div class="testimony">
                         <cite><img src="./wwwroot/img/people/nlogap.jpg" alt="Photo by Eber Devine on Unsplash">Ayangma P.</cite>
                         <blockquote>
-                            Pour lutter contre la pénurie d'eau dans mon village, Nzuane a soutenu mon projet et 10 puits ont été construits dans mon village et les 3 environnants.
+                            <p>Pour lutter contre la pénurie d'eau dans mon village, Nzuane a soutenu mon projet et 10 puits ont été construits dans mon village et les 3 environnants.</p>
                         </blockquote>
                     </div>
                     <div class="testimony">
                         <cite><img src="./wwwroot/img/people/seraphineA.jpg" alt="Photo by Joshua Hanson on Unsplash">Anastasie M.</cite>
                         <blockquote>
-                            Mon établissement scolaire a retrouvé des couleurs grâce au soutien de Nzuane et ses membres (dont je fais désormais partie). Nous avons en effet reçu plusieurs dotations en matériel et mobilier scolaire. Le seigneur vous le rendra.
+                            <p>Mon établissement scolaire a retrouvé des couleurs grâce au soutien de Nzuane et ses membres (dont je fais désormais partie). Nous avons en effet reçu plusieurs dotations en matériel et mobilier scolaire. Le seigneur vous le rendra.</p>
                         </blockquote>
                     </div>
                 </div>
@@ -473,166 +473,6 @@
         <script type="text/javascript" src="wwwroot/data/data.js"></script>
         
         <script>
-            $(document).ready(() => {
-
-                const countries = initCountries();
-                const mailSubjects = initSubjects();
-
-                // console.log(countries);
-
-                setCountries(countries);
-                setSubjects(mailSubjects);
-                $('input[name^=payment-method]').change((e) => {
-                    const id = e.target.id;
-                    
-                    $('.paymentmethods i').removeClass('green');
-                    switch (id) {
-                        case 'bank':
-                            $(`.fa-${id}`).addClass('green');
-                            $('.ibanbox').css('display','block');
-                            $('.creditcardbox').css('display','none');
-                            break;
-                        case 'credit-card':
-                            $(`.fa-${id}`).addClass('green');
-                            $('.ibanbox').css('display','none');
-                            $('.creditcardbox').css('display','block');
-                            break;
-                        case 'paypal':
-                            $(`.fa-${id}`).addClass('green');
-                            $('.ibanbox').css('display','none');
-                            $('.creditcardbox').css('display','none');
-                            break;
-                        default:
-                            $(`.fa-${id}`).addClass('green');
-                            $('.ibanbox').css('display','none');
-                            $('.creditcardbox').css('display','none');
-                            break;
-                    }
-
-                    console.log(`radio-options clicked ${id}`)
-                });
-
-                $('input[name^=donate-times]').change((e) => {
-                    const id = e.target.id;
-                    
-                    $('.times>span').removeClass('donate-times-checked');
-                    $(`.donate-${id}`).addClass('donate-times-checked');
-
-                    $('#mnt7').prop('checked', true);
-                    $(`#amount-mnt7`).addClass('amount-checked');
-                    $('.free-amount').addClass('show');
-                    $('.free-amount').removeClass('hide');
-                    switch (id) {
-                        case 'one':
-                            $('#amount-mnt1').addClass('show');
-                            $('#amount-mnt2').addClass('show');
-                            $('#amount-mnt3').addClass('show');
-                            $('#amount-mnt1').removeClass('hide');
-                            $('#amount-mnt2').removeClass('hide');
-                            $('#amount-mnt3').removeClass('hide');
-                            $('#amount-mnt4').addClass('hide');
-                            $('#amount-mnt5').addClass('hide');
-                            $('#amount-mnt6').addClass('hide');
-                            $('#amount-mnt4').removeClass('show');
-                            $('#amount-mnt5').removeClass('show');
-                            $('#amount-mnt6').removeClass('show');
-
-                            $('#check-bank').addClass('hide');
-                            $('#check-bank').removeClass('show');
-                            $('.ibanbox').css('display','none');
-                            $(`.fa-credit-card`).addClass('green');
-                            $('.creditcardbox').css('display','block');
-                            break;
-                        default:
-                            $('#amount-mnt1').addClass('hide');
-                            $('#amount-mnt2').addClass('hide');
-                            $('#amount-mnt3').addClass('hide');
-                            $('#amount-mnt1').removeClass('show');
-                            $('#amount-mnt2').removeClass('show');
-                            $('#amount-mnt3').removeClass('show');
-                            $('#amount-mnt4').addClass('show');
-                            $('#amount-mnt5').addClass('show');
-                            $('#amount-mnt6').addClass('show');
-                            $('#amount-mnt4').removeClass('hide');
-                            $('#amount-mnt5').removeClass('hide');
-                            $('#amount-mnt6').removeClass('hide');
-
-                            $('#check-bank').addClass('show');
-                            $('#check-bank').removeClass('hide');
-                            break;
-                    }
-
-                    console.log(`donate-times clicked ${id}`)
-                });
-
-                $('input[name^=donate-amount]').change((e) => {
-                    const id = e.target.id;
-                    
-                    $('.amount>label').removeClass('amount-checked');
-                    $(`#amount-${id}`).addClass('amount-checked');
-                    switch (id) {
-                        case 'mnt7':
-                            $('.free-amount').addClass('show');
-                            $('.free-amount').removeClass('hide');
-                            break;
-                        default:
-                            $('.free-amount').addClass('hide');
-                            $('.free-amount').removeClass('show');
-                            break;
-                    }
-                    console.log(`donate-amount clicked ${id}`)
-                });
-
-                $('#country').change(function (e) {
-                    console.log(this)
-                    console.log(`country changed ${this.value}`)
-                    $('#country-code').text(`(+${this.value})`)
-                });
-
-                $('#contact-country').change(function (e) {
-                    console.log(this)
-                    console.log(`country changed ${this.value}`)
-                    $('#contact-country-code').text(`(+${this.value})`)
-                });
-            })
-
-            function isorgClicked() {
-                if( $('#isorg').is(':checked') ){
-                    $('#lbIsOrg i').addClass('fa-solid fa-square-xmark red');
-                    $('#lbIsOrg i').removeClass('fa-regular fa-square-check green');
-                } else {
-                    $('#lbIsOrg i').removeClass('fa-solid fa-square-xmark red');
-                    $('#lbIsOrg i').addClass('fa-regular fa-square-check green');
-                }
-            }
-
-            function setCountries(countries) {
-        
-                $('#country').empty();
-                $('#contact-country').empty();
-
-                countries.forEach(country => {
-                    $('#country').append(new Option(country.Name, country.PhoneCode));
-                    $('#contact-country').append(new Option(country.Name, country.PhoneCode));
-                });
-
-                $('#country').prepend(new Option("— Choisissez un pays —", '00'));
-                $('#contact-country').prepend(new Option("— Choisissez un pays —", '00'));
-        
-                $('#country').val('00').change();
-                $('#contact-country').val('00').change();
-            }
-
-            function setSubjects(subjects) {
-                
-                $('#contact-subjects').empty();
-
-                subjects.forEach(subject => {
-                    $("#contact-subjects").append(new Option(subject.title, subject.id));
-                });
-            }
-            
-            
         </script>
     </body>
 </html>
