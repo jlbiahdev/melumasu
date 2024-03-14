@@ -362,67 +362,73 @@
             </section>
 
             <section id="section-contact" class="section-contact">
-                <div class="container">
-                    <h2>contactez-nous</h2>
-                    <form action="" class="contact-form">
-                        <div class="card-grp space">
-                            <label class="label-select civil">
-                                <select id="contact-civil" class="contact-civil">
-                                    <option value="0" selected="selected">Civilité *</option>
-                                    <option value="1">M</option>
-                                    <option value="2">Mme</option>
-                                    <option value="3">M & Mme</option>
-                                </select>    
-                            </label>
-                            <input type="text" id="contact-firstname" class="space-r" placeholder="Prénom *">
-                            <input type="text" id="contact-lastname" placeholder="Nom*">
-                        </div>
-                        <div class="card-grp space">
-                            <input type="text" id="contact-email" class="space-r" placeholder="Email*">
-                            <input type="text" id="contact-email-confirmed" placeholder="Confirmez l'email*">
-                        </div>
-                        <div class="card-grp space">
-                            <input type="text" id="contact-address" placeholder="Adresse*">
-                        </div>
-                        <div class="card-grp space">
-                            <input type="text" id="contact-city" class="space-r" placeholder="Ville*">
-                            <input type="text" id="contact-zipcode" placeholder="Code postal*">
-                        </div>
-                        <div class="card-grp space">
-                            <label class="label-select space-r">
-                                <select id="contact-country" class="contact-country">
-                                </select>
-                            </label>
-                            <label for="contact-phonenumber" id="contact-country-code" class="contact-country-code">(00)</label>
-                            <input type="tel" id="contact-phonenumber" placeholder="Téléphone">
-                        </div>
-                        <div class="card space">
-                            <label class="label-select">
-                                <select id="contact-subjects" class="contact-subjects">
-                                </select>
-                            </label>
-                        </div>
-                        <div class="card-grp space">
-                            <textarea id="msg-body" cols="30" rows="10" class="form-control" placeholder="Message*" aria-label="With textarea"></textarea>
-                        </div>
-                        <input type="submit" class="btn" value="Envoyer" >
-                    </form>
-                </div>
+                <h2>contactez-nous</h2>
+                <form action="" class="contact-form">
+                    <div class="card-grp space">
+                        <label class="label-select civil space-r">
+                            <select id="contact-civil" class="contact-civil">
+                                <option value="0" selected="selected">Civilité *</option>
+                                <option value="1">M</option>
+                                <option value="2">Mme</option>
+                                <option value="3">M & Mme</option>
+                            </select>    
+                        </label>
+                        <input type="text" id="contact-firstname" class="space-r" placeholder="Prénom *">
+                        <input type="text" id="contact-lastname" placeholder="Nom*">
+                    </div>
+                    <div class="card-grp space">
+                        <input type="text" id="contact-email" class="space-r" placeholder="Email*">
+                        <input type="text" id="contact-email-confirmed" placeholder="Confirmez l'email*">
+                    </div>
+                    <div class="card-grp space">
+                        <input type="text" id="contact-address" placeholder="Adresse*">
+                    </div>
+                    <div class="card-grp space">
+                        <input type="text" id="contact-city" class="space-r" placeholder="Ville*">
+                        <input type="text" id="contact-zipcode" placeholder="Code postal*">
+                    </div>
+                    <div class="card-grp space">
+                        <label class="label-select space-r">
+                            <select id="contact-country" class="contact-country">
+                            </select>
+                        </label>
+                        <label for="contact-phonenumber" id="contact-country-code" class="contact-country-code">(00)</label>
+                        <input type="tel" id="contact-phonenumber" placeholder="Téléphone">
+                    </div>
+                    <div class="card space">
+                        <label class="label-select">
+                            <select id="contact-subjects" class="contact-subjects">
+                            </select>
+                        </label>
+                    </div>
+                    <div class="card">
+                        <textarea id="msg-body" cols="30" rows="10" class="form-control" placeholder="Message*" aria-label="With textarea"></textarea>
+                    </div>
+                    <input type="submit" class="btn" value="Envoyer" >
+                </form>
             </section>
         </div>
 
         <footer class="footer">
             <div class="presentation">
-                <img src="wwwroot/img/logo.png" alt="" srcset="">
-                <h3>Aidons Ebolowa a grandir</h3>
+                <div class="head">
+                    <img src="wwwroot/img/logo.png" alt="" srcset="">
+                    <h3>Aidons Ebolowa à grandir</h3>
+                </div>
                 <p>NZUANE France est une association loi 1901, apolitique et non confessionnelle, reconnue d’utilité publique. Nous luttons contre la pauvreté et les inégalités en apportant une aide à l'enfance et aux démunis.</p>
             </div>
             <div class="vosdons">
-                <h3>Donner en confiance</h3>
+                <div class="head">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <h3>Donner en confiance</h3>
+                </div>
                 <p>Vos dons sont déductibles à 75% de vos impôts. Et leur utilisation est garantie par le label “Don en confiance”. Votre générosité est essentielle pour aider les populations qui en ont le plus besoin.</p>
             </div>
             <div class="vosespaces">
-                <h3>Vos espaces</h3>
+                <div class="head">
+                    <i class="fa fa-solid fa-bars"></i>
+                    <h3>Vos espaces</h3>
+                </div>
                 <ul class="">
                     <li><a href="#section-missions">missions</a></li>
                     <li><a href="#section-projets">projets</a></li>

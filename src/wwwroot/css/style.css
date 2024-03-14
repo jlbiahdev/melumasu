@@ -61,6 +61,87 @@ header {
 p {
     text-indent: 50px;
 }
+  
+input, textarea {
+    padding: .5rem 0;
+    width: 100%;
+    text-align: center;
+    border: none;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    outline: none;
+    font-size: .9rem;
+    color: var(--text-color);
+}
+
+textarea {
+    resize: none;
+}
+
+select {
+    width: 100%;
+    padding: 4px;
+    height: 2.2rem;
+    background: #fff;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    font-size: .9rem;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 375px){
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 300px){
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 270px){
+    section h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 240px){
+    section h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 210px){
+    section h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 180px){
+    section h2 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 150px){
+    section h2 {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 110px){
+    section h2 {
+        font-size: .7rem;
+    }
+}
+
 /* ---------------------------------------------- common ------------------------------------------ */
 
 .container {
@@ -138,8 +219,22 @@ p {
     background-color: var(--primary-color);
 }
 
-.fa-times, .fa-bars {
+header .fa-times, header .fa-bars {
     display: none;
+}
+
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 420px){
 }
 
 /* ---------------------------------------------- hero -------------------------------------------- */
@@ -192,6 +287,20 @@ p {
     width: 100%;
 }
 
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 420px){
+}
+
 /* ---------------------------------------------- missions ---------------------------------------- */
 
 section {
@@ -200,8 +309,22 @@ section {
 }
 
 section h2 {
-    font-size: 50px;
+    font-size: 2.3rem;
     text-transform: capitalize;
+}
+
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 420px){
 }
 /* ---------------------------------------------- task ---------------------------------------- */
 
@@ -305,6 +428,20 @@ hr {
     width: 60%;
 }
 
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 420px){
+}
+
 /* ---------------------------------------------- missions ---------------------------------------- */
 
 .section-missions {
@@ -363,6 +500,20 @@ hr {
     background-position: center;
     background-size: cover;
     height: 91vh;
+}
+
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 420px){
 }
 
 /* ---------------------------------------------- donate ------------------------------------------ */
@@ -443,38 +594,6 @@ hr {
     color: var(--text-color);
     margin-bottom: 6px;
 }
-  
-input, textarea {
-    padding: .5rem 0;
-    width: 100%;
-    text-align: center;
-    border: none;
-    letter-spacing: 1px;
-    word-spacing: 3px;
-    outline: none;
-    font-size: .9rem;
-    color: var(--text-color);
-}
-
-textarea {
-    resize: none;
-}
-
-select {
-    width: 100%;
-    padding: 4px;
-    height: 2.2rem;
-    background: #fff;
-    color: var(--text-color);
-    border: none;
-    outline: none;
-    font-size: .9rem;
-    display: inline-block;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
-}
 
 .label-select:after {
     content: "<>";
@@ -549,6 +668,20 @@ select {
     font-size: 20px;
     color: var(--text-color);
 }
+
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 420px){
+}
 /* ---------------------------------------------- donation ------------------------------------------ */
 
 .donation {
@@ -607,6 +740,20 @@ input[type="checkbox"].custom-check {
     margin: 1rem !important;
 }
 
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 420px){
+}
+
 /* ---------------------------------------------- coordonates ------------------------------------------ */
 
 .coordonates {
@@ -629,6 +776,20 @@ input[type="checkbox"].custom-check {
     width: 40%;
 }
 
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 420px){
+}
+
 /* ---------------------------------------------- payment ------------------------------------------ */
 
 .payment {
@@ -648,6 +809,17 @@ input[type="checkbox"].custom-check {
 #expirydate {
     width: 75%;
     margin-right: 1rem;
+}
+
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 600px){
 }
 
 @media screen and (max-width: 420px){
@@ -694,6 +866,20 @@ input[type="checkbox"].custom-check {
 .number .what {
     font-size: .7rem;
     text-transform: uppercase;
+}
+
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 420px){
 }
 
 /* ---------------------------------------------- testimonials ------------------------------------ */
@@ -761,12 +947,121 @@ cite img {
 	vertical-align: middle;
 }
 
-/* ---------------------------------------------- testimonials ------------------------------------ */
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+}
+
+@media screen and (max-width: 680px){
+}
+
+@media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 420px){
+}
+
+/* ---------------------------------------------- contact ------------------------------------ */
+
+#section-contact {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 10% 90%;
+}
+
+#section-contact h2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
 
 #section-contact form {
     background-color: var(--tertiary-color);
-    margin: 3rem 10rem;
+    /* margin: 3rem 10rem; */
     padding: 5rem;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1700px){
+  
+    #section-contact form input, 
+    #section-contact form textarea, 
+    #section-contact select, 
+    #section-contact label {
+        width: 100%;
+        /* letter-spacing: 1px;
+        word-spacing: 3px; */
+        font-size: .6rem;
+    }
+    
+    #section-contact label {
+        width: 70%;
+    }   
+}
+
+@media screen and (max-width: 1500px){
+    #section-contact {
+        display: flex;
+        flex-direction: column;
+        padding: 10rem;
+    }
+
+    #section-contact .card-grp {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin-bottom: 1rem;
+        /* border: 1px solid red; */
+    }
+  
+    #section-contact .card-grp input:not(:last-child),
+    #section-contact .card-grp select,
+    #section-contact .card textarea {
+        margin-bottom: 1rem;
+    }
+    #section-contact form input, 
+    #section-contact form textarea, 
+    #section-contact select, 
+    #section-contact label {
+        /* margin: 0; */
+        width: 100%;
+    }
+    .space-r { margin-right: 0;}
+}
+
+@media screen and (max-width: 750px){
+    #section-contact {
+        padding: 5rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #section-contact {
+        padding: 3rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    #section-contact {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 420px){
+    #section-contact {
+        padding: 0;
+    }
+  
+    #section-contact form {
+        padding: 1rem;
+    }
+
+    #contact-country-code {
+        padding: .5rem 0;
+    }
 }
 
 /* ---------------------------------------------- footer ------------------------------------------ */
@@ -782,7 +1077,26 @@ footer {
 }
 
 footer p, footer a {
-    font-size: .7rem
+    font-size: .6rem
+}
+
+footer h2, footer h3 {
+    font-size: .8rem;
+    margin-bottom: 0;
+}
+
+footer .head {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .head i {
+    padding: 2rem;
+    width: 18%;
+    background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 .newsletter {
@@ -838,11 +1152,10 @@ footer p, footer a {
 }
 
 .social {
+    display: flex;
+    flex-wrap: wrap;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-}
-
-.social {
     text-align: center;
 }
 
@@ -896,3 +1209,99 @@ footer p, footer a {
     font-size: .7rem;
     text-decoration: none;
 }
+
+/* ---------------------------------------------- medias ------------------------------------------ */
+
+@media screen and (max-width: 1500px){
+    .presentation h3 {
+        font-size: .6rem;
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 1220px){
+    .vosdons h3, .vosespaces h3 {
+        font-size: .6rem;
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 1084px){
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 15rem 10rem 10rem 2rem;
+    }
+
+    .newsletter {
+        grid-column: 1/ span 3;
+        grid-row: 3 / 4;
+        width: 100%;
+    }
+
+    .copyright {
+        grid-column: 1 / span 3;
+        grid-row: 4 / 5;
+    }
+}
+
+@media screen and (max-width: 680px){
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    footer .head {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    footer .head i {
+        padding: 2rem;
+        width: 3%;
+    }
+
+    .presentation h3, .vosdons h3, .vosespaces h3 {
+        font-size: .8rem;
+    }
+
+    footer p {
+        text-indent: 0;
+    }
+    /* border: 1px solid red; */
+
+    .presentation { order: 0; padding: 0; margin: 0; width: 100%; }
+    .vosdons { order: 1; padding: 0; width: 100%; }
+    .vosespaces { order: 2; padding: 0; margin-bottom: 1rem; width: 100%; }
+    .social { order: 3; }
+    .addfrance { order: 4; margin: 0; }
+    .addcameroon { order: 5; }
+    .newsletter { order: 6; }
+    .copyright { order: 7; width: 100%; }
+
+    .presentation, .vosdons, .vosespaces, .social {
+        margin-left: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .copyright {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .btn { 
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .newsletter .form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
