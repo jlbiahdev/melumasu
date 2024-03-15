@@ -94,6 +94,17 @@ select {
     cursor: pointer;
 }
 
+section {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+section h2 {
+    font-size: 2.3rem;
+    text-transform: capitalize;
+}
+
+
 @media screen and (max-width: 375px){
     section h2 {
         font-size: 2rem;
@@ -241,17 +252,13 @@ header .fa-times, header .fa-bars {
 
 .hero {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-around;
-    padding: 0;
+    grid-template-columns: repeat(3, 22rem);
+    justify-content: space-between;
+    /* background-color: purple; */
 }
 
 .hero p {
     margin: 3rem 0;
-}
-
-.hero-left, .hero-center, .hero-right {
-    padding: 1rem;
 }
 
 .hero-left a {
@@ -289,44 +296,44 @@ header .fa-times, header .fa-bars {
 
 /* ---------------------------------------------- medias ------------------------------------------ */
 
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 1400px){
+
+    .hero-wrapper .container {
+        /* background-color: purple; */
+        width: 100%;
+        padding: 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: var(--dark-color);
+    }
+
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        margin: 0 1rem;
+        color: var(--white-color);
+    }
+
+    .donate-btn {
+        text-align: center;
+    }
+
+    .hero-center img {
+        width: 0;
+    }
 }
 
-@media screen and (max-width: 680px){
-}
+@media screen and (max-width: 1260px){
 
-@media screen and (max-width: 600px){
 }
 
 @media screen and (max-width: 420px){
 }
 
-/* ---------------------------------------------- missions ---------------------------------------- */
-
-section {
-    text-align: center;
-    padding-bottom: 70px;
-}
-
-section h2 {
-    font-size: 2.3rem;
-    text-transform: capitalize;
-}
-
-/* ---------------------------------------------- medias ------------------------------------------ */
-
-@media screen and (max-width: 1500px){
-}
-
-@media screen and (max-width: 680px){
-}
-
-@media screen and (max-width: 600px){
-}
-
-@media screen and (max-width: 420px){
-}
-/* ---------------------------------------------- task ---------------------------------------- */
+/* ---------------------------------------------- task -------------------------------------------- */
 
 .tasks {
     display: grid;
@@ -430,10 +437,6 @@ hr {
 
 /* ---------------------------------------------- medias ------------------------------------------ */
 
-@media screen and (max-width: 1600px){
-
-}
-
 @media screen and (max-width: 1590px){
 
     .task-title {
@@ -519,7 +522,7 @@ hr {
     }
 
     .task-plus a {
-        padding: 1rem 0;
+        padding: 1rem;
     }
 }
 
@@ -595,20 +598,6 @@ hr {
     background-position: center;
     background-size: cover;
     height: 91vh;
-}
-
-/* ---------------------------------------------- medias ------------------------------------------ */
-
-@media screen and (max-width: 1500px){
-}
-
-@media screen and (max-width: 680px){
-}
-
-@media screen and (max-width: 600px){
-}
-
-@media screen and (max-width: 420px){
 }
 
 /* ---------------------------------------------- section-donate ---------------------------------- */
@@ -926,9 +915,9 @@ input[type="checkbox"].custom-check {
         width: 100%;
         margin-bottom: 20px;
     }
-    .btn {
+    /* .btn {
         margin-top: 20px;
-    }
+    } */
 }
 
 /* ---------------------------------------------- numbers ------------------------------------------ */
@@ -1437,7 +1426,7 @@ footer .head i {
 }
 
 @media screen and (max-width: 420px){
-    .btn { 
+    .newsletter .btn { 
         margin-top: 1rem;
         width: 100%;
     }
