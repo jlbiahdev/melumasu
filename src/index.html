@@ -18,13 +18,13 @@
     </head>
     <body>
         <header class="header">
-            <div class="nav-container">
-                <nav class="container nav">
+            <!-- <div class="nav-container"> -->
+                <nav class="container">
                     <a id="app-name" class="logo" href="#"><img src="./wwwroot/img/logo.png" alt="Nzuane" srcset=""></a>
                     <div class="navs" id="navLinks">
                         <i class="fa fa-solid fa-times" onclick="hideMenu()"></i>
                         <ul class="nav_links">
-                            <li onclick="activateMenu(this.id)" id="about" class="active"><a href="#about">association</a></li>
+                            <li onclick="activateMenu(this.id)" id="about" class="active"><a href="#hero">association</a></li>
                             <li onclick="activateMenu(this.id)" id="missions"><a href="#section-missions">missions</a></li>
                             <li onclick="activateMenu(this.id)" id="projets"><a href="#section-projets">projets</a></li>
                             <li onclick="activateMenu(this.id)" id="numbers"><a href="#section-numbers">chiffres</a></li>
@@ -32,13 +32,12 @@
                             <li onclick="activateMenu(this.id)" id="contact"><a href="#section-contact">contact</a></li>
                         </ul>
                     </div>
-                    <i class="fa fa-solid fa-basket-shopping cart"></i>
-                    <i class="fa fa-solid fa-bars" onclick="showMenu()"></i>
+                    <i id="zip_menu" class="fa fa-solid fa-bars zip_menu" onclick="showMenu()"></i>
                 </nav>
-            </div>
+            <!-- </div> -->
         </header>
 
-        <div class="hero-wrapper">
+        <div id="hero" class="hero-wrapper">
             <div class="container">
                 <div class="hero">
                     <div class="hero-left">

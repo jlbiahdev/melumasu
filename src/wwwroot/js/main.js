@@ -109,20 +109,20 @@ $(document).ready(() => {
         console.log(`donate-amount clicked ${id}`)
     });
 
-    $('#country').change(function (e) {
+    $('#country').change((e) => {
         console.log(this)
         console.log(`country changed ${this.value}`)
         $('#country-code').text(`(+${this.value})`)
     });
 
-    $('#contact-country').change(function (e) {
+    $('#contact-country').change((e) => {
         console.log(this)
         console.log(`country changed ${this.value}`)
         $('#contact-country-code').text(`(+${this.value})`)
     });
 })
 
-function isorgClicked() {
+const isorgClicked = () => {
     if( $('#isorg').is(':checked') ){
         $('#lbIsOrg i').addClass('fa-solid fa-square-xmark red');
         $('#lbIsOrg i').removeClass('fa-regular fa-square-check green');
@@ -132,7 +132,7 @@ function isorgClicked() {
     }
 }
 
-function setCountries(countries) {
+const setCountries = (countries) => {
 
     $('#country').empty();
     $('#contact-country').empty();
@@ -149,7 +149,7 @@ function setCountries(countries) {
     $('#contact-country').val('00').change();
 }
 
-function setSubjects(subjects) {
+const setSubjects = (subjects) => {
     
     $('#contact-subjects').empty();
 
@@ -158,9 +158,34 @@ function setSubjects(subjects) {
     });
 }
 
-function activateMenu(menu) {
+const activateMenu = (menu) => {
     $('.nav_links>li.active').removeClass('active');
     $(`#${menu}`).addClass('active');
+}
+
+let zipmenu = document.querySelector('#zip_menu');
+let navbar = document.querySelector('.nav_links');
+
+const showMenu = () => {
+    // alert('meun clicked');
+    zipmenu.classList.toggle('fa-xmark');
+    navbar.classList.toggle('active');
+}
+
+/* ---------------------------------------------- scroll -------------------------------------- */
+
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header .nav_links a');
+
+console.log(navLinks);
+for (var i = 0; i < navLinks.length ; i++) {
+    navLinks[i].addEventListener("click", 
+        function (event) {
+            // event.preventDefault();
+            zipmenu.classList.remove('fa-xmark');
+            navbar.classList.remove('active');
+        },
+        false);
 }
 
 let valueDisplays = document.querySelectorAll('.count');
@@ -178,6 +203,4 @@ valueDisplays.forEach((value) => {
             clearInterval(counter)
         }
     }, duration)
-
-    console.log(end)
 })

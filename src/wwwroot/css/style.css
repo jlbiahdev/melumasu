@@ -172,22 +172,26 @@ section h2 {
 /* ---------------------------------------------- nav --------------------------------------------- */
 
 .nav-container {
-    background: transparent;
+    background: rebeccapurple;
     width: 100%;
-    transition: 1s ease;
 }
 
-.nav {
+nav {
     display: grid;
     grid-template-areas: "nav-header nav-header nav-header";
+    /* background: green; */
 }
 
 .logo {
     grid-area: "nav-header";
+    margin: 0;
+    padding: 0;
 }
 
 .logo img {
     height: 7rem;
+    margin: 0;
+    padding: 0;
 }
 
 .navs {
@@ -236,16 +240,50 @@ header .fa-times, header .fa-bars {
 
 /* ---------------------------------------------- medias ------------------------------------------ */
 
-@media screen and (max-width: 1500px){
-}
+@media screen and (max-width: 1200px){
 
-@media screen and (max-width: 680px){
-}
+    header {
+        background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, .5)), url(../img/children01.jpg);
+        background-color: var(--dark-color);
+    }
 
-@media screen and (max-width: 600px){
-}
+    .nav-container .container {
+        width: 100%;
+        background: #000;
+    }
+    
+    nav {
+        display: flex;
+        /* background-color: var(--dark-color); */
+        width: 100%;
+    }
 
-@media screen and (max-width: 420px){
+    nav .zip_menu {
+        display: block;
+        color: var(--white-color);
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+
+    .nav_links {
+        text-align: left;
+        display: none;
+    }
+
+    .nav_links.active {
+        display: block;
+    }
+
+    .nav_links li {
+        display: block;
+        padding: .3rem;
+        margin: .5rem;
+    }
+
+    .nav_links a {
+        text-transform: capitalize;
+    }
 }
 
 /* ---------------------------------------------- hero -------------------------------------------- */
@@ -324,13 +362,6 @@ header .fa-times, header .fa-bars {
     .hero-center img {
         width: 0;
     }
-}
-
-@media screen and (max-width: 1260px){
-
-}
-
-@media screen and (max-width: 420px){
 }
 
 /* ---------------------------------------------- task -------------------------------------------- */
