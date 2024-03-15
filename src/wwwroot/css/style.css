@@ -219,7 +219,7 @@ nav {
     transition: 1s ease-out;
 }
 
-.nav_links li:hover {
+.nav_links li:hover:not(:last-child) {
     background-color: var(--primary-color);
 }
 
@@ -232,6 +232,12 @@ nav {
 
 .nav_links li.active {
     background-color: var(--primary-color);
+}
+
+.donate-link {
+    background-color: var(--primary-color) !important;
+    border: 1px solid var(--white-color);
+    border-radius: 2px;
 }
 
 header .fa-times, header .fa-bars {
