@@ -137,184 +137,186 @@
                 </div>
             </section>
 
-            <!-- <section class="section-donate" id="section-donate"> -->
-                <!-- <div class="donate-header">
-                    <h2>faites un don</h2>
-                    <p>
-                        En tant qu’organisme reconnu d’intérêt général, Zuane, association déclarée sous le numéro WXXXXXXXXX,  délivre un reçu fiscal pour chaque don.
-                    </p>
-                    <p>
-                        Pour chaque don versé à notre association, vous pouvez bénéficier d’une réduction d’impôt jusqu’à 66% du montant de votre don.
-                    </p>
-                </div> -->
-
-                <!-- <form action="">
-                    <div class="donation">
-                        <div class="header">Je donne</div>
-                        <fieldset>
-                            <div class="times">
-                                <span class="donate-one donate-times-checked">
-                                    <label for="one" class="radio-options">
-                                        <input type="radio" name="donate-times" id="one" class="custom-radio">Une fois
-                                    </label>
-                                </span>
-                                <span class="donate-repeat">
-                                    <label for="repeat" class="radio-options">
-                                        <input type="radio" name="donate-times" id="repeat" class="custom-radio">Chaque mois
-                                    </label>
-                                </span>
-                            </div>
-
-                            <div class="amount-container">
-                                <div class="amount">
-                                    <label id="amount-mnt1" for="mnt1" class="radio-options">
-                                        <input type="radio" name="donate-amount" id="mnt1" class="custom-radio">80€
-                                    </label>
-                                    <label id="amount-mnt2" for="mnt2" class="radio-options">
-                                        <input type="radio" name="donate-amount" id="mnt2" class="custom-radio">120€
-                                    </label>
-                                    <label id="amount-mnt3" for="mnt3" class="radio-options">
-                                        <input type="radio" name="donate-amount" id="mnt3" class="custom-radio">180€
-                                    </label>
-                                    <label id="amount-mnt4" for="mnt4" class="radio-options hide">
-                                        <input type="radio" name="donate-amount" id="mnt4" class="custom-radio">10€
-                                    </label>
-                                    <label id="amount-mnt5" for="mnt5" class="radio-options hide">
-                                        <input type="radio" name="donate-amount" id="mnt5" class="custom-radio">15€
-                                    </label>
-                                    <label id="amount-mnt6" for="mnt6" class="radio-options hide">
-                                        <input type="radio" name="donate-amount" id="mnt6" class="custom-radio">20€
-                                    </label>
-                                    <label id="amount-mnt7" for="mnt7" class="radio-options amount-checked">
-                                        <input type="radio" name="donate-amount" id="mnt7" class="custom-radio">Libre
-                                    </label>
-                                </div>
-
-                            </div>
-                            <div class="free-amount">
-                                <div class="icon-relative">
-                                    <i class="fas fa-solid fa-euro-sign"></i>
-                                    <input type="number" id="free-amount" placeholder="Montant libre">
-                                </div>
-                            </div>
-                        </fieldset>
+            <section class="section-donate" id="section-donate">
+                <div class="container">
+                    <div class="donate-header">
+                        <h2>faites un don</h2>
+                        <p>
+                            En tant qu’organisme reconnu d’intérêt général, Zuane, association déclarée sous le numéro WXXXXXXXXX,  délivre un reçu fiscal pour chaque don.
+                        </p>
+                        <p>
+                            Pour chaque don versé à notre association, vous pouvez bénéficier d’une réduction d’impôt jusqu’à 66% du montant de votre don.
+                        </p>
                     </div>
-
-                    <div class="coordonates">
-                        <div class="header">Mes coordonées</div>
-                        <fieldset>
-                            <div class="card icon-relative">
-                                <input type="text" id="email" placeholder="Email*">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="card-grp space">
-                                <label id="lbIsOrg" for="isorg" class="check-options" onclick="isorgClicked()">
-                                    <i class="fa-solid fa-square-xmark red"></i>
-                                    Je fais un don au nom d'une organisation ou d'une société
-                                    <input type="checkbox" name="isorg" id="isorg" class="custom-check">
-                                </label>
-                            </div>
-                            <div class="card-grp space">
-                                <label class="label-select space-r">
-                                    <select id="civility" class="civility">
-                                        <option value="0" selected="selected">Civilité *</option>
-                                        <option value="1">M</option>
-                                        <option value="2">Mme</option>
-                                        <option value="3">M & Mme</option>
-                                    </select>    
-                                </label>
-                                <input type="text" id="firstname" placeholder="Prénom *">
-                            </div>
-                            <div class="card space">
-                                <input type="text" id="lastname" placeholder="Nom*">
-                            </div>
-                            <div class="card space">
-                                <input type="text" id="address" placeholder="Adresse*">
-                            </div>
-                            <div class="card space">
-                                <input type="text" id="compaddress" placeholder="Complément d'adresse">
-                            </div>
-                            <div class="card space">
-                                <input type="text" id="zipcode" placeholder="Code postal*">
-                            </div>
-                            <div class="card space">
-                                <input type="text" id="city" placeholder="Ville*">
-                            </div>
-                            <div class="card space">
-                                <label class="label-select">
-                                    <select id="country" class="country">
-                                    </select>
-                                </label>
-                            </div>
-                            <div class="card-grp space">
-                                <label for="phonenumber" id="country-code" class="country-code">(00)</label>
-                                <input type="tel" id="phonenumber" placeholder="Téléphone">
-                            </div>
-                        </fieldset>
-                    </div>
-
-                    <div class="payment">
-                        <div class="header">Mon paiement</div>
-                        <fieldset class="">
-                            <div class="paymentmethods">
-                                
-                                <label id="check-bank" for="bank" class="radio-options hide">
-                                    <i class="fa-solid fa-building-columns"></i>
-                                    <input type="radio" name="payment-method" id="bank" class="custom-radio" checked>
-                                    <span class="checkmark"></span>
-                                </label>
-
-                                <label for="credit-card" class="radio-options">
-                                    <i class="fa-solid fa-credit-card green"></i>
-                                    <input type="radio" name="payment-method" id="credit-card" class="custom-radio" checked>
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="paypal" class="radio-options">
-                                    <i class="fa-brands fa-paypal"></i>
-                                    <input type="radio" name="payment-method" id="paypal" class="custom-radio">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="money-check" class="radio-options">
-                                    <i class="fa-solid fa-money-check"></i>
-                                    <input type="radio" name="payment-method" id="money-check" class="custom-radio">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <div class="creditcardbox">
-                                <div class="card space icon-relative">
-                                    <input type="text" class="input" placeholder="Card holder">
-                                    <i class="fas fa-user"></i>
+    
+                    <form action="">
+                        <div class="donation">
+                            <div class="header">Je donne</div>
+                            <fieldset>
+                                <div class="times">
+                                    <span class="donate-one donate-times-checked">
+                                        <label for="one" class="radio-options">
+                                            <input type="radio" name="donate-times" id="one" class="custom-radio">Une fois
+                                        </label>
+                                    </span>
+                                    <span class="donate-repeat">
+                                        <label for="repeat" class="radio-options">
+                                            <input type="radio" name="donate-times" id="repeat" class="custom-radio">Chaque mois
+                                        </label>
+                                    </span>
                                 </div>
-                                <div class="card space icon-relative">
-                                    <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
-                                    <i class="far fa-credit-card"></i>
+    
+                                <div class="amount-container">
+                                    <div class="amount">
+                                        <label id="amount-mnt1" for="mnt1" class="radio-options">
+                                            <input type="radio" name="donate-amount" id="mnt1" class="custom-radio">80€
+                                        </label>
+                                        <label id="amount-mnt2" for="mnt2" class="radio-options">
+                                            <input type="radio" name="donate-amount" id="mnt2" class="custom-radio">120€
+                                        </label>
+                                        <label id="amount-mnt3" for="mnt3" class="radio-options">
+                                            <input type="radio" name="donate-amount" id="mnt3" class="custom-radio">180€
+                                        </label>
+                                        <label id="amount-mnt4" for="mnt4" class="radio-options hide">
+                                            <input type="radio" name="donate-amount" id="mnt4" class="custom-radio">10€
+                                        </label>
+                                        <label id="amount-mnt5" for="mnt5" class="radio-options hide">
+                                            <input type="radio" name="donate-amount" id="mnt5" class="custom-radio">15€
+                                        </label>
+                                        <label id="amount-mnt6" for="mnt6" class="radio-options hide">
+                                            <input type="radio" name="donate-amount" id="mnt6" class="custom-radio">20€
+                                        </label>
+                                        <label id="amount-mnt7" for="mnt7" class="radio-options amount-checked">
+                                            <input type="radio" name="donate-amount" id="mnt7" class="custom-radio">Libre
+                                        </label>
+                                    </div>
+    
+                                </div>
+                                <div class="free-amount">
+                                    <div class="inline-label">
+                                        <input type="number" id="free-amount" placeholder="Montant libre">
+                                        <span id="contact-country-code" class="contact-country-code">€</span>
+                            </div>
+                                </div>
+                            </fieldset>
+                        </div>
+    
+                    <!--     <div class="coordonates">
+                            <div class="header">Mes coordonées</div>
+                            <fieldset>
+                                <div class="card icon-relative">
+                                    <input type="text" id="email" placeholder="Email*">
+                                    <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="card-grp space">
-                                    <div class="card-item icon-relative" id="expirydate">
-                                        <input type="text" name="expiry-date" id="expiry-date" class="input" data-mask="00 / 00"  placeholder="Expiry date">
-                                        <i class="far fa-calendar-alt"></i>
-                                    </div>
-                                    <div class="card-item icon-relative">
-                                        <input type="text" class="input" data-mask="000" placeholder="CVC">
-                                        <i class="fas fa-lock"></i>
-                                    </div>
+                                    <label id="lbIsOrg" for="isorg" class="check-options" onclick="isorgClicked()">
+                                        <i class="fa-solid fa-square-xmark red"></i>
+                                        Je fais un don au nom d'une organisation ou d'une société
+                                        <input type="checkbox" name="isorg" id="isorg" class="custom-check">
+                                    </label>
                                 </div>
-                            </div>
-                            <div class="ibanbox">
+                                <div class="card-grp space">
+                                    <label class="label-select space-r">
+                                        <select id="civility" class="civility">
+                                            <option value="0" selected="selected">Civilité *</option>
+                                            <option value="1">M</option>
+                                            <option value="2">Mme</option>
+                                            <option value="3">M & Mme</option>
+                                        </select>    
+                                    </label>
+                                    <input type="text" id="firstname" placeholder="Prénom *">
+                                </div>
                                 <div class="card space">
-                                    <input type="text" id="iban" class="input" placeholder="Votre numéro IBAN">
+                                    <input type="text" id="lastname" placeholder="Nom*">
                                 </div>
                                 <div class="card space">
-                                    <input type="text" id="bic" class="input" placeholder="Votre code BIC">
+                                    <input type="text" id="address" placeholder="Adresse*">
                                 </div>
-
-                            </div>
-                            <input type="submit" class="btn" value="Valider" >
-                        </fieldset>
-                    </div>
-                        
-                </form> -->
-            <!-- </section> -->
+                                <div class="card space">
+                                    <input type="text" id="compaddress" placeholder="Complément d'adresse">
+                                </div>
+                                <div class="card space">
+                                    <input type="text" id="zipcode" placeholder="Code postal*">
+                                </div>
+                                <div class="card space">
+                                    <input type="text" id="city" placeholder="Ville*">
+                                </div>
+                                <div class="card space">
+                                    <label class="label-select">
+                                        <select id="country" class="country">
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="card-grp space">
+                                    <label for="phonenumber" id="country-code" class="country-code">(00)</label>
+                                    <input type="tel" id="phonenumber" placeholder="Téléphone">
+                                </div>
+                            </fieldset>
+                        </div>
+    
+                        <div class="payment">
+                            <div class="header">Mon paiement</div>
+                            <fieldset class="">
+                                <div class="paymentmethods">
+                                    
+                                    <label id="check-bank" for="bank" class="radio-options hide">
+                                        <i class="fa-solid fa-building-columns"></i>
+                                        <input type="radio" name="payment-method" id="bank" class="custom-radio" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+    
+                                    <label for="credit-card" class="radio-options">
+                                        <i class="fa-solid fa-credit-card green"></i>
+                                        <input type="radio" name="payment-method" id="credit-card" class="custom-radio" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label for="paypal" class="radio-options">
+                                        <i class="fa-brands fa-paypal"></i>
+                                        <input type="radio" name="payment-method" id="paypal" class="custom-radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label for="money-check" class="radio-options">
+                                        <i class="fa-solid fa-money-check"></i>
+                                        <input type="radio" name="payment-method" id="money-check" class="custom-radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="creditcardbox">
+                                    <div class="card space icon-relative">
+                                        <input type="text" class="input" placeholder="Card holder">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="card space icon-relative">
+                                        <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
+                                        <i class="far fa-credit-card"></i>
+                                    </div>
+                                    <div class="card-grp space">
+                                        <div class="card-item icon-relative" id="expirydate">
+                                            <input type="text" name="expiry-date" id="expiry-date" class="input" data-mask="00 / 00"  placeholder="Expiry date">
+                                            <i class="far fa-calendar-alt"></i>
+                                        </div>
+                                        <div class="card-item icon-relative">
+                                            <input type="text" class="input" data-mask="000" placeholder="CVC">
+                                            <i class="fas fa-lock"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ibanbox">
+                                    <div class="card space">
+                                        <input type="text" id="iban" class="input" placeholder="Votre numéro IBAN">
+                                    </div>
+                                    <div class="card space">
+                                        <input type="text" id="bic" class="input" placeholder="Votre code BIC">
+                                    </div>
+    
+                                </div>
+                                <input type="submit" class="btn" value="Valider" >
+                            </fieldset>
+                        </div> -->
+                            
+                    </form>
+                </div>
+            </section>
 
             <section id="section-numbers" class="section-numbers">
                 <h2>quelques chiffres</h2>
