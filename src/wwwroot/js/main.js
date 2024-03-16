@@ -1,13 +1,18 @@
+const AMOUNT_CHECKBOX_PREFIX = 'amount-';
+const NUMBERS_DISPLAY_INTERVAL = 5000;
 
 $(document).ready(() => {
 
+/* ---------------------------------------------- data initialization ----------------------------- */
     const countries = initCountries();
     const mailSubjects = initSubjects();
 
-    // console.log(countries);
 
+    // console.log(countries);
     setCountries(countries);
     setSubjects(mailSubjects);
+
+/* ---------------------------------------------- events initialization --------------------------- */
     $('input[name^=payment-method]').change((e) => {
         const id = e.target.id;
         
@@ -35,7 +40,7 @@ $(document).ready(() => {
                 break;
         }
 
-        console.log(`radio-options clicked ${id}`)
+        // console.log(`radio-options clicked ${id}`)
     });
 
     $('input[name^=donate-times]').change((e) => {
@@ -106,7 +111,8 @@ $(document).ready(() => {
                 $('.free-amount').removeClass('show');
                 break;
         }
-        console.log(`donate-amount clicked ${id}`)
+        console.log(`donate-amount ${id} checked: ${$(`#${id}`).val()}`);
+        console.log($('input[name="donate-amount"]:checked').val());
     });
 
     $('#country').change(function (e) {
@@ -120,7 +126,34 @@ $(document).ready(() => {
         console.log(`country changed ${this.value}`)
         $('#contact-country-code').text(`(+${this.value})`)
     });
+
+    $('.check-box').click(function (e) {
+        getChecked('before');
+
+        var checked_item = `#${AMOUNT_CHECKBOX_PREFIX}${$('input[name="donate-amount"]:checked').attr('id')}`;
+        console.log(`checked_item ${checked_item}`)
+        $(`${checked_item} i`).removeClass('fa-circle-check green');
+        $(`${checked_item} i`).addClass('fa-circle-minus red');
+        $(`${checked_item}`).prop("checked", false);
+
+        var this_id = `#${this.id}`
+        $(`${this_id} i`).removeClass('fa-circle-minus red');
+        $(`${this_id} i`).addClass('fa-circle-check green');
+
+        let id = this.id.substring(AMOUNT_CHECKBOX_PREFIX.length);
+        $(`#${id}`).prop("checked", true);
+        
+        getChecked('after');
+    });
 })
+
+const getChecked = (when) => {
+    console.log(`checked ${when}`);
+
+    var checked_item = $('input[name="donate-amount"]:checked')
+    console.log(`Checked name(${checked_item.attr('id')}), value (${checked_item.val()})`);
+    // checked_item.prop("checked", false);
+}
 
 const isorgClicked = () => {
     if( $('#isorg').is(':checked') ){
@@ -158,24 +191,24 @@ const setSubjects = (subjects) => {
     });
 }
 
+/* ---------------------------------------------- MENU -------------------------------------------- */
+const zipmenu = document.querySelector('#zip_menu');
+const navbar = document.querySelector('.nav_links');
+
 const activateMenu = (menu) => {
     $('.nav_links>li.active').removeClass('active');
     $(`#${menu}`).addClass('active');
 }
 
-let zipmenu = document.querySelector('#zip_menu');
-let navbar = document.querySelector('.nav_links');
-
 const showMenu = () => {
-    // alert('meun clicked');
     zipmenu.classList.toggle('fa-xmark');
     navbar.classList.toggle('active');
 }
 
-/* ---------------------------------------------- scroll -------------------------------------- */
+/* ---------------------------------------------- scroll ------------------------------------------ */
 
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header .nav_links a');
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header .nav_links a');
 
 console.log(navLinks);
 for (var i = 0; i < navLinks.length ; i++) {
@@ -188,13 +221,12 @@ for (var i = 0; i < navLinks.length ; i++) {
         false);
 }
 
-let valueDisplays = document.querySelectorAll('.count');
-let interval = 5000;
+const valueDisplays = document.querySelectorAll('.count');
 
 valueDisplays.forEach((value) => {
     let start = 0
     let end = parseInt(value.getAttribute('data-val'))
-    let duration = Math.floor(interval / end);
+    let duration = Math.floor(NUMBERS_DISPLAY_INTERVAL / end);
     let counter = setInterval(() => {
         start++;
         value.textContent = start;

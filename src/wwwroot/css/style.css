@@ -232,6 +232,40 @@ form fieldset {
 .show { display: block; }
 
 /* radios & checks ------------------------------ */
+.check-box {
+    position: relative;
+    background-color: var(--white-color);
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 4.2em;
+    border: 1px solid transparent;
+    transition: .7s ease all .2s;
+}
+
+.check-box i {
+    left: 2px;
+    top: 2px;
+    position: absolute;
+    font-size: 1rem;
+    transition: .5s ease all .3s;
+}
+
+.check-box:hover {
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+
+.check-box:hover i {
+    font-size: 1.1rem;
+}
+
+.check-box div {
+    font-size: .8rem;
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+
 .radio-options {
     font-size: .9em;  
     margin: 0 0.5rem;
@@ -820,6 +854,8 @@ hr {
     grid-column: 2;
     grid-row: 1 / 3;
     width: 100%;
+ 
+    border: 1px solid blue ;
 }
 
 .section-donate .header {
@@ -859,9 +895,9 @@ hr {
         width: 90%;
     }
 
-    .section-donate form {
+    /* .section-donate form {
         display: flex;
-    }
+    } */
 }
 
 @media screen and (max-width: 750px){
@@ -922,15 +958,23 @@ hr {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    width: 100%;
+    padding: 1rem 0;
+    /* background: red; */
+    /* border: 1px solid red; */
 }
 
 .amount label {
     background-color: var(--white-color);
-    padding: 1rem;
+    padding: 0;
+    padding-top: .6rem;
+    justify-items: center;
+    width: 3rem;
+    height: 100%;
+
     font-size: .7rem;
     font-weight: 600;
-    /* width: 4rem; */
+
+    transition: 1s ease all;
 }
 
 .amount label:hover {
@@ -1006,11 +1050,6 @@ hr {
     grid-column: 2/3;
     grid-row: 1/ span 3;
 }
-
-/* .country-code, .contact-country-code {
-    background: #eee;
-    padding: .5rem;
-} */
 
 .civil select {
     width: 90%;
