@@ -109,13 +109,13 @@ $(document).ready(() => {
         console.log(`donate-amount clicked ${id}`)
     });
 
-    $('#country').change((e) => {
+    $('#country').change(function (e) {
         console.log(this)
         console.log(`country changed ${this.value}`)
         $('#country-code').text(`(+${this.value})`)
     });
 
-    $('#contact-country').change((e) => {
+    $('#contact-country').change(function (e) {
         console.log(this)
         console.log(`country changed ${this.value}`)
         $('#contact-country-code').text(`(+${this.value})`)

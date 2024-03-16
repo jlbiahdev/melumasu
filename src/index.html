@@ -137,8 +137,8 @@
                 </div>
             </section>
 
-            <section class="section-donate" id="section-donate">
-                <div class="donate-header">
+            <!-- <section class="section-donate" id="section-donate"> -->
+                <!-- <div class="donate-header">
                     <h2>faites un don</h2>
                     <p>
                         En tant qu’organisme reconnu d’intérêt général, Zuane, association déclarée sous le numéro WXXXXXXXXX,  délivre un reçu fiscal pour chaque don.
@@ -146,9 +146,9 @@
                     <p>
                         Pour chaque don versé à notre association, vous pouvez bénéficier d’une réduction d’impôt jusqu’à 66% du montant de votre don.
                     </p>
-                </div>
+                </div> -->
 
-                <form action="">
+                <!-- <form action="">
                     <div class="donation">
                         <div class="header">Je donne</div>
                         <fieldset>
@@ -313,8 +313,8 @@
                         </fieldset>
                     </div>
                         
-                </form>
-            </section>
+                </form> -->
+            <!-- </section> -->
 
             <section id="section-numbers" class="section-numbers">
                 <h2>quelques chiffres</h2>
@@ -368,49 +368,62 @@
 
             <section id="section-contact" class="section-contact">
                 <h2>contactez-nous</h2>
-                <form action="" class="contact-form">
-                    <div class="card-grp space">
-                        <label class="label-select civil space-r">
-                            <select id="contact-civil" class="contact-civil">
-                                <option value="0" selected="selected">Civilité *</option>
-                                <option value="1">M</option>
-                                <option value="2">Mme</option>
-                                <option value="3">M & Mme</option>
-                            </select>    
-                        </label>
-                        <input type="text" id="contact-firstname" class="space-r" placeholder="Prénom *">
-                        <input type="text" id="contact-lastname" placeholder="Nom*">
-                    </div>
-                    <div class="card-grp space">
-                        <input type="text" id="contact-email" class="space-r" placeholder="Email*">
-                        <input type="text" id="contact-email-confirmed" placeholder="Confirmez l'email*">
-                    </div>
-                    <div class="card-grp space">
-                        <input type="text" id="contact-address" placeholder="Adresse*">
-                    </div>
-                    <div class="card-grp space">
-                        <input type="text" id="contact-city" class="space-r" placeholder="Ville*">
-                        <input type="text" id="contact-zipcode" placeholder="Code postal*">
-                    </div>
-                    <div class="card-grp space">
-                        <label class="label-select space-r">
-                            <select id="contact-country" class="contact-country">
-                            </select>
-                        </label>
-                        <label for="contact-phonenumber" id="contact-country-code" class="contact-country-code">(00)</label>
-                        <input type="tel" id="contact-phonenumber" placeholder="Téléphone">
-                    </div>
-                    <div class="card space">
-                        <label class="label-select">
-                            <select id="contact-subjects" class="contact-subjects">
-                            </select>
-                        </label>
-                    </div>
-                    <div class="card">
-                        <textarea id="msg-body" cols="30" rows="10" class="form-control" placeholder="Message*" aria-label="With textarea"></textarea>
-                    </div>
-                    <input type="submit" class="btn" value="Envoyer" >
-                </form>
+                <h3>Nos équipes sont disponibles pour répondre à toutes vos interrogations.</h3>
+                <div class="contact-form">
+                    <form class="">
+                        <!-- <div class="card-grp space"> -->
+                        <div class="input-group">
+                            <!-- <label class="label-select space-r"> -->
+                                <select id="contact-civil" class="contact-civil">
+                                    <option value="0" selected="selected">Civilité *</option>
+                                    <option value="1">M</option>
+                                    <option value="2">Mme</option>
+                                    <option value="3">M & Mme</option>
+                                </select>    
+                            <!-- </label> -->
+                            <input type="text" id="contact-firstname" class="space-r" placeholder="Prénom *">
+                            <input type="text" id="contact-lastname" placeholder="Nom*">
+                        </div>
+                        <!-- <div class="card-grp space"> -->
+                        <div class="input-group">
+                            <input type="text" id="contact-email" class="space-r" placeholder="Email*">
+                            <input type="text" id="contact-email-confirmed" placeholder="Confirmez l'email*">
+                        </div>
+                        <!-- <div class="card-grp space"> -->
+                        <div class="input-group">
+                            <input type="text" id="contact-address" placeholder="Adresse*">
+                        </div>
+                        <!-- <div class="card-grp space"> -->
+                        <div class="input-group space">
+                            <input type="text" id="contact-city" class="space-r" placeholder="Ville*">
+                            <input type="text" id="contact-zipcode" placeholder="Code postal*">
+                        </div>
+                        <!-- <div class="card-grp space"> -->
+                        <div class="input-group space">
+                            <!-- <label class="label-select space-r"> -->
+                                <select id="contact-country" class="contact-country">
+                                </select>
+                            <!-- </label> -->
+                            <div class="inline-label">
+                                <input type="tel" id="contact-phonenumber" placeholder="Téléphone">
+                                <span id="contact-country-code" class="contact-country-code">(00)</span>
+                            </div>
+                        </div>
+                        <div class="input-gap">
+                            <!-- <label class="label-select"> -->
+                                <select id="contact-subjects" class="contact-subjects">
+                                </select>
+                            <!-- </label> -->
+                        </div>
+                        <div class="input-gap">
+                            <textarea id="msg-body" cols="30" rows="10" class="form-control" placeholder="Message*" aria-label="With textarea"></textarea>
+                        </div>
+    
+                        <div class="form-submit">
+                            <a class="btn" onclick="sendEmail();">Envoyer</a>
+                        </div>
+                    </form>
+                </div>
             </section>
         </div>
 
@@ -454,7 +467,7 @@
                 <h4>Je m'abonne à la newsletter</h4>
                 <div class="form">
                     <input type="text" id="newsletter-mail" placeholder="Votre Email*">
-                    <a class="btn">Souscrire</a>
+                    <a class="btn" onclick="subscribe();">Souscrire</a>
                 </div>
             </div>
             <div class="address addfrance">

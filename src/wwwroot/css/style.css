@@ -25,19 +25,24 @@
 }
 
 /* ---------------------------------------------- tags -------------------------------------------- */
+/* * {border:1px solid red; } */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	overflow-x: hidden;
+}
 
 html,
 body {
-    margin: 0;
-    padding: 0;
 	color: var(--text-color);
     background-color: #f8edeb;
 	font-family: 'Lato', 'Arial', sans-serif;
-	font-weight: 300;
-	font-size: 20px;
+	/* font-weight: 300;
+	font-size: 20px; */
 	text-rendering: optimizeLegibility;
-	overflow-x: hidden;
-    box-sizing: border-box;
+    width: 100%;
 }
 
 body {
@@ -59,44 +64,85 @@ header {
 }
 
 p {
-    text-indent: 50px;
+    text-indent: 2rem;
 }
-  
-input, textarea {
-    padding: .5rem 0;
+
+i { overflow: hidden; }
+
+input {
+    padding: .5rem;
+    margin: 0;
     width: 100%;
-    text-align: center;
-    border: none;
-    letter-spacing: 1px;
-    word-spacing: 3px;
-    outline: none;
-    font-size: .9rem;
+
     color: var(--text-color);
+    font-size: .8rem;
+    text-align: left;
+
+    border: .7px solid #8d99ae;
+    outline: none;
+
+    transition: 1s ease all;
+}
+
+input[type="text"] {
+    position: relative;
+}
+
+input[type="radio"].custom-radio {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="checkbox"].custom-check {
+    display: none;
+    margin: 0;
+    padding: 0;
 }
 
 textarea {
+    padding: .3rem;
+    margin: 0;
+    width: 100%;
+
+    color: var(--text-color);
+    font-size: .8rem;
+    text-align: left;
+
+    border: .7px solid #8d99ae;
     resize: none;
+    outline: none;
+
+    transition: 1s ease all;
 }
 
 select {
+    padding: .3rem;
+    margin: 0;
     width: 100%;
-    padding: 4px;
-    height: 2.2rem;
-    background: #fff;
-    color: var(--text-color);
-    border: none;
+
+    font-size: .8rem;
+
+    background: var(--white-color);
+
+    border: .7px solid #8d99ae;
     outline: none;
-    font-size: .9rem;
-    display: inline-block;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     cursor: pointer;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color);
 }
 
 section {
     text-align: center;
-    padding-bottom: 70px;
+    margin-bottom: 5rem;
+    overflow: hidden;
+}
+
+.sections {
+    margin: 0;
+    padding: 0;
 }
 
 section h2 {
@@ -104,6 +150,16 @@ section h2 {
     text-transform: capitalize;
 }
 
+form {
+    width: 100%;
+}
+
+form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
 
 @media screen and (max-width: 375px){
     section h2 {
@@ -167,6 +223,96 @@ section h2 {
     text-align: center;
     color: var(--light-color);
     cursor: pointer;
+}
+
+/* ---------------------------------------------- custom tags ------------------------------------- */
+
+.hide { display: none; }
+
+.show { display: block; }
+
+/* radios & checks ------------------------------ */
+.radio-options {
+    font-size: .9em;  
+    margin: 0 0.5rem;
+    text-transform: capitalize;
+}
+
+.check-options {
+    margin: 0 0.5rem;
+    padding: 1rem;
+}
+
+.check-options:hover, .radio-options:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* associations --------------------------------- */
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.input-group, .input-gap {
+    padding-bottom: .5rem;
+}
+
+.inline-label {
+    position: relative;
+    font-size: .8rem;
+    width: 100%;
+}
+
+.inline-label input {
+    padding-left: 4rem;
+}
+
+.inline-label span {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+
+    margin: 0;
+    padding: 0;
+    font-family : inherit;
+    font-size: .7rem;
+    background: transparent;
+ 
+    /* border: 1px solid red; */
+}
+
+/* .card-item {
+    width: 48%;
+} */
+
+/* .space {
+    margin-bottom: 20px;
+} */
+
+.space-r { margin-right: .1rem;}
+
+/* .icon-relative {
+    position: relative;
+}
+
+.icon-relative .fas,
+.icon-relative .far{
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    font-size: 20px;
+    color: var(--text-color);
+} */
+
+@media screen and (max-width: 420px){
+
+    .inline-label span {
+        left: 5px;
+        top: 6px;
+    }
 }
 
 /* ---------------------------------------------- nav --------------------------------------------- */
@@ -246,7 +392,7 @@ header .fa-times, header .fa-bars {
 
 /* ---------------------------------------------- medias ------------------------------------------ */
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1320px){
 
     header {
         background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, .5)), url(../img/children01.jpg);
@@ -298,6 +444,7 @@ header .fa-times, header .fa-bars {
     display: grid;
     grid-template-columns: repeat(3, 22rem);
     justify-content: space-between;
+    margin: 5rem 0;
     /* background-color: purple; */
 }
 
@@ -402,7 +549,7 @@ header .fa-times, header .fa-bars {
     transition: 1s;
 }
 
-.task-title,.task-desc  {
+.task-title, .task-desc  {
     color: var(--white-color);
     width: 80%;
     position: absolute;
@@ -519,8 +666,6 @@ hr {
 }
 
 @media screen and (max-width: 750px){
-
-
     .task-desc p {
         font-size: .9rem;
     }
@@ -529,9 +674,9 @@ hr {
 @media screen and (max-width: 600px){
 
     .tasks {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: .5rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .task-title {
@@ -640,170 +785,124 @@ hr {
 /* ---------------------------------------------- section-donate ---------------------------------- */
 
 .section-donate {
-    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3)), url(../img/children06.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 91vh;
-    padding: 3rem;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3)), url(../img/children06.jpg); */
+    /* background-position: center;
+    background-size: cover; */
+    background-color: greenyellow;
+    /* overflow: scroll; */
+    height: auto;
+    /* width: 100%;
 
     font-size: .8rem;
     letter-spacing: .7px;
-    word-spacing: 3px;
+    word-spacing: 3px; */
 
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); */
+    /* padding: 3rem; */
+
+    /* border: 3px solid rebeccapurple;
+    margin-right: 1rem; */
 }
 
-.section-donate form {
+/* .section-donate form {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    justify-content: space-evenly;
     gap: 1rem;
 
     grid-column: 2/ span 3;
     grid-row: 1 / span 2;
-}
+} */
 
-.section-donate fieldset {
-    border: none;
-}
-
-.section-donate .header {
+/* .section-donate .header {
     background-color: var(--secondary-color);
     color: var(--white-color);
     padding: 1rem;
     font-size: 1.4rem;
     font-weight: 600;
-}
+} */
 
-/* ---------------------------------------------- donate ------------------------------------------ */
 .donate-header {
     background-color: var(--white-color);
-    margin: 3rem;
+    /* margin: 3rem; */
     padding: .5rem;
     grid-column: 1/2;
     grid-row: 2/ 3;
+    opacity: .7;
 }
 
 .donate-header p {
     text-align: left;
 }
 
-.hide { display: none; }
-
-.show { display: block; }
-
-.radio-options {
-    font-size: .9em;  
-    margin: 0 0.5rem;
-    text-transform: capitalize;
-}
-
-.check-options {
-    margin: 0 0.5rem;
-    padding: 1rem;
-}
-
-.check-options:hover, .radio-options:hover {
-    color: var(--secondary-color);
-    cursor: pointer;
-}
-
-.form .label{
-    display: block;
-    color: var(--text-color);
-    margin-bottom: 6px;
-}
-
-.label-select:after {
-    content: "<>";
-    font: 11px "Consolas", monospace;
-    color: #666;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    right: 8px;
-    top: 15px;
-    /* padding: 1rem 0 2px; */
-    padding-top: 3px;
-    padding-left: 3px;
-    padding-right: 4px;
-    background-color: #ddd;
-    padding-bottom: 3px;
-    position: absolute;
-    pointer-events: none;
-}
-
-.label-select:before {
-    content: "";
-    right: 6px;
-    top: 0px;
-    background: #eee;
-    position: absolute;
-    pointer-events: none;
-    display: block;
-}
-
-.label-select {
-    position: relative;
-    width: 50%;
-}
-
-.paymentmethods {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 1rem;
-}
-
-.paymentmethods i {
-    font-size: 2rem;
-    transition: 1s ease;
-}
-
-.card-grp {
-    display: flex;
-    justify-content: space-between;
-}
-
-.card-item {
-    width: 48%;
-}
-
-.space {
-    margin-bottom: 20px;
-}
-
-.space-r { margin-right: .1rem;}
-
-.icon-relative {
-    position: relative;
-}
-
-.icon-relative .fas,
-.icon-relative .far{
-    position: absolute;
-    bottom: 12px;
-    left: 15px;
-    font-size: 20px;
-    color: var(--text-color);
-}
-
 /* ---------------------------------------------- medias ------------------------------------------ */
 
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 1320px){
+
+    /* .section-donate {
+        display: flex;
+        flex-wrap: wrap;
+        height: 150vh;
+    } */
+
+    .donate-header {
+        margin: 1rem 0;
+    }
+
+    .donate-header p {
+        text-indent: 0;
+    }
+
+    /* .section-donate form {
+        grid-template-rows: 1fr;
+    } */
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 750px){
+
+    /* .section-donate {
+        height: 200vh;
+    } */
+
+    /* .section-donate form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    } */
+
+    .donate-header {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 450px){
+
+    /* .section-donate {
+        height: 250vh;
+    } */
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 360px){
+
+    /* .section-donate .header {
+        padding: 0;
+        width: 100%;
+    } */
 }
+
+@media screen and (max-width: 260px){
+
+    /* .section-donate {
+        height: 330vh;
+    } */
+}
+
 /* ---------------------------------------------- donation ------------------------------------------ */
 
 .donation {
@@ -811,19 +910,11 @@ hr {
     background-color: var(--tertiary-color);
     grid-column: 1/2;
     grid-row: 1/ 2;
-}
-
-input[type="radio"].custom-radio {
-    display: none;
-}
-
-input[type="checkbox"].custom-check {
-    display: none;
+    width: 100%;
 }
 
 .donate-one, .donate-repeat {
     border: 1px solid var(--primary-color);
-    padding: 1rem;
     transition: 1s ease;
 }
 
@@ -835,9 +926,20 @@ input[type="checkbox"].custom-check {
 .donate-times-checked label {
     color: var(--white-color);
 }
+
 .times {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.times span {
+    padding: 1rem 0;
+    /* width: 100%; */
+}
+
+.times span label {
+    margin: 0;
+    padding: 0;
 }
 
 .amount {
@@ -851,6 +953,7 @@ input[type="checkbox"].custom-check {
     padding: 1rem;
     font-size: .7rem;
     font-weight: 600;
+    width: 3rem;
 }
 
 .amount label:hover {
@@ -864,16 +967,58 @@ input[type="checkbox"].custom-check {
 
 /* ---------------------------------------------- medias ------------------------------------------ */
 
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 1320px){
+
+    .times {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .amount {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+    }
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 960px){
+
+    .times {
+        width: 100%;
+    }
+
+    .times span {
+        width: 100%;
+    }
+
+    .free-amount input,
+    .free-amount .icon-relative i {
+        font-size: .9em;
+    }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 750px){
+
+    .donation {
+        width: 100%;
+    }
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 360px){
+
+    .donation .times span {
+        /* padding: 1rem; */
+        /* width: 100%; */
+    }
+}
+
+@media screen and (max-width: 260px){
+
+    .free-amount input {
+        width: 100%;
+    }
 }
 
 /* ---------------------------------------------- coordonates ------------------------------------------ */
@@ -885,10 +1030,10 @@ input[type="checkbox"].custom-check {
     grid-row: 1/ span 3;
 }
 
-.country-code, .contact-country-code {
+/* .country-code, .contact-country-code {
     background: #eee;
     padding: .5rem;
-}
+} */
 
 .civil select {
     width: 90%;
@@ -900,16 +1045,28 @@ input[type="checkbox"].custom-check {
 
 /* ---------------------------------------------- medias ------------------------------------------ */
 
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 1320px){
+
+    .coordonates {
+        grid-row: 1/ 2;
+    }
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 1450px){
+    .coordonates label,
+    .coordonates input,
+    .coordonates select {
+        font-size: .6rem;
+
+        /* background: red; */
+    }
 }
 
-@media screen and (max-width: 600px){
-}
+@media screen and (max-width: 750px){
 
-@media screen and (max-width: 420px){
+    .coordonates {
+        width: 100%;
+    }
 }
 
 /* ---------------------------------------------- payment ------------------------------------------ */
@@ -921,6 +1078,17 @@ input[type="checkbox"].custom-check {
     position: relative;
     grid-column: 3/4;
     grid-row: 1 / 3;
+}
+
+.paymentmethods {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+}
+
+.paymentmethods i {
+    font-size: 2rem;
+    transition: 1s ease;
 }
 
 .creditcardbox, .ibanbox {
@@ -936,12 +1104,29 @@ input[type="checkbox"].custom-check {
 /* ---------------------------------------------- medias ------------------------------------------ */
 
 @media screen and (max-width: 1500px){
+    .payment label,
+    .payment input {
+        font-size: .6rem;
+    }
+}
+
+@media screen and (max-width: 1450px){
+    .payment label,
+    .payment input,
+    .payment .card i,
+    .payment .card-item i {
+        font-size: .5rem;
+    }
+}
+
+@media screen and (max-width: 1320px){
+
+    .payment {
+        grid-row: 1/ 2;
+    }
 }
 
 @media screen and (max-width: 680px){
-}
-
-@media screen and (max-width: 600px){
 }
 
 @media screen and (max-width: 420px){
@@ -952,9 +1137,14 @@ input[type="checkbox"].custom-check {
         width: 100%;
         margin-bottom: 20px;
     }
-    /* .btn {
-        margin-top: 20px;
-    } */
+}
+
+@media screen and (max-width: 180px){
+
+    .paymentmethods {
+        display: flex;
+        /* padding: 1rem; */
+    }
 }
 
 /* ---------------------------------------------- numbers ------------------------------------------ */
@@ -1086,6 +1276,8 @@ blockquote {
 	font-style: italic;
 	line-height: 145%;
 	position: relative;
+    height: auto;
+    overflow: hidden;
 }
 
 blockquote::before {
@@ -1093,8 +1285,8 @@ blockquote::before {
 	font-size: 500%;
 	display: block;
 	position: absolute;
-	top: 1;
-	left: -1rem;
+	top: 2rem;
+	left: 1rem;
 }
 
 blockquote::after {
@@ -1133,103 +1325,39 @@ cite img {
 /* ---------------------------------------------- contact ------------------------------------ */
 
 #section-contact {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 10% 90%;
-}
-
-#section-contact h2 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    width: 100%;
+    margin-bottom: 0;
 }
 
 #section-contact form {
-    background-color: var(--tertiary-color);
-    /* margin: 3rem 10rem; */
-    padding: 5rem;
+    background-color: transparent;
+    padding: 1rem;
+    width: 100%;
+}
 
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+.contact-form {
+    background-color: var(--secondary-color);
+    padding: 0 20%;
+}
+.contact-form .form-submit {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: right;
+    /* border: 1px solid yellow; */
 }
 
 /* ---------------------------------------------- medias ------------------------------------------ */
 
-@media screen and (max-width: 1700px){
-  
-    #section-contact form input, 
-    #section-contact form textarea, 
-    #section-contact select, 
-    #section-contact label {
-        width: 100%;
-        /* letter-spacing: 1px;
-        word-spacing: 3px; */
-        font-size: .6rem;
-    }
-    
-    #section-contact label {
-        width: 70%;
-    }   
-}
-
 @media screen and (max-width: 1500px){
-    #section-contact {
-        display: flex;
-        flex-direction: column;
-        padding: 10rem;
-    }
-
-    #section-contact .card-grp {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0;
-        margin-bottom: 1rem;
-        /* border: 1px solid red; */
-    }
-  
-    #section-contact .card-grp input:not(:last-child),
-    #section-contact .card-grp select,
-    #section-contact .card textarea {
-        margin-bottom: 1rem;
-    }
-    #section-contact form input, 
-    #section-contact form textarea, 
-    #section-contact select, 
-    #section-contact label {
-        /* margin: 0; */
-        width: 100%;
-    }
-    .space-r { margin-right: 0;}
-}
-
-@media screen and (max-width: 750px){
-    #section-contact {
-        padding: 5rem;
-    }
-}
-
-@media screen and (max-width: 600px){
-    #section-contact {
-        padding: 3rem;
-    }
-}
-
-@media screen and (max-width: 480px){
-    #section-contact {
-        padding: 1rem;
+    .contact-form {
+        padding: 0 10%;
     }
 }
 
 @media screen and (max-width: 420px){
-    #section-contact {
-        padding: 0;
-    }
-  
+ 
     #section-contact form {
         padding: 1rem;
-    }
-
-    #contact-country-code {
-        padding: .5rem 0;
     }
 }
 
@@ -1256,14 +1384,16 @@ footer h2, footer h3 {
 
 footer .head {
     display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: space-evenly;
+    grid-template-columns: 6rem 6rem;
+    justify-content: start;
     align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 footer .head i {
     padding: 2rem;
-    width: 18%;
+    width: 5rem;
     background-color: var(--primary-color);
     color: var(--white-color);
 }
@@ -1368,7 +1498,7 @@ footer .head i {
     place-content: center ;
     grid-column: 1 / span 4;
     grid-row: 3 / 4;
-    background-color: var(--quaternary-color);
+    background-color: var(--secondary-color);
     color: var(--white-color);
     font-size: .7rem
 }
@@ -1423,11 +1553,6 @@ footer .head i {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-    }
-
-    footer .head i {
-        padding: 2rem;
-        width: 3%;
     }
 
     .presentation h3, .vosdons h3, .vosespaces h3 {
