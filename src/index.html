@@ -210,60 +210,58 @@
                                     <div class="inline-label">
                                         <input type="number" id="free-amount" placeholder="Montant libre">
                                         <span id="contact-country-code" class="contact-country-code">€</span>
-                            </div>
+                                    </div>
                                 </div>
                             </fieldset>
                         </div>
     
-                    <!--     <div class="coordonates">
+                         <div class="coordonates">
                             <div class="header">Mes coordonées</div>
                             <fieldset>
-                                <div class="card icon-relative">
+                                <div class="icon-relative">
                                     <input type="text" id="email" placeholder="Email*">
                                     <i class="fas fa-envelope"></i>
                                 </div>
-                                <div class="card-grp space">
+                                <div class="input-group">
                                     <label id="lbIsOrg" for="isorg" class="check-options" onclick="isorgClicked()">
                                         <i class="fa-solid fa-square-xmark red"></i>
                                         Je fais un don au nom d'une organisation ou d'une société
                                         <input type="checkbox" name="isorg" id="isorg" class="custom-check">
                                     </label>
                                 </div>
-                                <div class="card-grp space">
-                                    <label class="label-select space-r">
-                                        <select id="civility" class="civility">
+                                <div class="input-group">
+                                        <select class="space-r">
                                             <option value="0" selected="selected">Civilité *</option>
                                             <option value="1">M</option>
                                             <option value="2">Mme</option>
                                             <option value="3">M & Mme</option>
                                         </select>    
-                                    </label>
                                     <input type="text" id="firstname" placeholder="Prénom *">
                                 </div>
-                                <div class="card space">
+                                <div class="input-gap">
                                     <input type="text" id="lastname" placeholder="Nom*">
                                 </div>
-                                <div class="card space">
+                                <div class="input-gap">
                                     <input type="text" id="address" placeholder="Adresse*">
                                 </div>
-                                <div class="card space">
+                                <div class="input-gap">
                                     <input type="text" id="compaddress" placeholder="Complément d'adresse">
                                 </div>
-                                <div class="card space">
+                                <div class="input-gap">
                                     <input type="text" id="zipcode" placeholder="Code postal*">
                                 </div>
-                                <div class="card space">
+                                <div class="input-gap">
                                     <input type="text" id="city" placeholder="Ville*">
                                 </div>
-                                <div class="card space">
+                                <div class="input-gap">
                                     <label class="label-select">
                                         <select id="country" class="country">
                                         </select>
                                     </label>
                                 </div>
-                                <div class="card-grp space">
-                                    <label for="phonenumber" id="country-code" class="country-code">(00)</label>
+                                <div class="inline-label">
                                     <input type="tel" id="phonenumber" placeholder="Téléphone">
+                                    <span id="country-code" class="country-code">(00)</span>
                                 </div>
                             </fieldset>
                         </div>
@@ -273,60 +271,63 @@
                             <fieldset class="">
                                 <div class="paymentmethods">
                                     
-                                    <label id="check-bank" for="bank" class="radio-options hide">
+                                    <label id="check-bank" for="bank" class="radio-options">
                                         <i class="fa-solid fa-building-columns"></i>
                                         <input type="radio" name="payment-method" id="bank" class="custom-radio" checked>
                                         <span class="checkmark"></span>
                                     </label>
     
-                                    <label for="credit-card" class="radio-options">
+                                    <label id="check-credit-card" for="credit-card" class="radio-options">
                                         <i class="fa-solid fa-credit-card green"></i>
                                         <input type="radio" name="payment-method" id="credit-card" class="custom-radio" checked>
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label for="paypal" class="radio-options">
+                                    <label id="check-paypal" for="paypal" class="radio-options">
                                         <i class="fa-brands fa-paypal"></i>
                                         <input type="radio" name="payment-method" id="paypal" class="custom-radio">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label for="money-check" class="radio-options">
+                                    <label id="check-moneycheck" for="money-check" class="radio-options">
                                         <i class="fa-solid fa-money-check"></i>
                                         <input type="radio" name="payment-method" id="money-check" class="custom-radio">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
+
                                 <div class="creditcardbox">
-                                    <div class="card space icon-relative">
+                                    <div class="input-gap icon-relative">
                                         <input type="text" class="input" placeholder="Card holder">
                                         <i class="fas fa-user"></i>
                                     </div>
-                                    <div class="card space icon-relative">
+                                    <div class="input-gap icon-relative">
                                         <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
                                         <i class="far fa-credit-card"></i>
                                     </div>
-                                    <div class="card-grp space">
-                                        <div class="card-item icon-relative" id="expirydate">
+                                    <div class="input-group">
+                                        <div class="icon-relative input-gap id="expirydate">
                                             <input type="text" name="expiry-date" id="expiry-date" class="input" data-mask="00 / 00"  placeholder="Expiry date">
                                             <i class="far fa-calendar-alt"></i>
                                         </div>
-                                        <div class="card-item icon-relative">
+                                        <div class="icon-relative">
                                             <input type="text" class="input" data-mask="000" placeholder="CVC">
                                             <i class="fas fa-lock"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ibanbox">
-                                    <div class="card space">
+                                    <div class="input-gap">
                                         <input type="text" id="iban" class="input" placeholder="Votre numéro IBAN">
                                     </div>
-                                    <div class="card space">
+                                    <div class="input-gap">
                                         <input type="text" id="bic" class="input" placeholder="Votre code BIC">
                                     </div>
     
                                 </div>
-                                <input type="submit" class="btn" value="Valider" >
+                                <div class="form-submit">
+                                    <a class="btn" onclick="proceedPayment();">Valider</a>
+                                </div>
                             </fieldset>
-                        </div> -->
+                        </div>
                             
                     </form>
                 </div>
@@ -387,49 +388,36 @@
                 <h3>Nos équipes sont disponibles pour répondre à toutes vos interrogations.</h3>
                 <div class="contact-form">
                     <form class="">
-                        <!-- <div class="card-grp space"> -->
                         <div class="input-group">
-                            <!-- <label class="label-select space-r"> -->
-                                <select id="contact-civil" class="contact-civil">
-                                    <option value="0" selected="selected">Civilité *</option>
-                                    <option value="1">M</option>
-                                    <option value="2">Mme</option>
-                                    <option value="3">M & Mme</option>
-                                </select>    
-                            <!-- </label> -->
+                            <select>
+                                <option value="0" selected="selected">Civilité *</option>
+                                <option value="1">M</option>
+                                <option value="2">Mme</option>
+                                <option value="3">M & Mme</option>
+                            </select>    
                             <input type="text" id="contact-firstname" class="space-r" placeholder="Prénom *">
                             <input type="text" id="contact-lastname" placeholder="Nom*">
                         </div>
-                        <!-- <div class="card-grp space"> -->
                         <div class="input-group">
                             <input type="text" id="contact-email" class="space-r" placeholder="Email*">
                             <input type="text" id="contact-email-confirmed" placeholder="Confirmez l'email*">
                         </div>
-                        <!-- <div class="card-grp space"> -->
                         <div class="input-group">
                             <input type="text" id="contact-address" placeholder="Adresse*">
                         </div>
-                        <!-- <div class="card-grp space"> -->
-                        <div class="input-group space">
+                        <div class="input-group">
                             <input type="text" id="contact-city" class="space-r" placeholder="Ville*">
                             <input type="text" id="contact-zipcode" placeholder="Code postal*">
                         </div>
-                        <!-- <div class="card-grp space"> -->
-                        <div class="input-group space">
-                            <!-- <label class="label-select space-r"> -->
-                                <select id="contact-country" class="contact-country">
-                                </select>
-                            <!-- </label> -->
+                        <div class="input-group">
+                            <select id="contact-country" class="contact-country"></select>
                             <div class="inline-label">
                                 <input type="tel" id="contact-phonenumber" placeholder="Téléphone">
                                 <span id="contact-country-code" class="contact-country-code">(00)</span>
                             </div>
                         </div>
                         <div class="input-gap">
-                            <!-- <label class="label-select"> -->
-                                <select id="contact-subjects" class="contact-subjects">
-                                </select>
-                            <!-- </label> -->
+                            <select id="contact-subjects" class="contact-subjects"></select>
                         </div>
                         <div class="input-gap">
                             <textarea id="msg-body" cols="30" rows="10" class="form-control" placeholder="Message*" aria-label="With textarea"></textarea>

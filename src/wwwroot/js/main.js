@@ -12,6 +12,11 @@ $(document).ready(() => {
     setCountries(countries);
     setSubjects(mailSubjects);
 
+/* ---------------------------------------------- checkboxes initialization ----------------------- */
+$('#check-bank').css('display','none');
+$('#check-credit-card').css('display','block');
+$('#check-paypal').css('display','block');
+$('#check-moneycheck').css('display','block');
 /* ---------------------------------------------- events initialization --------------------------- */
     $('input[name^=payment-method]').change((e) => {
         const id = e.target.id;
@@ -40,7 +45,7 @@ $(document).ready(() => {
                 break;
         }
 
-        // console.log(`radio-options clicked ${id}`)
+        console.log(`radio-options clicked ${id}`)
     });
 
     $('input[name^=donate-times]').change((e) => {
@@ -50,46 +55,38 @@ $(document).ready(() => {
         $(`.donate-${id}`).addClass('donate-times-checked');
 
         $('#mnt7').prop('checked', true);
-        $(`#amount-mnt7`).addClass('amount-checked');
-        $('.free-amount').addClass('show');
-        $('.free-amount').removeClass('hide');
+        $('.free-amount').css('display','block');
         switch (id) {
             case 'one':
-                $('#amount-mnt1').addClass('show');
-                $('#amount-mnt2').addClass('show');
-                $('#amount-mnt3').addClass('show');
-                $('#amount-mnt1').removeClass('hide');
-                $('#amount-mnt2').removeClass('hide');
-                $('#amount-mnt3').removeClass('hide');
-                $('#amount-mnt4').addClass('hide');
-                $('#amount-mnt5').addClass('hide');
-                $('#amount-mnt6').addClass('hide');
-                $('#amount-mnt4').removeClass('show');
-                $('#amount-mnt5').removeClass('show');
-                $('#amount-mnt6').removeClass('show');
+                $('#amount-mnt1').css('display','block');
+                $('#amount-mnt2').css('display','block');
+                $('#amount-mnt3').css('display','block');
+                $('#amount-mnt4').css('display','none');
+                $('#amount-mnt5').css('display','none');
+                $('#amount-mnt6').css('display','none');
 
-                $('#check-bank').addClass('hide');
-                $('#check-bank').removeClass('show');
+                $('#check-bank').css('display','none');
+
+                $('#check-paypal').css('display','block');
+                $('#check-moneycheck').css('display','block');
+
                 $('.ibanbox').css('display','none');
                 $(`.fa-credit-card`).addClass('green');
                 $('.creditcardbox').css('display','block');
                 break;
             default:
-                $('#amount-mnt1').addClass('hide');
-                $('#amount-mnt2').addClass('hide');
-                $('#amount-mnt3').addClass('hide');
-                $('#amount-mnt1').removeClass('show');
-                $('#amount-mnt2').removeClass('show');
-                $('#amount-mnt3').removeClass('show');
-                $('#amount-mnt4').addClass('show');
-                $('#amount-mnt5').addClass('show');
-                $('#amount-mnt6').addClass('show');
-                $('#amount-mnt4').removeClass('hide');
-                $('#amount-mnt5').removeClass('hide');
-                $('#amount-mnt6').removeClass('hide');
+                $('#amount-mnt1').css('display','none');
+                $('#amount-mnt2').css('display','none');
+                $('#amount-mnt3').css('display','none');
+                $('#amount-mnt4').css('display','block');
+                $('#amount-mnt5').css('display','block');
+                $('#amount-mnt6').css('display','block');
 
-                $('#check-bank').addClass('show');
-                $('#check-bank').removeClass('hide');
+                $('#check-bank').css('display','block');
+                // $('#check-credit-card').css('display','block');
+
+                $('#check-paypal').css('display','none');
+                $('#check-moneycheck').css('display','none');
                 break;
         }
 
@@ -103,12 +100,10 @@ $(document).ready(() => {
         $(`#amount-${id}`).addClass('amount-checked');
         switch (id) {
             case 'mnt7':
-                $('.free-amount').addClass('show');
-                $('.free-amount').removeClass('hide');
+                $('.free-amount').css('display','block');
                 break;
             default:
-                $('.free-amount').addClass('hide');
-                $('.free-amount').removeClass('show');
+                $('.free-amount').css('display','none');
                 break;
         }
         console.log(`donate-amount ${id} checked: ${$(`#${id}`).val()}`);
@@ -130,22 +125,34 @@ $(document).ready(() => {
     $('.check-box').click(function (e) {
         getChecked('before');
 
-        var checked_item = `#${AMOUNT_CHECKBOX_PREFIX}${$('input[name="donate-amount"]:checked').attr('id')}`;
-        console.log(`checked_item ${checked_item}`)
-        $(`${checked_item} i`).removeClass('fa-circle-check green');
-        $(`${checked_item} i`).addClass('fa-circle-minus red');
-        $(`${checked_item}`).prop("checked", false);
-
-        var this_id = `#${this.id}`
-        $(`${this_id} i`).removeClass('fa-circle-minus red');
-        $(`${this_id} i`).addClass('fa-circle-check green');
-
-        let id = this.id.substring(AMOUNT_CHECKBOX_PREFIX.length);
-        $(`#${id}`).prop("checked", true);
+        var checkContainerId = AMOUNT_CHECKBOX_PREFIX + $('input[name="donate-amount"]:checked').attr('id');
+        
+        checkboxChanged(checkContainerId, false);
+        checkboxChanged(this.id, true);
         
         getChecked('after');
     });
 })
+
+const checkboxChanged = (checkContainerId, checked) => {
+
+    let checkboxId = checkContainerId.substring(AMOUNT_CHECKBOX_PREFIX.length);
+  
+    if (checked) {
+        $(`#${checkContainerId} i`).removeClass('fa-circle-minus red');
+        $(`#${checkContainerId} i`).addClass('fa-circle-check green');
+
+        $(`#${checkboxId}`).prop("checked", true);
+
+        
+        return;
+    }
+
+    console.log(`checked_item ${checkContainerId}`)
+    $(`#${checkContainerId} i`).removeClass('fa-circle-check green');
+    $(`#${checkContainerId} i`).addClass('fa-circle-minus red');
+    $(`#${checkboxId}`).prop("checked", false);
+}
 
 const getChecked = (when) => {
     console.log(`checked ${when}`);
