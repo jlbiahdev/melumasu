@@ -147,6 +147,7 @@ NZUANE est volontairement :
 - **lisible**.
 
 Elle repose sur :
+- un conseil des fondateurs
 - une Assemblée Générale,
 - un Conseil d’Administration,
 - un Bureau Exécutif,
