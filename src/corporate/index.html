@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NZUANE International — Le Retour · Ebolowa, Cameroun</title>
+<meta name="description" content="NZUANE International — Organisation de développement territorial structuré à finalité sociale. Ebolowa, Sud Cameroun.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Karla:wght@300;400;500;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- HAMBURGER -->
+<button id="hamburger" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="overlay"></div>
+
+<!-- =============================================
+     SIDEBAR
+     ============================================= -->
+<aside id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-mark">NZUANE</div>
+    <span class="logo-sub">International</span>
+    <div class="logo-country">🇫🇷 France · 🇨🇲 Cameroun · 🇨🇦 Canada</div>
+  </div>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-l="fr">FR</button>
+    <button class="lang-btn" data-l="en">EN</button>
+  </div>
+
+  <nav>
+    <div class="nav-section-label" data-fr>Présentation</div>
+    <div class="nav-section-label" data-en>Overview</div>
+
+    <a href="#accueil" class="nav-link active">
+      <span class="icon">◆</span>
+      <span data-fr>Accueil</span><span data-en>Home</span>
+    </a>
+    <a href="#vision" class="nav-link">
+      <span class="icon">◈</span>
+      <span data-fr>Vision & Valeurs</span><span data-en>Vision & Values</span>
+    </a>
+    <a href="#organisation" class="nav-link">
+      <span class="icon">◇</span>
+      <span data-fr>Organisation</span><span data-en>Structure</span>
+    </a>
+    <a href="#gouvernance" class="nav-link">
+      <span class="icon">◉</span>
+      <span data-fr>Board & Gouvernance</span><span data-en>Board & Governance</span>
+    </a>
+
+    <div class="nav-section-label" data-fr>Stratégie</div>
+    <div class="nav-section-label" data-en>Strategy</div>
+
+    <a href="#projets" class="nav-link">
+      <span class="icon">▸</span>
+      <span data-fr>Projets Structurants</span><span data-en>Key Projects</span>
+    </a>
+    <a href="#triennal" class="nav-link">
+      <span class="icon">▸</span>
+      <span data-fr>Plan Triennal 2025–2028</span><span data-en>3-Year Plan 2025–2028</span>
+    </a>
+    <a href="#decennal" class="nav-link">
+      <span class="icon">▸</span>
+      <span data-fr>Plan Décennal 2025–2035</span><span data-en>10-Year Plan 2025–2035</span>
+    </a>
+
+    <div class="nav-section-label" data-fr>Ressources</div>
+    <div class="nav-section-label" data-en>Resources</div>
+
+    <a href="#donnees" class="nav-link">
+      <span class="icon">◎</span>
+      <span data-fr>Base de Données Scientifique</span><span data-en>Scientific Knowledge Base</span>
+    </a>
+    <a href="#publications" class="nav-link">
+      <span class="icon">◎</span>
+      <span data-fr>Rapports & Publications</span><span data-en>Reports & Publications</span>
+    </a>
+    <a href="#contact" class="nav-link">
+      <span class="icon">◯</span>
+      <span data-fr>Contact</span><span data-en>Contact</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    NZUANE International<br>
+    Loi 1901 · France<br>
+    <span data-fr>© 2026 — Tous droits réservés</span>
+    <span data-en>© 2026 — All rights reserved</span>
+  </div>
+</aside>
+
+<!-- =============================================
+     MAIN
+     ============================================= -->
+<div id="main">
+
+<!-- ══════════ HERO ══════════ -->
+<section id="accueil">
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-tagline">
+      <span data-fr>Développement Territorial · Ebolowa, Cameroun</span>
+      <span data-en>Territorial Development · Ebolowa, Cameroon</span>
+    </div>
+
+    <h1 class="hero-title">
+      NZUANE
+      <span data-fr>Le Retour.</span>
+      <span data-en>The Return.</span>
+    </h1>
+    <p class="hero-name-meaning" data-fr>Un engagement. Une responsabilité. Un territoire.</p>
+    <p class="hero-name-meaning" data-en>A commitment. A responsibility. A territory.</p>
+
+    <p class="hero-desc" data-fr>
+      NZUANE International est un dispositif territorial structuré à finalité sociale, né de la diaspora et ancré dans la ville d'Ebolowa. Il transforme l'attachement au territoire en action concrète, rigoureuse et durable.
+    </p>
+    <p class="hero-desc" data-en>
+      NZUANE International is a structured territorial organization with a social purpose, born from the diaspora and rooted in the city of Ebolowa. It transforms attachment to the territory into concrete, rigorous, and lasting action.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#vision" class="btn-primary" data-fr>Notre Vision</a>
+      <a href="#vision" class="btn-primary" data-en>Our Vision</a>
+      <a href="#triennal" class="btn-ghost" data-fr>Plan Stratégique</a>
+      <a href="#triennal" class="btn-ghost" data-en>Strategic Plan</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-val">810K</div>
+        <div class="hero-stat-lbl" data-fr>Habitants · Région du Sud</div>
+        <div class="hero-stat-lbl" data-en>Inhabitants · South Region</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">34%</div>
+        <div class="hero-stat-lbl" data-fr>Incidence de la pauvreté</div>
+        <div class="hero-stat-lbl" data-en>Poverty incidence rate</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">5</div>
+        <div class="hero-stat-lbl" data-fr>Entités du réseau NZUANE</div>
+        <div class="hero-stat-lbl" data-en>NZUANE network entities</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">2035</div>
+        <div class="hero-stat-lbl" data-fr>Horizon du Plan Décennal</div>
+        <div class="hero-stat-lbl" data-en>10-Year Plan horizon</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ VISION ══════════ -->
+<section id="vision">
+  <div class="section-eyebrow" data-fr>Vision Fondatrice</div>
+  <div class="section-eyebrow" data-en>Founding Vision</div>
+  <h2 class="section-title" data-fr>Un territoire.<br><em>Un engagement.</em></h2>
+  <h2 class="section-title" data-en>A territory.<br><em>A commitment.</em></h2>
+
+  <div class="vision-grid">
+    <div>
+      <p class="section-lead" data-fr>
+        NZUANE signifie <strong>« Le Retour »</strong>. Ce retour est un engagement — vers le territoire d'origine, vers la responsabilité collective, vers ceux qui n'ont pas eu les mêmes opportunités.
+      </p>
+      <p class="section-lead" data-en>
+        NZUANE means <strong>"The Return"</strong>. This return is a commitment — to the territory of origin, to collective responsibility, to those who did not have the same opportunities.
+      </p>
+
+      <blockquote class="vision-quote" data-fr>
+        "NZUANE n'est ni une organisation caritative isolée, ni un simple outil économique. Il est un dispositif territorial structuré à finalité sociale, utilisant l'économie comme levier et non comme fin."
+      </blockquote>
+      <blockquote class="vision-quote" data-en>
+        "NZUANE is neither an isolated charity nor a simple economic tool. It is a structured territorial organization with a social purpose, using the economy as a lever, not as an end in itself."
+      </blockquote>
+
+      <div class="logic-chain">
+        <span class="logic-step" data-fr>Production</span>
+        <span class="logic-step" data-en>Production</span>
+        <span class="logic-arrow">→</span>
+        <span class="logic-step" data-fr>Formation</span>
+        <span class="logic-step" data-en>Training</span>
+        <span class="logic-arrow">→</span>
+        <span class="logic-step" data-fr>Insertion</span>
+        <span class="logic-step" data-en>Integration</span>
+        <span class="logic-arrow">→</span>
+        <span class="logic-step" data-fr>Autonomisation</span>
+        <span class="logic-step" data-en>Empowerment</span>
+        <span class="logic-arrow">→</span>
+        <span class="logic-step" data-fr>Solidarité</span>
+        <span class="logic-step" data-en>Solidarity</span>
+      </div>
+    </div>
+
+    <div class="vision-pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div>
+          <div class="pillar-title" data-fr>Dimension Diasporique</div>
+          <div class="pillar-title" data-en>Diaspora Dimension</div>
+          <p class="pillar-desc" data-fr>La diaspora est appelée à devenir une force structurante du développement local — par un engagement organisé, pas une contribution ponctuelle.</p>
+          <p class="pillar-desc" data-en>The diaspora is called to become a driving force for local development — through organized commitment, not one-off contributions.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div>
+          <div class="pillar-title" data-fr>Finalité Sociale</div>
+          <div class="pillar-title" data-en>Social Purpose</div>
+          <p class="pillar-desc" data-fr>La solidarité n'est pas une conséquence secondaire. Elle est une composante structurante du modèle.</p>
+          <p class="pillar-desc" data-en>Solidarity is not a secondary consequence. It is a structural component of the model.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div>
+          <div class="pillar-title" data-fr>Rigueur & Transparence</div>
+          <div class="pillar-title" data-en>Rigor & Transparency</div>
+          <p class="pillar-desc" data-fr>Agir avec rigueur, préserver l'intégrité du projet, éviter toute récupération ou dilution, inscrire chaque action dans une logique d'impact réel.</p>
+          <p class="pillar-desc" data-en>Acting with rigor, preserving project integrity, avoiding capture or dilution, grounding each action in real impact logic.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <div>
+          <div class="pillar-title" data-fr>Modèle Reproductible</div>
+          <div class="pillar-title" data-en>Replicable Model</div>
+          <p class="pillar-desc" data-fr>À terme, stabiliser un modèle territorial reproductible et faire du Retour un mouvement concret et organisé.</p>
+          <p class="pillar-desc" data-en>Ultimately, stabilize a replicable territorial model and make the Return a concrete, organized movement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ORGANISATION ══════════ -->
+<section id="organisation">
+  <div class="section-eyebrow" data-fr>Architecture Institutionnelle</div>
+  <div class="section-eyebrow" data-en>Institutional Architecture</div>
+  <h2 class="section-title" data-fr>Un réseau<br><em>structuré</em> sur trois pays.</h2>
+  <h2 class="section-title" data-en>A network<br><em>structured</em> across three countries.</h2>
+  <p class="section-lead" data-fr>NZUANE s'organise en un écosystème d'entités complémentaires, chacune jouant un rôle précis à son niveau de gouvernance.</p>
+  <p class="section-lead" data-en>NZUANE operates as an ecosystem of complementary entities, each playing a precise role at its governance level.</p>
+
+  <div class="org-tree">
+
+    <!-- Niveau International -->
+    <div class="org-level">
+      <div class="org-level-label" data-fr>International</div>
+      <div class="org-level-label" data-en>International</div>
+      <div class="org-cards">
+        <div class="org-card intl">
+          <div class="org-name">NZUANE International</div>
+          <div class="org-type">Association · Loi 1901</div>
+          <div class="org-country">🇫🇷 <span data-fr>France</span><span data-en>France</span></div>
+          <p class="org-role" data-fr>Coordination diaspora et levée de fonds internationale. Pilotage stratégique global.</p>
+          <p class="org-role" data-en>Diaspora coordination and international fundraising. Global strategic leadership.</p>
+          <div class="org-year">Est. 2026</div>
+        </div>
+        <div class="org-card chapter">
+          <div class="org-name">NZUANE CA</div>
+          <div class="org-type">Chapter</div>
+          <div class="org-country">🇨🇦 Canada</div>
+          <p class="org-role" data-fr>Chapitre nord-américain. Mobilisation de la diaspora et relais institutionnel.</p>
+          <p class="org-role" data-en>North American chapter. Diaspora mobilization and institutional relay.</p>
+          <div class="org-year">Est. 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Niveau National -->
+    <div class="org-level">
+      <div class="org-level-label" data-fr>National</div>
+      <div class="org-level-label" data-en>National</div>
+      <div class="org-cards">
+        <div class="org-card national">
+          <div class="org-name">NZUANE CM</div>
+          <div class="org-type">Association</div>
+          <div class="org-country">🇨🇲 Cameroun</div>
+          <p class="org-role" data-fr>Structure opérationnelle nationale. Mise en œuvre des actions sociales et humanitaires sur le terrain.</p>
+          <p class="org-role" data-en>National operational structure. Implementation of social and humanitarian field actions.</p>
+          <div class="org-year">Est. 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Niveau Opérationnel -->
+    <div class="org-level">
+      <div class="org-level-label" data-fr>Opérationnel</div>
+      <div class="org-level-label" data-en>Operational</div>
+      <div class="org-cards">
+        <div class="org-card operational">
+          <div class="org-name">ROMBONE</div>
+          <div class="org-type" data-fr>Coopérative · Institution opérationnelle</div>
+          <div class="org-type" data-en>Cooperative · Operational Institution</div>
+          <div class="org-country">🇨🇲 Ebolowa, Cameroun</div>
+          <p class="org-role" data-fr>Bras opérationnel économique. Implémentation des projets sociaux et productifs.</p>
+          <p class="org-role" data-en>Economic operational arm. Implementation of social and productive projects.</p>
+          <div class="org-year">Est. 2020</div>
+        </div>
+        <div class="org-card partner">
+          <div class="org-name">ADV</div>
+          <div class="org-type" data-fr>Collectif — Acteurs de Vente</div>
+          <div class="org-type" data-en>Collective — Market Vendors</div>
+          <div class="org-country">🇨🇲 Ebolowa, Cameroun</div>
+          <p class="org-role" data-fr>Collectif des actrices commerciales partenaires. Structuration et coordination des vendeuses locales.</p>
+          <p class="org-role" data-en>Partner commercial actors collective. Structuring and coordination of local market women.</p>
+          <div class="org-year">Est. 2026</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ BOARD ══════════ -->
+<section id="gouvernance">
+  <div class="section-eyebrow" data-fr>Board & Gouvernance</div>
+  <div class="section-eyebrow" data-en>Board & Governance</div>
+  <h2 class="section-title" data-fr>Les personnes<br><em>derrière le projet.</em></h2>
+  <h2 class="section-title" data-en>The people<br><em>behind the project.</em></h2>
+  <p class="section-lead" data-fr>Un board pluridisciplinaire réunissant ingénierie, droit, communication, académie et opérations — ancré entre France, Cameroun et Canada.</p>
+  <p class="section-lead" data-en>A multidisciplinary board combining engineering, law, communications, academia, and operations — anchored between France, Cameroon, and Canada.</p>
+
+  <div class="board-grid">
+    <!-- Jean Luc BIAH -->
+    <div class="board-card">
+      <div class="board-avatar">JB</div>
+      <div class="board-body">
+        <div class="board-name">Jean Luc BIAH</div>
+        <div class="board-roles">
+          <div class="board-role"><span class="board-role-org">NZUANE INTL</span> Président</div>
+          <div class="board-role"><span class="board-role-org">NZUANE CM</span> Président</div>
+          <div class="board-role"><span class="board-role-org">ROMBONE</span> Président</div>
+        </div>
+        <div class="board-expertise" data-fr>Ingénierie logicielle · Gouvernance stratégique · Diaspora</div>
+        <div class="board-expertise" data-en>Software Engineering · Strategic Governance · Diaspora</div>
+        <p class="board-bio" data-fr>Professionnel de la tech et de la structuration organisationnelle. Il conçoit et pilote des projets à fort impact social, assurant la cohérence stratégique entre vision, gouvernance et mise en œuvre. Il porte l'architecture globale EBWA et la structuration de NZUANE.</p>
+        <p class="board-bio" data-en>Technology and organizational structuring professional. He designs and leads high-impact social projects, ensuring strategic coherence between vision, governance, and implementation. He leads the EBWA architecture and the overall NZUANE structuring.</p>
+      </div>
+    </div>
+
+    <!-- Jean-Jacques EBANGA -->
+    <div class="board-card">
+      <div class="board-avatar">JE</div>
+      <div class="board-body">
+        <div class="board-name">Jean-Jacques EBANGA</div>
+        <div class="board-roles">
+          <div class="board-role"><span class="board-role-org">NZUANE INTL</span> Vice-Président</div>
+        </div>
+        <div class="board-expertise" data-fr>Opérations · Supply Chain · Développement JS/Node · Canada</div>
+        <div class="board-expertise" data-en>Operations · Supply Chain · JS/Node Development · Canada</div>
+        <p class="board-bio" data-fr>Superviseur des opérations au Canada et développeur indépendant spécialisé en automatisation et structuration de données. Il conçoit des outils de pilotage et tableaux de bord, apportant rigueur opérationnelle et analytique aux projets.</p>
+        <p class="board-bio" data-en>Operations supervisor in Canada and independent developer specializing in automation and data structuring. He designs management tools and dashboards, bringing operational and analytical rigor to projects.</p>
+      </div>
+    </div>
+
+    <!-- Julienne BITA -->
+    <div class="board-card">
+      <div class="board-avatar">JB</div>
+      <div class="board-body">
+        <div class="board-name">Julienne BITA</div>
+        <div class="board-roles">
+          <div class="board-role"><span class="board-role-org">NZUANE INTL</span> Secrétaire Générale</div>
+          <div class="board-role"><span class="board-role-org">NZUANE CM</span> Vice-Présidente</div>
+          <div class="board-role"><span class="board-role-org">ROMBONE</span> Vice-Présidente</div>
+        </div>
+        <div class="board-expertise" data-fr>Enseignement supérieur · Organisation institutionnelle · Encadrement académique</div>
+        <div class="board-expertise" data-en>Higher Education · Institutional Organization · Academic Leadership</div>
+        <p class="board-bio" data-fr>Professeure d'Université à la retraite. Elle apporte méthode, rigueur et stabilité institutionnelle, veille à la qualité documentaire et au respect des procédures. Son expérience académique renforce la crédibilité des projets.</p>
+        <p class="board-bio" data-en>Retired University Professor. She brings method, rigor, and institutional stability, overseeing documentary quality and procedural compliance. Her academic experience reinforces project credibility.</p>
+      </div>
+    </div>
+
+    <!-- Osiera MEBOUNOU -->
+    <div class="board-card">
+      <div class="board-avatar">OM</div>
+      <div class="board-body">
+        <div class="board-name">Osiera MEBOUNOU</div>
+        <div class="board-roles">
+          <div class="board-role"><span class="board-role-org">NZUANE INTL</span> Resp. Communication</div>
+          <div class="board-role"><span class="board-role-org">NZUANE CM</span> Resp. Communication</div>
+          <div class="board-role"><span class="board-role-org">ROMBONE</span> Resp. Communication</div>
+        </div>
+        <div class="board-expertise" data-fr>Journalisme · Communication stratégique · Relations Publiques CAMTEL</div>
+        <div class="board-expertise" data-en>Journalism · Strategic Communications · CAMTEL Public Relations</div>
+        <p class="board-bio" data-fr>Journaliste et experte en communication stratégique, Chef de service aux Relations Publiques de CAMTEL. Entrepreneure et consultante en marketing, elle structure l'image et la cohérence communicationnelle des projets.</p>
+        <p class="board-bio" data-en>Journalist and strategic communications expert, Head of Public Relations at CAMTEL. Entrepreneur and marketing consultant, she shapes the image and communication coherence of projects.</p>
+      </div>
+    </div>
+
+    <!-- Sonia OSSOE -->
+    <div class="board-card">
+      <div class="board-avatar">SO</div>
+      <div class="board-body">
+        <div class="board-name">Sonia OSSOE</div>
+        <div class="board-roles">
+          <div class="board-role"><span class="board-role-org">NZUANE CM</span> Secrétaire Générale</div>
+          <div class="board-role"><span class="board-role-org">ROMBONE</span> Secrétaire Générale</div>
+        </div>
+        <div class="board-expertise" data-fr>Droit des affaires · Cadres réglementaires · Conformité juridique</div>
+        <div class="board-expertise" data-en>Business Law · Regulatory Frameworks · Legal Compliance</div>
+        <p class="board-bio" data-fr>Juriste spécialisée en droit des affaires. Elle assure la conformité juridique des dossiers, la sécurisation administrative et la structuration contractuelle des projets, veillant à la protection institutionnelle des organisations.</p>
+        <p class="board-bio" data-en>Business law specialist. She ensures legal compliance of files, administrative security, and contractual structuring of projects, safeguarding the institutional protection of organizations.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ PROJETS ══════════ -->
+<section id="projets">
+  <div class="section-eyebrow" data-fr>Projets Structurants</div>
+  <div class="section-eyebrow" data-en>Key Projects</div>
+  <h2 class="section-title" data-fr>L'économie comme<br><em>levier social.</em></h2>
+  <h2 class="section-title" data-en>The economy as a<br><em>social lever.</em></h2>
+  <p class="section-lead" data-fr>Trois projets structurants articulés autour d'une vision : FEMMEKMR2035 — autonomiser durablement la femme à travers ses activités économiques, entrepreneuriales et sociales.</p>
+  <p class="section-lead" data-en>Three key projects built around one vision: FEMMEKMR2035 — sustainably empowering women through their economic, entrepreneurial, and social activities.</p>
+
+  <div style="margin-bottom:1rem;">
+    <span class="tag gold">Vision Programme · FEMMEKMR2035 · 2035</span>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-type-tag" data-fr>Pilier Économique</div>
+        <div class="project-type-tag" data-en>Economic Pillar</div>
+        <div class="project-name">ROMBONE</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc" data-fr>Projet structurant visant à mettre en place un écosystème productif local durable articulé autour de l'agriculture, de la transformation et de l'organisation communautaire. Base de légitimité et d'autonomie de l'ensemble du dispositif.</p>
+        <p class="project-desc" data-en>Flagship project establishing a sustainable local productive ecosystem around agriculture, processing, and community organization. Foundation for the legitimacy and autonomy of the entire structure.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-type-tag" data-fr>Programme Sectoriel</div>
+        <div class="project-type-tag" data-en>Sector Programme</div>
+        <div class="project-name">BIDI</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc" data-fr>Programme structurant d'alimentation locale reliant production, transformation et distribution scolaire afin de renforcer l'autonomie alimentaire. Fondé sur la base de connaissance scientifique du territoire.</p>
+        <p class="project-desc" data-en>Structured local food programme linking production, processing, and school distribution to strengthen food sovereignty. Grounded in the territory's scientific knowledge base.</p>
+        <div class="project-parent" data-fr>→ Composante : ROMBONE</div>
+        <div class="project-parent" data-en>→ Component of: ROMBONE</div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-type-tag" data-fr>Projet Organisationnel</div>
+        <div class="project-type-tag" data-en>Organizational Project</div>
+        <div class="project-name">FEMMES ADV</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc" data-fr>Structuration des Actrices de Vente (ADV) en association professionnelle formelle. Formalisation des activités, renforcement de l'autonomie financière et développement de la capacité entrepreneuriale.</p>
+        <p class="project-desc" data-en>Structuring Market Vendors (ADV) into a formal professional association. Formalizing activities, strengthening financial autonomy, and developing entrepreneurial capacity.</p>
+        <div class="project-parent" data-fr>→ Sous-projet : KISSINE (cuisines professionnelles BIDI)</div>
+        <div class="project-parent" data-en>→ Sub-project: KISSINE (BIDI professional kitchens)</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:2rem;">
+    <div class="section-eyebrow" style="margin-bottom:1rem;" data-fr>Mécanismes Transversaux</div>
+    <div class="section-eyebrow" style="margin-bottom:1rem;" data-en>Cross-cutting Mechanisms</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;">
+      <div class="mechanism-card">
+        <div class="mechanism-icon">🤝</div>
+        <div>
+          <div class="mechanism-name">JEPARTICIPE2035</div>
+          <div class="mechanism-type" data-fr>Mécanisme d'Engagement</div>
+          <div class="mechanism-type" data-en>Engagement Mechanism</div>
+          <p class="mechanism-desc" data-fr>Dispositif destiné à mobiliser citoyens et diaspora pour contribuer financièrement, matériellement ou par compétences aux projets structurants.</p>
+          <p class="mechanism-desc" data-en>Device to mobilize citizens and diaspora to contribute financially, materially, or through skills to key projects.</p>
+        </div>
+      </div>
+      <div class="mechanism-card">
+        <div class="mechanism-icon">💡</div>
+        <div>
+          <div class="mechanism-name">EBWA</div>
+          <div class="mechanism-type" data-fr>Étude Territoriale Stratégique</div>
+          <div class="mechanism-type" data-en>Strategic Territorial Study</div>
+          <p class="mechanism-desc" data-fr>Base documentaire et analytique servant d'appui aux décisions et priorités de développement à Ebolowa. Fondement scientifique de toutes les interventions.</p>
+          <p class="mechanism-desc" data-en>Documentary and analytical base supporting development decisions and priorities in Ebolowa. Scientific foundation for all interventions.</p>
+        </div>
+      </div>
+      <div class="mechanism-card">
+        <div class="mechanism-icon">💰</div>
+        <div>
+          <div class="mechanism-name">KISSIN</div>
+          <div class="mechanism-type" data-fr>Outil de Financement Participatif</div>
+          <div class="mechanism-type" data-en>Participatory Financing Tool</div>
+          <p class="mechanism-desc" data-fr>Mécanisme de contribution permettant de soutenir financièrement les projets structurants de l'écosystème NZUANE.</p>
+          <p class="mechanism-desc" data-en>Contribution mechanism enabling financial support for NZUANE's key projects.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PLAN TRIENNAL ══════════ -->
+<section id="triennal">
+  <div class="section-eyebrow" data-fr>Plan Stratégique 2025–2028</div>
+  <div class="section-eyebrow" data-en>Strategic Plan 2025–2028</div>
+  <h2 class="section-title" data-fr>Plan Triennal.<br><em>Trois phases. Une séquence.</em></h2>
+  <h2 class="section-title" data-en>3-Year Plan.<br><em>Three phases. One sequence.</em></h2>
+  <p class="section-lead" data-fr>Sur 2025–2028, NZUANE concentre ses efforts sur l'installation et la stabilisation du levier productif et alimentaire territorial (ROMBONE → BIDI), fondement de toute légitimité future.</p>
+  <p class="section-lead" data-en>Over 2025–2028, NZUANE concentrates on establishing and stabilizing the territorial productive and food lever (ROMBONE → BIDI), the foundation of all future legitimacy.</p>
+
+  <div class="triennal-grid">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="period-badge">01</div>
+          <div class="timeline-phase" data-fr>Phase 1 · Année 1</div>
+          <div class="timeline-phase" data-en>Phase 1 · Year 1</div>
+          <div class="timeline-title" data-fr>Ancrage Institutionnel</div>
+          <div class="timeline-title" data-en>Institutional Anchoring</div>
+          <p class="timeline-desc" data-fr>Sécurisation du partenariat avec le CRA, légitimation sociale via le MINAS, formalisation du cadre juridique et structuration du noyau local.</p>
+          <p class="timeline-desc" data-en>Securing the CRA partnership, social legitimization through MINAS, legal framework formalization, and local core structuring.</p>
+          <div class="timeline-objectives">
+            <div class="timeline-obj" data-fr>Convention avec orphelinats pilotes</div>
+            <div class="timeline-obj" data-en>Convention with pilot orphanages</div>
+            <div class="timeline-obj" data-fr>Préparation documentaire et administrative</div>
+            <div class="timeline-obj" data-en>Documentary and administrative preparation</div>
+            <div class="timeline-obj" data-fr>Appui stratégique de la diaspora</div>
+            <div class="timeline-obj" data-en>Diaspora strategic support</div>
+          </div>
+          <div class="timeline-kpi" data-fr>✓ Indicateur : Dispositif institutionnel stabilisé et conventions signées</div>
+          <div class="timeline-kpi" data-en>✓ KPI: Institutional framework stabilized and agreements signed</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="period-badge">02</div>
+          <div class="timeline-phase" data-fr>Phase 2 · Années 1–2</div>
+          <div class="timeline-phase" data-en>Phase 2 · Years 1–2</div>
+          <div class="timeline-title" data-fr>Stabilisation Productive</div>
+          <div class="timeline-title" data-en>Productive Stabilization</div>
+          <p class="timeline-desc" data-fr>Mise en production effective de ROMBONE, organisation logistique, système de suivi, premiers flux alimentaires vers les structures sociales partenaires.</p>
+          <p class="timeline-desc" data-en>Effective production launch of ROMBONE, logistics organization, monitoring systems, first food flows to partner social structures.</p>
+          <div class="timeline-objectives">
+            <div class="timeline-obj" data-fr>Production régulière et traçable</div>
+            <div class="timeline-obj" data-en>Regular and traceable production</div>
+            <div class="timeline-obj" data-fr>Appui en structuration depuis la diaspora</div>
+            <div class="timeline-obj" data-en>Structuring support from the diaspora</div>
+            <div class="timeline-obj" data-fr>Mise en relation technique si nécessaire</div>
+            <div class="timeline-obj" data-en>Technical networking as needed</div>
+          </div>
+          <div class="timeline-kpi" data-fr>✓ Indicateur : Production régulière et mesurable</div>
+          <div class="timeline-kpi" data-en>✓ KPI: Regular and measurable production</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="period-badge">03</div>
+          <div class="timeline-phase" data-fr>Phase 3 · Années 2–3</div>
+          <div class="timeline-phase" data-en>Phase 3 · Years 2–3</div>
+          <div class="timeline-title" data-fr>Déploiement BIDI</div>
+          <div class="timeline-title" data-en>BIDI Deployment</div>
+          <p class="timeline-desc" data-fr>Approvisionnement structuré, intégration progressive des ADV, lancement d'une première école pilote, mesure d'impact nutritionnel.</p>
+          <p class="timeline-desc" data-en>Structured supply, progressive ADV integration, first pilot school launch, nutritional impact measurement.</p>
+          <div class="timeline-objectives">
+            <div class="timeline-obj" data-fr>Modèle alimentaire stable et reproductible</div>
+            <div class="timeline-obj" data-en>Stable and replicable food model</div>
+            <div class="timeline-obj" data-fr>Structuration de partenariats institutionnels</div>
+            <div class="timeline-obj" data-en>Institutional partnership structuring</div>
+            <div class="timeline-obj" data-fr>Valorisation des résultats auprès des bailleurs</div>
+            <div class="timeline-obj" data-en>Results communication to funders</div>
+          </div>
+          <div class="timeline-kpi" data-fr>✓ Indicateur : Modèle alimentaire stabilisé et reproductible</div>
+          <div class="timeline-kpi" data-en>✓ KPI: Stabilized and replicable food model</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,151,58,.2);padding:2rem;margin-bottom:1.5rem;">
+        <div class="section-eyebrow" style="font-size:.55rem;" data-fr>Résultat attendu · Fin 2028</div>
+        <div class="section-eyebrow" style="font-size:.55rem;" data-en>Expected Result · End of 2028</div>
+        <div style="margin-top:1rem;display:flex;flex-direction:column;gap:.75rem;">
+          <div style="display:flex;align-items:flex-start;gap:.75rem;font-size:.82rem;color:rgba(247,243,235,.6);">
+            <span style="color:var(--gold);flex-shrink:0;">✓</span>
+            <span data-fr>Un levier productif fonctionnel</span><span data-en>A functional productive lever</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:.75rem;font-size:.82rem;color:rgba(247,243,235,.6);">
+            <span style="color:var(--gold);flex-shrink:0;">✓</span>
+            <span data-fr>Un modèle alimentaire stabilisé</span><span data-en>A stabilized food model</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:.75rem;font-size:.82rem;color:rgba(247,243,235,.6);">
+            <span style="color:var(--gold);flex-shrink:0;">✓</span>
+            <span data-fr>Une crédibilité territoriale démontrée</span><span data-en>Demonstrated territorial credibility</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:.75rem;font-size:.82rem;color:rgba(247,243,235,.6);">
+            <span style="color:var(--gold);flex-shrink:0;">✓</span>
+            <span data-fr>Capacité prouvée à mobiliser partenaires</span><span data-en>Proven capacity to mobilize partners</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(200,151,58,.2);padding:2rem;">
+        <div class="section-eyebrow" style="font-size:.55rem;" data-fr>Axes Secondaires · En préparation</div>
+        <div class="section-eyebrow" style="font-size:.55rem;" data-en>Secondary Axes · In preparation</div>
+        <div style="margin-top:1rem;display:flex;flex-direction:column;gap:.6rem;">
+          <div style="font-size:.78rem;color:rgba(247,243,235,.45);padding:.5rem;border-left:1px solid rgba(200,151,58,.2);" data-fr>Études préliminaires : forages/puits</div>
+          <div style="font-size:.78rem;color:rgba(247,243,235,.45);padding:.5rem;border-left:1px solid rgba(200,151,58,.2);" data-en>Preliminary studies: boreholes/wells</div>
+          <div style="font-size:.78rem;color:rgba(247,243,235,.45);padding:.5rem;border-left:1px solid rgba(200,151,58,.2);" data-fr>Structuration d'un dispositif d'aide médicale</div>
+          <div style="font-size:.78rem;color:rgba(247,243,235,.45);padding:.5rem;border-left:1px solid rgba(200,151,58,.2);" data-en>Structuring of a medical aid system</div>
+          <div style="font-size:.78rem;color:rgba(247,243,235,.45);padding:.5rem;border-left:1px solid rgba(200,151,58,.2);" data-fr>Cartographie des besoins en matériel scolaire</div>
+          <div style="font-size:.78rem;color:rgba(247,243,235,.45);padding:.5rem;border-left:1px solid rgba(200,151,58,.2);" data-en>Mapping of school equipment needs</div>
+          <div style="font-size:.78rem;color:rgba(247,243,235,.45);padding:.5rem;border-left:1px solid rgba(200,151,58,.2);" data-fr>Accompagnement des personnes âgées isolées</div>
+          <div style="font-size:.78rem;color:rgba(247,243,235,.45);padding:.5rem;border-left:1px solid rgba(200,151,58,.2);" data-en>Support for isolated elderly persons</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PLAN DÉCENNAL ══════════ -->
+<section id="decennal">
+  <div class="section-eyebrow" data-fr>Vision Long Terme 2025–2035</div>
+  <div class="section-eyebrow" data-en>Long-Term Vision 2025–2035</div>
+  <h2 class="section-title" data-fr>Plan Décennal.<br><em>Cinq axes. Une autonomie.</em></h2>
+  <h2 class="section-title" data-en>10-Year Plan.<br><em>Five axes. One autonomy.</em></h2>
+  <p class="section-lead" data-fr>À l'horizon 2035, NZUANE vise à contribuer à l'émergence d'une autonomie territoriale systémique à Ebolowa — la capacité du territoire à organiser, produire, former, soutenir et élever ses membres de manière structurée et durable.</p>
+  <p class="section-lead" data-en>By 2035, NZUANE aims to contribute to the emergence of systemic territorial autonomy in Ebolowa — the territory's capacity to organize, produce, train, support, and elevate its members in a structured and sustainable manner.</p>
+
+  <div class="axes-grid">
+    <div class="axe-card">
+      <div class="axe-number">01</div>
+      <div class="axe-title" data-fr>Autonomie Productive et Formative</div>
+      <div class="axe-title" data-en>Productive and Training Autonomy</div>
+      <div class="axe-obj" data-fr>Professionnaliser les formations techniques à Ebolowa</div>
+      <div class="axe-obj" data-en>Professionalize technical training in Ebolowa</div>
+      <div class="axe-result" data-fr>
+        <ul>
+          <li>Formations connectées à la production réelle</li>
+          <li>Insertion professionnelle directe</li>
+          <li>Réduction du décalage théorie/pratique</li>
+        </ul>
+      </div>
+      <div class="axe-result" data-en>
+        <ul>
+          <li>Training connected to real production</li>
+          <li>Direct professional integration</li>
+          <li>Reduced theory/practice gap</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="axe-card">
+      <div class="axe-number">02</div>
+      <div class="axe-title" data-fr>Autonomie Économique Féminine</div>
+      <div class="axe-title" data-en>Women's Economic Autonomy</div>
+      <div class="axe-obj" data-fr>Favoriser l'indépendance financière des femmes</div>
+      <div class="axe-obj" data-en>Foster financial independence for women</div>
+      <div class="axe-result" data-fr>
+        <ul>
+          <li>Femmes économiquement autonomes</li>
+          <li>Influence accrue dans la structuration sociale</li>
+          <li>Stabilité familiale et communautaire mesurable</li>
+        </ul>
+      </div>
+      <div class="axe-result" data-en>
+        <ul>
+          <li>Economically autonomous women</li>
+          <li>Increased influence in social structuring</li>
+          <li>Measurable family and community stability</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="axe-card">
+      <div class="axe-number">03</div>
+      <div class="axe-title" data-fr>Autonomie Sociale Organisée</div>
+      <div class="axe-title" data-en>Organized Social Autonomy</div>
+      <div class="axe-obj" data-fr>Systématiser le suivi des personnes vulnérables</div>
+      <div class="axe-obj" data-en>Systematize tracking of vulnerable people</div>
+      <div class="axe-result" data-fr>
+        <ul>
+          <li>Connaissance précise des parcours</li>
+          <li>Suivi structuré des bénéficiaires</li>
+          <li>Passage de l'assistance à la gestion organisée</li>
+        </ul>
+      </div>
+      <div class="axe-result" data-en>
+        <ul>
+          <li>Precise knowledge of individual trajectories</li>
+          <li>Structured beneficiary tracking</li>
+          <li>Shift from assistance to organized management</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="axe-card">
+      <div class="axe-number">04</div>
+      <div class="axe-title" data-fr>Autonomie sur la Dignité Humaine</div>
+      <div class="axe-title" data-en>Autonomy on Human Dignity</div>
+      <div class="axe-obj" data-fr>Autosuffisance sur les besoins fondamentaux</div>
+      <div class="axe-obj" data-en>Self-sufficiency on fundamental needs</div>
+      <div class="axe-result" data-fr>
+        <ul>
+          <li>Alimentation · Eau · Cadre de vie</li>
+          <li>Réduction des dépendances extérieures</li>
+          <li>Amélioration tangible des conditions de vie</li>
+        </ul>
+      </div>
+      <div class="axe-result" data-en>
+        <ul>
+          <li>Food · Water · Living conditions</li>
+          <li>Reduced external dependencies</li>
+          <li>Tangible improvement in living conditions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="axe-card">
+      <div class="axe-number">05</div>
+      <div class="axe-title" data-fr>Autonomie Qualitative du Territoire</div>
+      <div class="axe-title" data-en>Qualitative Territorial Autonomy</div>
+      <div class="axe-obj" data-fr>Élever la qualité humaine d'Ebolowa</div>
+      <div class="axe-obj" data-en>Elevate the human quality of Ebolowa</div>
+      <div class="axe-result" data-fr>
+        <ul>
+          <li>Indicateurs sociaux structurés</li>
+          <li>Attractivité et reconnaissance régionale</li>
+          <li>Indicateur territorial de qualité humaine</li>
+        </ul>
+      </div>
+      <div class="axe-result" data-en>
+        <ul>
+          <li>Structured social indicators</li>
+          <li>Regional attractiveness and recognition</li>
+          <li>Territorial human quality indicator</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="vision-2035">
+    <div class="vision-2035-title" data-fr>L'autonomie territoriale systémique à Ebolowa.</div>
+    <div class="vision-2035-title" data-en>Systemic territorial autonomy in Ebolowa.</div>
+    <p class="vision-2035-text" data-fr>
+      Le Plan Décennal fixe le cap. Les plans triennaux successifs en assurent la traduction progressive et opérationnelle. 
+      Le Plan Triennal 2025–2028 constitue la première phase de mise en œuvre — centrée sur l'installation du levier productif 
+      et alimentaire structurant. Chaque phase consolide la suivante, dans une logique de construction patiente et rigoureuse.
+    </p>
+    <p class="vision-2035-text" data-en>
+      The 10-Year Plan sets the direction. Successive 3-year plans ensure its progressive operational translation. 
+      The 2025–2028 Plan constitutes the first implementation phase — focused on establishing the productive and food lever. 
+      Each phase consolidates the next, in a logic of patient and rigorous construction.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ DONNÉES ══════════ -->
+<section id="donnees">
+  <div class="section-eyebrow" data-fr>Base de Connaissance Scientifique</div>
+  <div class="section-eyebrow" data-en>Scientific Knowledge Base</div>
+  <h2 class="section-title" data-fr>Des données.<br><em>Des décisions fondées.</em></h2>
+  <h2 class="section-title" data-en>Data.<br><em>Evidence-based decisions.</em></h2>
+  <p class="section-lead" data-fr>NZUANE fonde chacune de ses interventions sur une analyse rigoureuse du territoire. L'étude EBWA constitue le socle documentaire et analytique de toutes nos décisions — une démarche rare, qui nous distingue comme acteur sérieux auprès des bailleurs institutionnels.</p>
+  <p class="section-lead" data-en>NZUANE grounds each of its interventions in rigorous territorial analysis. The EBWA study forms the documentary and analytical foundation of all our decisions — a rare approach that distinguishes us as a serious actor in the eyes of institutional funders.</p>
+
+  <div class="dashboard-preview">
+    <div class="preview-kpi">
+      <div class="preview-kpi-val">810K</div>
+      <div class="preview-kpi-lbl" data-fr>Habitants · Région Sud</div>
+      <div class="preview-kpi-lbl" data-en>Inhabitants · South Region</div>
+    </div>
+    <div class="preview-kpi">
+      <div class="preview-kpi-val">34%</div>
+      <div class="preview-kpi-lbl" data-fr>Incidence pauvreté</div>
+      <div class="preview-kpi-lbl" data-en>Poverty incidence</div>
+    </div>
+    <div class="preview-kpi">
+      <div class="preview-kpi-val">46%</div>
+      <div class="preview-kpi-lbl" data-fr>Pauvreté féminine (2014)</div>
+      <div class="preview-kpi-lbl" data-en>Female poverty (2014)</div>
+    </div>
+    <div class="preview-kpi">
+      <div class="preview-kpi-val">39.7%</div>
+      <div class="preview-kpi-lbl" data-fr>Filles 12–18 ans hors école</div>
+      <div class="preview-kpi-lbl" data-en>Girls 12–18 out of school</div>
+    </div>
+    <div class="preview-kpi">
+      <div class="preview-kpi-val">82%</div>
+      <div class="preview-kpi-lbl" data-fr>Ménages · bois combustible</div>
+      <div class="preview-kpi-lbl" data-en>Households · firewood fuel</div>
+    </div>
+    <div class="preview-kpi">
+      <div class="preview-kpi-val">28%</div>
+      <div class="preview-kpi-lbl" data-fr>Assainissement amélioré</div>
+      <div class="preview-kpi-lbl" data-en>Improved sanitation</div>
+    </div>
+    <div class="dashboard-cta">
+      <p class="dashboard-cta-text" data-fr>7 thèmes · 50+ indicateurs · Population, Éducation, Santé, Agriculture, Énergie, Services, Pauvreté</p>
+      <p class="dashboard-cta-text" data-en>7 themes · 50+ indicators · Population, Education, Health, Agriculture, Energy, Services, Poverty</p>
+      <a href="dashboard.html" class="btn-primary" data-fr>Accéder au Dashboard complet →</a>
+      <a href="dashboard.html" class="btn-primary" data-en>Access the full Dashboard →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PUBLICATIONS ══════════ -->
+<section id="publications">
+  <div class="section-eyebrow" data-fr>Rapports & Publications</div>
+  <div class="section-eyebrow" data-en>Reports & Publications</div>
+  <h2 class="section-title" data-fr>Transparence<br><em>& redevabilité.</em></h2>
+  <h2 class="section-title" data-en>Transparency<br><em>& accountability.</em></h2>
+  <p class="section-lead" data-fr>NZUANE s'engage à une communication régulière et transparente sur ses activités, résultats et finances. Les publications suivantes seront disponibles au fil du déploiement des programmes.</p>
+  <p class="section-lead" data-en>NZUANE is committed to regular and transparent communication on its activities, results, and finances. The following publications will become available as programs are deployed.</p>
+
+  <div class="publications-grid">
+    <div class="pub-card">
+      <div class="pub-type" data-fr>Rapport Annuel</div>
+      <div class="pub-type" data-en>Annual Report</div>
+      <div class="pub-title" data-fr>Rapport d'Activités 2025</div>
+      <div class="pub-title" data-en>2025 Activity Report</div>
+      <div class="pub-year">2025</div>
+    </div>
+    <div class="pub-card">
+      <div class="pub-type" data-fr>Étude Territoriale</div>
+      <div class="pub-type" data-en>Territorial Study</div>
+      <div class="pub-title">EBWA — Étude Stratégique Ebolowa</div>
+      <div class="pub-year">2025</div>
+    </div>
+    <div class="pub-card">
+      <div class="pub-type" data-fr>Rapport de Programme</div>
+      <div class="pub-type" data-en>Programme Report</div>
+      <div class="pub-title" data-fr>ROMBONE · Rapport d'Impact 2025</div>
+      <div class="pub-title" data-en>ROMBONE · Impact Report 2025</div>
+      <div class="pub-year">2025</div>
+    </div>
+    <div class="pub-card">
+      <div class="pub-type" data-fr>Note de Synthèse</div>
+      <div class="pub-type" data-en>Executive Summary</div>
+      <div class="pub-title" data-fr>BIDI · Nutrition Scolaire, État des Lieux</div>
+      <div class="pub-title" data-en>BIDI · School Nutrition, Situation Report</div>
+      <div class="pub-year">2026</div>
+    </div>
+    <div class="pub-card">
+      <div class="pub-type" data-fr>Rapport Financier</div>
+      <div class="pub-type" data-en>Financial Report</div>
+      <div class="pub-title" data-fr>Comptes Annuels 2025</div>
+      <div class="pub-title" data-en>2025 Annual Accounts</div>
+      <div class="pub-year">2025</div>
+    </div>
+    <div class="pub-card">
+      <div class="pub-type" data-fr>Plan Stratégique</div>
+      <div class="pub-type" data-en>Strategic Plan</div>
+      <div class="pub-title" data-fr>Plan Triennal 2025–2028 · Version Publique</div>
+      <div class="pub-title" data-en>3-Year Plan 2025–2028 · Public Version</div>
+      <div class="pub-year">2025</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact">
+  <div class="section-eyebrow" data-fr>Nous Rejoindre</div>
+  <div class="section-eyebrow" data-en>Join Us</div>
+  <h2 class="section-title" data-fr>Partenaires.<br><em>Bailleurs. Diaspora.</em></h2>
+  <h2 class="section-title" data-en>Partners.<br><em>Funders. Diaspora.</em></h2>
+  <p class="section-lead" data-fr>NZUANE est ouvert à toute forme de collaboration alignée avec sa mission : partenariats institutionnels, appuis techniques, contributions diasporiques ou soutien financier.</p>
+  <p class="section-lead" data-en>NZUANE is open to any form of collaboration aligned with its mission: institutional partnerships, technical support, diaspora contributions, or financial backing.</p>
+
+  <div class="contact-grid">
+    <div class="contact-entity">
+      <div class="entity-country">🇫🇷 France · Siège International</div>
+      <div class="entity-name">NZUANE International</div>
+      <div class="entity-detail">
+        5 Avenue P.B<br>
+        59280 Armentières<br>
+        <a href="tel:+33643000000">+33 643 XXX XXX</a><br>
+        <a href="mailto:contact@nzuane.org">contact@nzuane.org</a><br>
+        <a href="https://nzuane.org" target="_blank">nzuane.org</a>
+      </div>
+    </div>
+    <div class="contact-entity">
+      <div class="entity-country">🇨🇲 Cameroun · Antenne Opérationnelle</div>
+      <div class="entity-name">NZUANE CM / ROMBONE</div>
+      <div class="entity-detail">
+        15 Rue Mvondo Mebounou<br>
+        BP 12 Ebolowa, Sud Cameroun<br>
+        <a href="tel:+237656025282">+237 656 025 282</a><br>
+        <a href="mailto:cameroun@nzuane.org">cameroun@nzuane.org</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      © 2026 <span>NZUANE International</span> — Association Loi 1901 · France ·
+      <span data-fr>Tous droits réservés</span><span data-en>All rights reserved</span>
+    </div>
+    <div class="footer-copy">
+      <span data-fr>Site institutionnel · nzuane.org · Base de données : Open Data for Africa / INS Cameroun</span>
+      <span data-en>Institutional website · nzuane.org · Data source: Open Data for Africa / INS Cameroon</span>
+    </div>
+  </div>
+</section>
+
+</div>
+<script src="assets/js/index.js"></script>
+</body>
+</html>

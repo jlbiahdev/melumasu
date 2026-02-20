@@ -1,0 +1,83 @@
+{
+  "members": [
+    {
+      "full_name": "Jean Luc BIAH",
+      "photo": null,
+      "profession_expertise": "Ingénierie logicielle, structuration de projets, gouvernance stratégique, coordination diaspora-terrain",
+      "bio": "Professionnel de la tech et de la structuration organisationnelle, il conçoit et pilote des projets à fort impact social. Il assure la cohérence stratégique entre vision, gouvernance et mise en œuvre opérationnelle. Il porte l’architecture globale EBWA et la structuration de NZUANE.",
+      "roles": [
+        {"organization": "NZUANE INTERNATIONAL", "title": "Président"},
+        {"organization": "NZUANE CM", "title": "Président"},
+        {"organization": "ROMBONE", "title": "Président"}
+      ]
+    },
+    {
+      "full_name": "Jean-Jacques EBANGA",
+      "photo": null,
+      "profession_expertise": "Supervision des opérations, supply chain, automatisation de données, développement JavaScript/Node, amélioration continue",
+      "bio": "Superviseur des opérations au Canada et développeur indépendant spécialisé en automatisation et structuration de données. Il conçoit des outils de pilotage, tableaux de bord et systèmes d’optimisation des processus. Il apporte une rigueur opérationnelle et analytique aux projets.",
+      "roles": [
+        {"organization": "NZUANE INTERNATIONAL", "title": "Vice-Président"}
+      ]
+    },
+    {
+      "full_name": "Julienne BITA",
+      "photo": null,
+      "profession_expertise": "Enseignement supérieur, organisation institutionnelle, encadrement académique",
+      "bio": "Professeure d’Université à la retraite, elle apporte méthode, rigueur et stabilité institutionnelle. Elle veille à la qualité documentaire, au respect des procédures et à la structuration interne des organisations. Son expérience académique renforce la crédibilité des projets.",
+      "roles": [
+        {"organization": "NZUANE INTERNATIONAL", "title": "Secrétaire Générale"},
+        {"organization": "NZUANE CM", "title": "Vice-Présidente"},
+        {"organization": "ROMBONE", "title": "Vice-Présidente"}
+      ]
+    },
+    {
+      "full_name": "Osiera MEBOUNOU",
+      "photo": null,
+      "profession_expertise": "Communication stratégique, relations publiques, journalisme, marketing, événementiel",
+      "bio": "Journaliste et experte en communication stratégique, Chef de service aux Relations Publiques de CAMTEL. Entrepreneure et consultante en marketing, elle accompagne institutions et entreprises dans leur visibilité et leur stratégie média. Elle structure l’image et la cohérence communicationnelle des projets.",
+      "roles": [
+        {"organization": "NZUANE INTERNATIONAL", "title": "Responsable Communication"},
+        {"organization": "NZUANE CM", "title": "Responsable Communication"},
+        {"organization": "ROMBONE", "title": "Responsable Communication"}
+      ]
+    },
+    {
+      "full_name": "Sonia OSSOE",
+      "photo": null,
+      "profession_expertise": "Juriste",
+      "bio": "Juriste spécialisée en droit des affaires et cadres réglementaires. Elle assure la conformité juridique des dossiers, la sécurisation administrative et la structuration contractuelle des projets. Elle veille à la rigueur et à la protection institutionnelle des organisations.",
+      "roles": [
+        {"organization": "NZUANE CM", "title": "Secrétaire Générale"},
+        {"organization": "ROMBONE", "title": "Secrétaire Générale"}
+      ]
+    },
+    {
+      "full_name": "Laure NYANDA",
+      "photo": null,
+      "profession_expertise": "Commerce et coordination d’acteurs de vente",
+      "bio": "Commerçante et actrice de terrain, elle représente et organise les acteurs de vente au sein du collectif ADV. Elle coordonne les dynamiques internes et porte la voix des commerçantes dans les initiatives structurées.",
+      "roles": [
+        {"organization": "ADV - ACTEURS DE VENTE", "title": "Présidente"}
+      ]
+    },
+    {
+      "full_name": "Marie ANABA",
+      "photo": null,
+      "profession_expertise": "Commerce et organisation administrative",
+      "bio": "Commerçante engagée dans la structuration des acteurs de vente. Elle assure le suivi administratif et la coordination interne du collectif. Elle contribue à la discipline organisationnelle et à la traçabilité des décisions.",
+      "roles": [
+        {"organization": "ADV - ACTEURS DE VENTE", "title": "Secrétaire Générale"}
+      ]
+    },
+    {
+      "full_name": "Isabelle MENDAMA",
+      "photo": null,
+      "profession_expertise": "Journalisme et communication",
+      "bio": "Journaliste formée en communication, elle apporte une expertise média et rédactionnelle au collectif ADV. Elle assure la visibilité, la diffusion des messages et la valorisation des actions menées sur le terrain.",
+      "roles": [
+        {"organization": "ADV - ACTEURS DE VENTE", "title": "Responsable Communication"}
+      ]
+    }
+  ]
+}

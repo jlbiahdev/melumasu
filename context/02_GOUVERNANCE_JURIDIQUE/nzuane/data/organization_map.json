@@ -1,0 +1,64 @@
+{
+  "satellite_organizations": [
+    {
+      "name": "NZUANE CM",
+      "role": "Structure opérationnelle nationale au Cameroun, mise en œuvre des actions sociales et humanitaires sur le terrain",
+      "country": {
+        "name": "Cameroon",
+        "iso_code": "CM"
+      },
+      "type": "Association",
+      "year_established": 2024,
+      "parent": "NZUANE",
+      "governance_level": "National"
+    },
+    {
+      "name": "NZUANE INTERNATIONAL",
+      "role": "Structure de coordination diaspora et levée de fonds internationale, pilotage stratégique global",
+      "country": {
+        "name": "France",
+        "iso_code": "FR"
+      },
+      "type": "Association",
+      "year_established": 2026,
+      "parent": "NZUANE",
+      "governance_level": "International"
+    },
+    {
+      "name": "NZUANE CA",
+      "role": "Chapitre national de NZUANE au Canada, mobilisation de la diaspora et relais institutionnel nord-américain",
+      "country": {
+        "name": "Canada",
+        "iso_code": "CA"
+      },
+      "type": "Chapter",
+      "year_established": 2026,
+      "parent": "NZUANE INTERNATIONAL",
+      "governance_level": "Chapter"
+    },
+    {
+      "name": "ROMBONE",
+      "role": "Bras opérationnel économique et structurant, implémentation des projets sociaux et productifs",
+      "country": {
+        "name": "Cameroon",
+        "iso_code": "CM"
+      },
+      "type": "Cooperative / Operational Institution",
+      "year_established": 2020,
+      "parent": "NZUANE CM",
+      "governance_level": "Operational"
+    },
+    {
+      "name": "ADV - ACTEURS DE VENTE",
+      "role": "Collectif des acteurs commerciaux partenaires, structuration et coordination des vendeuses locales",
+      "country": {
+        "name": "Cameroon",
+        "iso_code": "CM"
+      },
+      "type": "Collective",
+      "year_established": 2026,
+      "parent": "ROMBONE",
+      "governance_level": "Partner Network"
+    }
+  ]
+}

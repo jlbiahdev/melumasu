@@ -1,0 +1,51 @@
+{
+  "ecosystem": {
+    "vision_strategique": {
+      "name": "FEMMEKMR2035",
+      "type": "Vision Programme 2035",
+      "description": "Initiative stratégique à horizon 2035 visant à autonomiser durablement la femme à travers ses activités économiques, entrepreneuriales et sociales."
+    },
+    "projets_structurants": [
+      {
+        "name": "ROMBONE",
+        "type": "Pilier Economique",
+        "description": "Projet structurant visant à mettre en place un écosystème productif local durable articulé autour de l’agriculture, de la transformation et de l’organisation communautaire."
+      },
+      {
+        "name": "BIDI",
+        "type": "Programme Sectoriel",
+        "description": "Programme structurant d’alimentation locale reliant production, transformation et distribution scolaire afin de renforcer l’autonomie alimentaire."
+      },
+      {
+        "name": "FEMMES ADV",
+        "type": "Projet Organisationnel",
+        "description": "Projet visant à structurer les Actrices de Vente (ADV) en association professionnelle, afin de formaliser leurs activités, renforcer leur autonomie financière et développer leur capacité entrepreneuriale."
+      }
+    ],
+    "sous_projets": [
+      {
+        "name": "KISSINE",
+        "type": "Implémentation Technique & Standard Professionnel",
+        "parent_project": "FEMMES ADV",
+        "description": "Projet d’alignement des ADV à un standard professionnel via l’installation de cuisines professionnelles BIDI. Les équipements seraient fabriqués par des établissements d’enseignement technique régionaux, subventionnés par NZUANE et remboursés sous forme de crédit progressif par les ADV."
+      }
+    ],
+    "mecanismes_transversaux": [
+      {
+        "name": "JEPARTICIPE2035",
+        "type": "Mécanisme d’Engagement",
+        "description": "Dispositif destiné à mobiliser citoyens et diaspora pour contribuer financièrement, matériellement ou par compétences aux projets structurants."
+      },
+      {
+        "name": "KISSIN",
+        "type": "Outil de Financement Participatif",
+        "description": "Plateforme ou mécanisme de contribution permettant de soutenir financièrement les projets structurants de l’écosystème NZUANE."
+      }
+    ],
+    "etude_strategique": {
+      "name": "EBWA",
+      "type": "Etude Territoriale",
+      "description": "Base documentaire et stratégique servant d’appui analytique aux décisions et priorités de développement à Ebolowa."
+    }
+  }
+}

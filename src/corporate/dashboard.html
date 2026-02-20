@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NZUANE — Base de Connaissance Scientifique · Région du Sud, Cameroun</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a3a2a;
+    --forest-mid: #2d5a3d;
+    --forest-light: #4a8c5c;
+    --earth: #8b5e3c;
+    --earth-light: #c4956a;
+    --cream: #f5f0e8;
+    --cream-dark: #ede5d4;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --text-dark: #1a1a1a;
+    --text-mid: #3d3d3d;
+    --text-light: #6b6b6b;
+    --red-alert: #c0392b;
+    --blue-data: #2980b9;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Mono', monospace;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(201,168,76,0.04) 40px, rgba(201,168,76,0.04) 41px),
+      repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(201,168,76,0.04) 40px, rgba(201,168,76,0.04) 41px);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    padding: 3rem 3rem 0;
+    gap: 2rem;
+  }
+
+  .header-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .brand-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .brand-tag::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--cream);
+    letter-spacing: -0.01em;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .header-subtitle {
+    font-size: 0.75rem;
+    color: rgba(245,240,232,0.55);
+    letter-spacing: 0.1em;
+    margin-top: 0.5rem;
+  }
+
+  .header-stats-row {
+    display: flex;
+    gap: 0;
+    border-top: 1px solid rgba(201,168,76,0.2);
+    margin-top: 2.5rem;
+  }
+
+  .header-stat {
+    flex: 1;
+    padding: 1.25rem 1.5rem;
+    border-right: 1px solid rgba(201,168,76,0.15);
+    transition: background 0.3s;
+  }
+
+  .header-stat:last-child { border-right: none; }
+  .header-stat:hover { background: rgba(201,168,76,0.06); }
+
+  .header-stat-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+
+  .header-stat-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.5);
+    margin-top: 0.3rem;
+  }
+
+  /* ===== NAV TABS ===== */
+  .nav-container {
+    background: var(--forest-mid);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+
+  .nav-tabs {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-tabs::-webkit-scrollbar { display: none; }
+
+  .nav-tab {
+    padding: 1rem 1.5rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.5);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+
+  .nav-tab:hover { color: var(--cream); background: rgba(255,255,255,0.05); }
+
+  .nav-tab.active {
+    color: var(--gold-light);
+    border-bottom-color: var(--gold);
+    background: rgba(201,168,76,0.08);
+  }
+
+  .nav-tab .icon { font-size: 0.9rem; }
+
+  /* ===== MAIN LAYOUT ===== */
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+  }
+
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* ===== SECTION HEADER ===== */
+  .section-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--cream-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--forest);
+    line-height: 1.1;
+  }
+
+  .section-title span {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+  }
+
+  .source-tag {
+    font-size: 0.6rem;
+    color: var(--text-light);
+    letter-spacing: 0.08em;
+    background: var(--cream-dark);
+    padding: 0.3rem 0.75rem;
+    border-radius: 2px;
+  }
+
+  /* ===== KPI CARDS ===== */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .kpi-card {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--forest-light);
+  }
+
+  .kpi-card.alert::before { background: var(--red-alert); }
+  .kpi-card.gold::before { background: var(--gold); }
+  .kpi-card.earth::before { background: var(--earth-light); }
+
+  .kpi-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+
+  .kpi-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .kpi-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1;
+  }
+
+  .kpi-unit {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-left: 0.2rem;
+  }
+
+  .kpi-sub {
+    font-size: 0.65rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+  }
+
+  /* ===== CHART GRID ===== */
+  .chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .chart-grid.cols-3 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .chart-card {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    padding: 1.75rem;
+  }
+
+  .chart-card.wide {
+    grid-column: 1 / -1;
+  }
+
+  .chart-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--forest);
+    margin-bottom: 0.35rem;
+  }
+
+  .chart-subtitle {
+    font-size: 0.62rem;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25rem;
+  }
+
+  .chart-wrap {
+    position: relative;
+    height: 240px;
+  }
+
+  .chart-wrap.tall { height: 320px; }
+  .chart-wrap.short { height: 180px; }
+
+  /* ===== INSIGHT BOX ===== */
+  .insight-box {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-left: 4px solid var(--gold);
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .insight-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+  .insight-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .insight-text strong {
+    font-weight: 600;
+    font-style: normal;
+    color: var(--gold-light);
+  }
+
+  /* ===== TABLE STYLE ===== */
+  .data-table-wrap {
+    overflow-x: auto;
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.7rem;
+  }
+
+  thead { background: var(--forest); }
+  thead th {
+    color: var(--cream);
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  tbody tr { border-bottom: 1px solid var(--cream-dark); }
+  tbody tr:hover { background: rgba(26,58,42,0.03); }
+
+  tbody td {
+    padding: 0.65rem 1rem;
+    color: var(--text-mid);
+    font-size: 0.7rem;
+  }
+
+  tbody td.num {
+    font-family: 'DM Mono', monospace;
+    text-align: right;
+    font-weight: 500;
+    color: var(--forest);
+  }
+
+  tbody td.highlight { color: var(--red-alert); font-weight: 500; }
+  tbody td.good { color: var(--forest-light); font-weight: 500; }
+
+  /* ===== PROGRESS BARS ===== */
+  .progress-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .progress-item { }
+
+  .progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    color: var(--text-mid);
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.04em;
+  }
+
+  .progress-bar-track {
+    height: 6px;
+    background: var(--cream-dark);
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--forest-light);
+    transition: width 1.5s cubic-bezier(0.4,0,0.2,1);
+    width: 0;
+  }
+
+  .progress-bar-fill.red { background: var(--red-alert); }
+  .progress-bar-fill.gold { background: var(--gold); }
+  .progress-bar-fill.earth { background: var(--earth-light); }
+
+  /* ===== COMPARISON BADGE ===== */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .compare-item {
+    padding: 0.75rem;
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .compare-item .clabel {
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+  }
+
+  .compare-item .cval {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--forest);
+  }
+
+  .compare-item.female .cval { color: #7b4f8a; }
+  .compare-item.male .cval { color: #2c6b9a; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--forest);
+    color: rgba(245,240,232,0.4);
+    padding: 1.5rem 3rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  footer span { color: var(--gold); }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section.active .kpi-card,
+  .section.active .chart-card,
+  .section.active .insight-box {
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .section.active .kpi-card:nth-child(1) { animation-delay: 0.05s; }
+  .section.active .kpi-card:nth-child(2) { animation-delay: 0.10s; }
+  .section.active .kpi-card:nth-child(3) { animation-delay: 0.15s; }
+  .section.active .kpi-card:nth-child(4) { animation-delay: 0.20s; }
+  .section.active .kpi-card:nth-child(5) { animation-delay: 0.25s; }
+  .section.active .kpi-card:nth-child(6) { animation-delay: 0.30s; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .header-content { grid-template-columns: 1fr; padding: 2rem; }
+    .chart-grid { grid-template-columns: 1fr; }
+    main { padding: 1.5rem 1rem; }
+    .header-stats-row { flex-wrap: wrap; }
+    .header-stat { flex: 1 1 140px; }
+    footer { padding: 1.5rem; flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-pattern"></div>
+  <div class="header-content">
+    <div class="header-brand">
+      <div class="brand-tag">NZUANE · Région du Sud · Cameroun</div>
+      <h1>Base de <em>Connaissance</em><br>Scientifique</h1>
+      <p class="header-subtitle">Données probantes fondant les actions et projets de NZUANE · Sources : Open Data for Africa / INS Cameroun · 2001–2023</p>
+    </div>
+  </div>
+  <div class="header-stats-row">
+    <div class="header-stat">
+      <div class="header-stat-value">810K</div>
+      <div class="header-stat-label">Habitants (2018)</div>
+    </div>
+    <div class="header-stat">
+      <div class="header-stat-value">47 191</div>
+      <div class="header-stat-label">km² superficie</div>
+    </div>
+    <div class="header-stat">
+      <div class="header-stat-value">34%</div>
+      <div class="header-stat-label">Incidence pauvreté</div>
+    </div>
+    <div class="header-stat">
+      <div class="header-stat-value">82%</div>
+      <div class="header-stat-label">Dépendance bois combustible</div>
+    </div>
+    <div class="header-stat">
+      <div class="header-stat-value">28%</div>
+      <div class="header-stat-label">Assainissement amélioré</div>
+    </div>
+    <div class="header-stat">
+      <div class="header-stat-value">17</div>
+      <div class="header-stat-label">Arrondissements MVILA</div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== NAVIGATION ===== -->
+<div class="nav-container">
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-tab="population"><span class="icon">👥</span> Population</button>
+    <button class="nav-tab" data-tab="education"><span class="icon">📚</span> Éducation</button>
+    <button class="nav-tab" data-tab="sante"><span class="icon">🏥</span> Santé</button>
+    <button class="nav-tab" data-tab="services"><span class="icon">💧</span> Services de Base</button>
+    <button class="nav-tab" data-tab="agriculture"><span class="icon">🌿</span> Agriculture</button>
+    <button class="nav-tab" data-tab="energie"><span class="icon">⚡</span> Énergie</button>
+    <button class="nav-tab" data-tab="pauvrete"><span class="icon">📊</span> Pauvreté & Économie</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ===== SECTION POPULATION ===== -->
+<section class="section active" id="population">
+  <div class="section-header">
+    <div class="section-title">
+      <span>Thème 01 / 07</span>
+      Population & Démographie
+    </div>
+    <div class="source-tag">Source: INS Cameroun · Open Data for Africa · 1987–2023</div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card gold">
+      <div class="kpi-label">Population Région du Sud</div>
+      <div class="kpi-value">810 421<span class="kpi-unit">hab.</span></div>
+      <div class="kpi-sub">2018 · +116% depuis 1987</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Département MVILA (Ebolowa)</div>
+      <div class="kpi-value">229 121<span class="kpi-unit">hab.</span></div>
+      <div class="kpi-sub">2018 · Chef-lieu : Ebolowa</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Densité MVILA</div>
+      <div class="kpi-value">26.3<span class="kpi-unit">hab/km²</span></div>
+      <div class="kpi-sub">vs. 17.2 pour la région</div>
+    </div>
+    <div class="kpi-card earth">
+      <div class="kpi-label">Population 0–14 ans (proj. 2025)</div>
+      <div class="kpi-value">159 K</div>
+      <div class="kpi-sub">Femmes · Pression sur services scolaires</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Âge médian (2005)</div>
+      <div class="kpi-value">20<span class="kpi-unit">ans</span></div>
+      <div class="kpi-sub">Population très jeune</div>
+    </div>
+    <div class="kpi-card alert">
+      <div class="kpi-label">Handicap (MVILA)</div>
+      <div class="kpi-value">2.4<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Population en situation de handicap</div>
+    </div>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-card">
+      <div class="chart-title">Évolution de la Population — Région du Sud</div>
+      <div class="chart-subtitle">1987 → 2018 · Effectifs en habitants · par département</div>
+      <div class="chart-wrap tall">
+        <canvas id="popEvolution"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Structure par Âge — MVILA (2016)</div>
+      <div class="chart-subtitle">Répartition de la population par tranche d'âge</div>
+      <div class="chart-wrap tall">
+        <canvas id="ageStructure"></canvas>
+      </div>
+    </div>
+    <div class="chart-card wide">
+      <div class="chart-title">Densité de Population par Département · 2018</div>
+      <div class="chart-subtitle">Habitants par km² — comparaison interdépartementale</div>
+      <div class="chart-wrap short">
+        <canvas id="densite"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <div class="insight-icon">🌱</div>
+    <div class="insight-text">
+      La région du Sud a <strong>doublé sa population</strong> en 30 ans (374K hab. en 1987 → 810K en 2018). Avec un âge médian de 20 ans, <strong>plus de 40% de la population a moins de 15 ans</strong>, créant une pression considérable sur les services éducatifs, nutritionnels et de santé — au cœur des missions de NZUANE.
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION ÉDUCATION ===== -->
+<section class="section" id="education">
+  <div class="section-header">
+    <div class="section-title">
+      <span>Thème 02 / 07</span>
+      Éducation & Scolarisation
+    </div>
+    <div class="source-tag">Source: MINESEC · Open Data for Africa · 2010–2022</div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card gold">
+      <div class="kpi-label">Alphabétisation 15–64 ans (Femmes)</div>
+      <div class="kpi-value">92.8<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Hommes : 97.6% · Données 2016</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Scolarisation Primaire (Filles 6–11 ans)</div>
+      <div class="kpi-value">94.9<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Parité quasi-atteinte au primaire</div>
+    </div>
+    <div class="kpi-card alert">
+      <div class="kpi-label">Scolarisation Secondaire (Filles 12–18 ans)</div>
+      <div class="kpi-value">52.3<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Garçons : 73.4% · Écart critique</div>
+    </div>
+    <div class="kpi-card alert">
+      <div class="kpi-label">Filles 12–18 ans hors école</div>
+      <div class="kpi-value">39.7<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Garçons : 9.6% · Inégalité majeure</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Établissements secondaires publics (2022)</div>
+      <div class="kpi-value">194</div>
+      <div class="kpi-sub">+49% depuis 2010 (130 établissements)</div>
+    </div>
+    <div class="kpi-card earth">
+      <div class="kpi-label">15–24 ans ni école ni travail (Femmes)</div>
+      <div class="kpi-value">23<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Hommes : 6% · Vulnérabilité féminine</div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <div class="insight-icon">⚠️</div>
+    <div class="insight-text">
+      Le décrochage scolaire au secondaire frappe prioritairement les filles : <strong>39.7% des filles de 12–18 ans sont hors école</strong> contre 9.6% des garçons. Cette réalité structure les inégalités de genre sur le long terme et justifie les programmes d'accompagnement de NZUANE ciblant les jeunes filles scolarisées.
+    </div>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-card">
+      <div class="chart-title">Taux de Scolarisation par Niveau et Genre</div>
+      <div class="chart-subtitle">Région du Sud · 2016 · en %</div>
+      <div class="chart-wrap">
+        <canvas id="scolarisation"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Évolution des Enseignants du Secondaire Public</div>
+      <div class="chart-subtitle">Région du Sud · 2010–2022 · Hommes vs Femmes</div>
+      <div class="chart-wrap">
+        <canvas id="enseignants"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Évolution du Taux Brut de Scolarisation Secondaire</div>
+      <div class="chart-subtitle">Région du Sud · 2011–2022</div>
+      <div class="chart-wrap">
+        <canvas id="tauxBrut"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Enfants Hors École — Comparaison Filles/Garçons</div>
+      <div class="chart-subtitle">Région du Sud · 2016 · en %</div>
+      <div class="chart-wrap">
+        <canvas id="horsEcole"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION SANTÉ ===== -->
+<section class="section" id="sante">
+  <div class="section-header">
+    <div class="section-title">
+      <span>Thème 03 / 07</span>
+      Santé & Nutrition
+    </div>
+    <div class="source-tag">Source: MINSANTE · DHS Cameroun · 2004–2023</div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card alert">
+      <div class="kpi-label">Mortalité infantile (National)</div>
+      <div class="kpi-value">40<span class="kpi-unit">/1000</span></div>
+      <div class="kpi-sub">2018 · Milieu urbain · Baisse depuis 49 (2014)</div>
+    </div>
+    <div class="kpi-card alert">
+      <div class="kpi-label">Mortalité infantile (Rural)</div>
+      <div class="kpi-value">54<span class="kpi-unit">/1000</span></div>
+      <div class="kpi-sub">2018 · +35% vs milieu urbain</div>
+    </div>
+    <div class="kpi-card gold">
+      <div class="kpi-label">Accouchements en établissement de santé</div>
+      <div class="kpi-value">79.8<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">2018 · National · +16 pts depuis 2004</div>
+    </div>
+    <div class="kpi-card alert">
+      <div class="kpi-label">Prévalence VIH (Femmes 15–49 ans)</div>
+      <div class="kpi-value">5.5<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">2018 · Région Sud · En baisse (10.6% en 2011)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Mortalité maternelle</div>
+      <div class="kpi-value">147<span class="kpi-unit">/100K</span></div>
+      <div class="kpi-sub">2023 · Naissances vivantes</div>
+    </div>
+    <div class="kpi-card earth">
+      <div class="kpi-label">Prévalence paludisme (< 5 ans)</div>
+      <div class="kpi-value">22 K<span class="kpi-unit">cas</span></div>
+      <div class="kpi-sub">2023 · Première cause de morbidité</div>
+    </div>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-card">
+      <div class="chart-title">Prévalence VIH — Région du Sud</div>
+      <div class="chart-subtitle">Population 15–49 ans · par sexe · 2004–2018</div>
+      <div class="chart-wrap">
+        <canvas id="vih"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Personnel de Santé (Région du Sud)</div>
+      <div class="chart-subtitle">Évolution 2018–2023 · Principaux corps</div>
+      <div class="chart-wrap">
+        <canvas id="personnel"></canvas>
+      </div>
+    </div>
+    <div class="chart-card wide">
+      <div class="chart-title">Maladies Prioritaires — Taux de Prévalence</div>
+      <div class="chart-subtitle">Pour 10 000 habitants · 2023</div>
+      <div class="chart-wrap short">
+        <canvas id="maladies"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <div class="insight-icon">💊</div>
+    <div class="insight-text">
+      La <strong>double charge de malnutrition</strong> (sous-nutrition et maladies chroniques en hausse) frappe particulièrement les enfants de moins de 5 ans. L'amélioration de la nutrition scolaire, cible centrale du programme ROMBONE/BIDI, répond directement aux données de mortalité infantile rurale encore à <strong>54 décès pour 1 000 naissances</strong>.
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION SERVICES DE BASE ===== -->
+<section class="section" id="services">
+  <div class="section-header">
+    <div class="section-title">
+      <span>Thème 04 / 07</span>
+      Services de Base & Assainissement
+    </div>
+    <div class="source-tag">Source: INS · CAMWATER · Open Data for Africa · 2016–2021</div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Accès eau améliorée (Région Sud)</div>
+      <div class="kpi-value">74.6<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">2016 · 25.4% sans eau potable</div>
+    </div>
+    <div class="kpi-card alert">
+      <div class="kpi-label">Assainissement amélioré (non partagé)</div>
+      <div class="kpi-value">28.2<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">60.5% utilisent des toilettes non améliorées</div>
+    </div>
+    <div class="kpi-card gold">
+      <div class="kpi-label">Accès électricité (Région Sud 2021)</div>
+      <div class="kpi-value">73.6<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">+10.6 pts depuis 2016 (63%)</div>
+    </div>
+    <div class="kpi-card alert">
+      <div class="kpi-label">Logements en matériau rudimentaire</div>
+      <div class="kpi-value">51.2<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Mur · Région Sud · 2016</div>
+    </div>
+    <div class="kpi-card earth">
+      <div class="kpi-label">Internet (Hommes 15–49 ans · SUD)</div>
+      <div class="kpi-value">34.5<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Femmes : 24.6% · Fracture numérique de genre</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Propriétaires sans titre foncier</div>
+      <div class="kpi-value">62.5<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Sécurisation foncière enjeu majeur</div>
+    </div>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-card">
+      <div class="chart-title">Accès aux Services Essentiels par Département</div>
+      <div class="chart-subtitle">% population · Eau, Électricité, Assainissement · 2016</div>
+      <div class="chart-wrap tall">
+        <canvas id="services"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Accès à l'Eau par Arrondissement (MVILA)</div>
+      <div class="chart-subtitle">% population utilisant une source améliorée · 2016</div>
+      <div class="chart-wrap tall">
+        <canvas id="eauMvila"></canvas>
+      </div>
+    </div>
+    <div class="chart-card wide">
+      <div class="chart-title">Accès aux Services de Base — Arrondissements Critiques vs Performants</div>
+      <div class="chart-subtitle">Sélection · eau améliorée · assainissement non partagé · électricité · 2016</div>
+      <div class="chart-wrap short">
+        <canvas id="servicesCompare"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <div class="insight-icon">🚰</div>
+    <div class="insight-text">
+      Les disparités intra-régionales sont saisissantes : <strong>Kribi 2 (100% accès eau) contre Mvengue (32.1%)</strong>, ou encore Mintom avec seulement <strong>1.4% d'accès à l'électricité</strong>. Ces inégalités territoriales guident la priorisation géographique des interventions NZUANE.
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION AGRICULTURE ===== -->
+<section class="section" id="agriculture">
+  <div class="section-header">
+    <div class="section-title">
+      <span>Thème 05 / 07</span>
+      Agriculture & Production
+    </div>
+    <div class="source-tag">Source: MINADER · Open Data for Africa · 2010–2022</div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card gold">
+      <div class="kpi-label">Banane Plantain (production 2020)</div>
+      <div class="kpi-value">872 K<span class="kpi-unit">t</span></div>
+      <div class="kpi-sub">1ère culture vivrière de la région</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Manioc (production 2020)</div>
+      <div class="kpi-value">570 K<span class="kpi-unit">t</span></div>
+      <div class="kpi-sub">Base alimentaire fondamentale</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Macabo/Taro (production 2020)</div>
+      <div class="kpi-value">145 K<span class="kpi-unit">t</span></div>
+      <div class="kpi-sub">Culture de sécurité alimentaire</div>
+    </div>
+    <div class="kpi-card earth">
+      <div class="kpi-label">Cacao (production 2020)</div>
+      <div class="kpi-value">18 951<span class="kpi-unit">t</span></div>
+      <div class="kpi-sub">Culture de rente · 51 347 ha</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Maïs (production 2020)</div>
+      <div class="kpi-value">101 K<span class="kpi-unit">t</span></div>
+      <div class="kpi-sub">+47% depuis 2010</div>
+    </div>
+    <div class="kpi-card alert">
+      <div class="kpi-label">Colocasia (production 2020)</div>
+      <div class="kpi-value">145 K<span class="kpi-unit">t</span></div>
+      <div class="kpi-sub">Culture à fort potentiel nutritionnel</div>
+    </div>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-card">
+      <div class="chart-title">Top 8 Productions Agricoles (2020)</div>
+      <div class="chart-subtitle">Tonnes · Région du Sud</div>
+      <div class="chart-wrap tall">
+        <canvas id="productions"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Évolution Plantain & Manioc</div>
+      <div class="chart-subtitle">2010–2020 · Tonnes</div>
+      <div class="chart-wrap tall">
+        <canvas id="agriEvol"></canvas>
+      </div>
+    </div>
+    <div class="chart-card wide">
+      <div class="chart-title">Production Élevage (Région du Sud)</div>
+      <div class="chart-subtitle">Évolution 2019–2022 · Tonnes</div>
+      <div class="chart-wrap short">
+        <canvas id="elevage"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <div class="insight-icon">🌾</div>
+    <div class="insight-text">
+      La région du Sud présente un <strong>potentiel agricole exceptionnel</strong> avec une production de plantain en hausse continue (+53% en 10 ans). La diversité des cultures vivrières disponibles — manioc, macabo, igname, maïs — offre à NZUANE une base solide pour développer des <strong>programmes de nutrition scolaire ancrés dans l'agriculture locale</strong>.
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION ÉNERGIE ===== -->
+<section class="section" id="energie">
+  <div class="section-header">
+    <div class="section-title">
+      <span>Thème 06 / 07</span>
+      Énergie & Combustibles
+    </div>
+    <div class="source-tag">Source: MINEE · INS Cameroun · 2016–2021</div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card alert">
+      <div class="kpi-label">Ménages utilisant le bois (cuisine)</div>
+      <div class="kpi-value">77–87<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Selon la zone · Risque déforestation & santé</div>
+    </div>
+    <div class="kpi-card gold">
+      <div class="kpi-label">Accès électricité ENEO (MVILA)</div>
+      <div class="kpi-value">61.8<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Vallée du Ntem : 40.2% seulement</div>
+    </div>
+    <div class="kpi-card earth">
+      <div class="kpi-label">GPL/Gaz domestique (MVILA)</div>
+      <div class="kpi-value">13.7<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Adoption très faible · Potentiel de croissance</div>
+    </div>
+    <div class="kpi-card alert">
+      <div class="kpi-label">Lampes à pétrole (MVILA)</div>
+      <div class="kpi-value">30.3<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Vallée du Ntem : 48.2% · Précarité énergétique</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Combustibles solides (cuisine · SUD 2016)</div>
+      <div class="kpi-value">81.9<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Impact sur la qualité de l'air intérieur</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Accès eau potable (forage/CDE)</div>
+      <div class="kpi-value">42.7<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">MVILA · Reste dépendant des sources</div>
+    </div>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-card">
+      <div class="chart-title">Mix Combustibles — Cuisine (Région Sud 2021)</div>
+      <div class="chart-subtitle">% des ménages par type de combustible</div>
+      <div class="chart-wrap">
+        <canvas id="combustibles"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Accès Électricité par Département</div>
+      <div class="chart-subtitle">Source ENEO · % ménages · 2021</div>
+      <div class="chart-wrap">
+        <canvas id="electricite"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <div class="insight-icon">🔥</div>
+    <div class="insight-text">
+      Plus de <strong>8 ménages sur 10</strong> utilisent le bois comme combustible pour cuisiner dans la région du Sud. Cette dépendance crée un cercle vicieux : <strong>pression sur les forêts, qualité de l'air dégradée, temps des femmes monopolisé</strong> par la collecte de bois. Les cuisines améliorées et la transition vers des combustibles propres font partie des leviers d'action de NZUANE.
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION PAUVRETÉ & ÉCONOMIE ===== -->
+<section class="section" id="pauvrete">
+  <div class="section-header">
+    <div class="section-title">
+      <span>Thème 07 / 07</span>
+      Pauvreté & Économie
+    </div>
+    <div class="source-tag">Source: INS · ECAM Cameroun · 2001–2019</div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card alert">
+      <div class="kpi-label">Incidence pauvreté (Région Sud 2014)</div>
+      <div class="kpi-value">34.1<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Hausse depuis 2007 (29.3%) · +4.8 pts</div>
+    </div>
+    <div class="kpi-card alert">
+      <div class="kpi-label">Pauvreté féminine (SUD 2014)</div>
+      <div class="kpi-value">46<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">Hommes : 29% · Écart de 17 points</div>
+    </div>
+    <div class="kpi-card gold">
+      <div class="kpi-label">Dépense moyenne / unité conso.</div>
+      <div class="kpi-value">587 K<span class="kpi-unit">FCFA</span></div>
+      <div class="kpi-sub">2014 · +28% depuis 2007</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Rapport interquintile Q5/Q1</div>
+      <div class="kpi-value">6.7</div>
+      <div class="kpi-sub">2014 · Inégalités en hausse (4.9 en 2001)</div>
+    </div>
+    <div class="kpi-card earth">
+      <div class="kpi-label">Emploi informel (sans diplôme)</div>
+      <div class="kpi-value">95.5<span class="kpi-unit">%</span></div>
+      <div class="kpi-sub">National · L'éducation réduit drastiquement ce taux</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Salaire horaire (diplômé supérieur)</div>
+      <div class="kpi-value">1 048<span class="kpi-unit">FCFA</span></div>
+      <div class="kpi-sub">vs. 342 FCFA (niveau primaire)</div>
+    </div>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-card">
+      <div class="chart-title">Évolution de la Pauvreté — Région du Sud</div>
+      <div class="chart-subtitle">Incidence, Profondeur, Sévérité · 2001–2014</div>
+      <div class="chart-wrap">
+        <canvas id="pauvrete"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Pauvreté par Genre (Région Sud 2014)</div>
+      <div class="chart-subtitle">Incidence, Profondeur et Sévérité · Femmes vs Hommes</div>
+      <div class="chart-wrap">
+        <canvas id="pauvreteGenre"></canvas>
+      </div>
+    </div>
+    <div class="chart-card wide">
+      <div class="chart-title">L'Éducation comme Levier Économique — Salaire horaire par niveau</div>
+      <div class="chart-subtitle">FCFA · Données nationales · 2014</div>
+      <div class="chart-wrap short">
+        <canvas id="salaires"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <div class="insight-icon">📈</div>
+    <div class="insight-text">
+      La pauvreté touche <strong>46% des femmes</strong> contre 29% des hommes dans la région du Sud. L'éducation est le levier le plus puissant : un travailleur diplômé du supérieur gagne <strong>3× plus</strong> qu'un travailleur de niveau primaire. Investir dans la scolarisation des filles et la nutrition scolaire, c'est investir dans la rupture du cycle de la pauvreté.
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div>© 2025 <span>NZUANE</span> — Tous droits réservés · Données : Open Data for Africa / INS Cameroun</div>
+  <div>Base de Connaissance Scientifique · Région du Sud · Programme <span>ROMBONE / BIDI</span></div>
+</footer>
+
+<script>
+// ===== CHART DEFAULTS =====
+Chart.defaults.font.family = "'DM Mono', monospace";
+Chart.defaults.font.size = 11;
+Chart.defaults.color = '#6b6b6b';
+Chart.defaults.plugins.legend.labels.boxWidth = 12;
+Chart.defaults.plugins.legend.labels.padding = 16;
+
+const COLORS = {
+  forest: '#1a3a2a', forestMid: '#2d5a3d', forestLight: '#4a8c5c',
+  earth: '#8b5e3c', earthLight: '#c4956a',
+  gold: '#c9a84c', goldLight: '#e8c97a',
+  red: '#c0392b', blue: '#2980b9', purple: '#7b4f8a',
+  cream: '#f5f0e8', grey: '#bbb'
+};
+
+// ===== POPULATION EVOLUTION =====
+new Chart(document.getElementById('popEvolution'), {
+  type: 'line',
+  data: {
+    labels: ['1987','2005','2010','2014','2018'],
+    datasets: [
+      { label: 'SUD (total)', data: [373798,634655,698627,740671,810421], borderColor: COLORS.forest, backgroundColor: 'rgba(26,58,42,0.08)', borderWidth: 2, fill: true, tension: 0.3 },
+      { label: 'MVILA', data: [116996,179429,197513,209402,229121], borderColor: COLORS.gold, borderWidth: 2, tension: 0.3 },
+      { label: 'DJA-ET-LOBO', data: [121059,196951,216801,229851,251532], borderColor: COLORS.earthLight, borderWidth: 2, tension: 0.3 },
+      { label: 'OCEAN', data: [92994,179093,197143,209010,228692], borderColor: COLORS.blue, borderWidth: 2, tension: 0.3 },
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { grid: { color: '#ede5d4' } } } }
+});
+
+// ===== AGE STRUCTURE =====
+new Chart(document.getElementById('ageStructure'), {
+  type: 'doughnut',
+  data: {
+    labels: ['0–4 ans', '5–14 ans', '15–34 ans', '35–59 ans', '60+ ans'],
+    datasets: [{ data: [15.9, 24.4, 29.6, 21.0, 9.0], backgroundColor: [COLORS.goldLight, COLORS.gold, COLORS.forestLight, COLORS.forestMid, COLORS.forest], borderWidth: 0 }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
+});
+
+// ===== DENSITÉ =====
+new Chart(document.getElementById('densite'), {
+  type: 'bar',
+  data: {
+    labels: ['MVILA','OCEAN','DJA-ET-LOBO','VALLEE DU NTEM'],
+    datasets: [
+      { label: '2010', data: [23,17,11,12], backgroundColor: 'rgba(201,168,76,0.3)', borderColor: COLORS.gold, borderWidth: 1 },
+      { label: '2018', data: [26.3,20.3,12.6,13.8], backgroundColor: COLORS.forestLight, borderColor: COLORS.forest, borderWidth: 1 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { title: { display: true, text: 'hab/km²' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== SCOLARISATION =====
+new Chart(document.getElementById('scolarisation'), {
+  type: 'bar',
+  data: {
+    labels: ['Primaire\n6-11 ans', 'Secondaire\n12-18 ans', '1er cycle sec.\n12-15 ans'],
+    datasets: [
+      { label: 'Filles', data: [94.9, 52.3, 68.7], backgroundColor: '#7b4f8a', borderRadius: 2 },
+      { label: 'Garçons', data: [96.7, 73.4, 65.9], backgroundColor: COLORS.blue, borderRadius: 2 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { max: 100, ticks: { callback: v => v+'%' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== ENSEIGNANTS =====
+new Chart(document.getElementById('enseignants'), {
+  type: 'line',
+  data: {
+    labels: ['2010','2012','2014','2016','2018','2020','2022'],
+    datasets: [
+      { label: 'Hommes', data: [1460,2122,2744,2889,2230,2461,2867], borderColor: COLORS.blue, backgroundColor: 'rgba(41,128,185,0.08)', borderWidth: 2, fill: true, tension: 0.3 },
+      { label: 'Femmes', data: [502,494,857,1107,1318,1368,1406], borderColor: '#7b4f8a', backgroundColor: 'rgba(123,79,138,0.08)', borderWidth: 2, fill: true, tension: 0.3 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { grid: { color: '#ede5d4' } } } }
+});
+
+// ===== TAUX BRUT =====
+new Chart(document.getElementById('tauxBrut'), {
+  type: 'line',
+  data: {
+    labels: ['2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022'],
+    datasets: [{ label: 'Taux brut scolarisation (%)', data: [47.01,49.97,51.62,56.56,58.27,59.54,50.30,46.26,45.56,47.36,47.51,47.86], borderColor: COLORS.forest, backgroundColor: 'rgba(26,58,42,0.1)', fill: true, tension: 0.3, borderWidth: 2 }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { ticks: { callback: v => v+'%' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== HORS ECOLE =====
+new Chart(document.getElementById('horsEcole'), {
+  type: 'bar',
+  data: {
+    labels: ['Primaire 6-11 ans', 'Secondaire 12-18 ans'],
+    datasets: [
+      { label: 'Filles', data: [4.3, 39.7], backgroundColor: '#7b4f8a', borderRadius: 2 },
+      { label: 'Garçons', data: [2.1, 9.6], backgroundColor: COLORS.blue, borderRadius: 2 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { ticks: { callback: v => v+'%' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== VIH =====
+new Chart(document.getElementById('vih'), {
+  type: 'bar',
+  data: {
+    labels: ['2004', '2011', '2018'],
+    datasets: [
+      { label: 'Femmes 15-49 ans', data: [8.4, 10.6, 5.5], backgroundColor: '#7b4f8a', borderRadius: 2 },
+      { label: 'Hommes 15-49 ans', data: [4.5, 3.8, 6.1], backgroundColor: COLORS.blue, borderRadius: 2 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { ticks: { callback: v => v+'%' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== PERSONNEL SANTÉ =====
+new Chart(document.getElementById('personnel'), {
+  type: 'line',
+  data: {
+    labels: ['2019','2020','2021','2022','2023'],
+    datasets: [
+      { label: 'Médecins généralistes', data: [164,275,291,284,280], borderColor: COLORS.forest, borderWidth: 2, tension: 0.3 },
+      { label: 'Infirmiers IDE', data: [3779,null,12040,10923,10375], borderColor: COLORS.gold, borderWidth: 2, tension: 0.3 },
+      { label: 'Sages-femmes', data: [60,176,197,200,272], borderColor: '#7b4f8a', borderWidth: 2, tension: 0.3 },
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { grid: { color: '#ede5d4' } } } }
+});
+
+// ===== MALADIES =====
+new Chart(document.getElementById('maladies'), {
+  type: 'bar',
+  data: {
+    labels: ['Asthme', 'Diarrhée sanglante', 'Tb (n/100K)', 'Psychose', 'Rougeole', 'Cancer prostate', 'AVC', 'Cancer col'],
+    datasets: [{ label: 'Taux /10 000 (2023)', data: [30.37, 1.84, null, 2.06, 3.13, 3.55, 2.40, 2.78], backgroundColor: [COLORS.red,COLORS.red,COLORS.earthLight,COLORS.earthLight,COLORS.gold,COLORS.forestLight,COLORS.forestLight,COLORS.forestLight], borderRadius: 2 }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, indexAxis: 'y', scales: { x: { grid: { color: '#ede5d4' } } } }
+});
+
+// ===== SERVICES PAR DÉPARTEMENT =====
+new Chart(document.getElementById('services'), {
+  type: 'radar',
+  data: {
+    labels: ['Eau améliorée', 'Assainissement', 'Électricité', 'Téléphone'],
+    datasets: [
+      { label: 'SUD', data: [74.6, 28.2, 63, 39.5], borderColor: COLORS.forest, backgroundColor: 'rgba(26,58,42,0.1)', borderWidth: 2 },
+      { label: 'MVILA', data: [70, 26.8, 68.4, 40.2], borderColor: COLORS.gold, backgroundColor: 'rgba(201,168,76,0.1)', borderWidth: 2 },
+      { label: 'OCEAN', data: [74.4, 31.7, 63.5, 41.1], borderColor: COLORS.blue, backgroundColor: 'rgba(41,128,185,0.1)', borderWidth: 2 },
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { r: { min: 0, max: 100, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== EAU MVILA =====
+new Chart(document.getElementById('eauMvila'), {
+  type: 'bar',
+  data: {
+    labels: ['Ebolowa 1','Ebolowa 2','Ngoulemakong','Mvangan','Mengong','Efoulan','Biwong Bane','Biwong-Bulu'],
+    datasets: [{ label: '% eau améliorée', data: [76.9,71.7,64,72.8,66.2,51.6,67.6,57.4], backgroundColor: d => d.parsed.y < 65 ? COLORS.red : COLORS.forestLight, borderRadius: 2 }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { max: 100, ticks: { callback: v => v+'%' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== SERVICES COMPARE =====
+new Chart(document.getElementById('servicesCompare'), {
+  type: 'bar',
+  data: {
+    labels: ['Kribi 1', 'Kribi 2', 'Sangmélima', 'Zoétélé', 'Ebolowa 1', 'Efoulan', 'Akom 2', 'Bipindi', 'Mintom'],
+    datasets: [
+      { label: 'Eau améliorée (%)', data: [97.5,100,87.1,88,76.9,51.6,35.6,51.1,59], backgroundColor: COLORS.blue, borderRadius: 2 },
+      { label: 'Assainissement (%)', data: [46.9,45.5,41.5,19.7,42.9,10.4,18.4,10.6,14.4], backgroundColor: COLORS.gold, borderRadius: 2 },
+      { label: 'Électricité (%)', data: [91.4,93.7,87.6,87.8,80.1,45.6,0.8,0.9,1.4], backgroundColor: COLORS.forestLight, borderRadius: 2 },
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { max: 100, ticks: { callback: v => v+'%' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== PRODUCTIONS =====
+new Chart(document.getElementById('productions'), {
+  type: 'bar',
+  data: {
+    labels: ['Plantain','Manioc','Colocasia','Maïs','Banane','Arachide','Igname','Macabo'],
+    datasets: [{ label: 'Production 2020 (t)', data: [872120,569535,144905,101000,77045,21805,7874,7874], backgroundColor: [COLORS.forest,COLORS.forestMid,COLORS.forestLight,COLORS.gold,COLORS.goldLight,COLORS.earth,COLORS.earthLight,COLORS.grey], borderRadius: 2 }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { grid: { color: '#ede5d4' } } } }
+});
+
+// ===== AGRI EVOL =====
+new Chart(document.getElementById('agriEvol'), {
+  type: 'line',
+  data: {
+    labels: ['2010','2012','2014','2016','2018','2020'],
+    datasets: [
+      { label: 'Plantain (t)', data: [568234,637654,685010,764730,891620,872120], borderColor: COLORS.forest, backgroundColor: 'rgba(26,58,42,0.08)', fill: true, tension: 0.3, borderWidth: 2, yAxisID: 'y' },
+      { label: 'Manioc (t)', data: [630573,696634,745803,594331,661661,569535], borderColor: COLORS.gold, tension: 0.3, borderWidth: 2, yAxisID: 'y' }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { grid: { color: '#ede5d4' } } } }
+});
+
+// ===== ELEVAGE =====
+new Chart(document.getElementById('elevage'), {
+  type: 'bar',
+  data: {
+    labels: ['Volaille', 'Porc', 'Bovins', 'Ovins', 'Caprins'],
+    datasets: [
+      { label: '2019', data: [12678.8, 2856.9, 3148.4, 558.6, 366], backgroundColor: 'rgba(201,168,76,0.5)', borderRadius: 2 },
+      { label: '2022', data: [2361.4, 2581.2, 3495.1, 472.6, 477.6], backgroundColor: COLORS.forestLight, borderRadius: 2 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { title: { display: true, text: 'Tonnes' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== COMBUSTIBLES =====
+new Chart(document.getElementById('combustibles'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Bois de chauffe', 'Pétrole lampant', 'GPL/Gaz', 'Charbon de bois', 'Déchets bois', 'Autre'],
+    datasets: [{ data: [86.5, 42.4, 32.9, 9.5, 4.0, 8.7], backgroundColor: [COLORS.earth,COLORS.red,COLORS.gold,COLORS.grey,COLORS.earthLight,COLORS.forestLight], borderWidth: 0 }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
+});
+
+// ===== ÉLECTRICITÉ =====
+new Chart(document.getElementById('electricite'), {
+  type: 'bar',
+  data: {
+    labels: ['DJA-ET-LOBO','MVILA','OCEAN','VALLEE DU NTEM'],
+    datasets: [
+      { label: 'ENEO', data: [64.6, 61.8, 62.9, 40.2], backgroundColor: COLORS.gold, borderRadius: 2 },
+      { label: 'Pétrole lampant', data: [28.8, 30.3, 25.9, 48.2], backgroundColor: COLORS.red, borderRadius: 2 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { max: 100, ticks: { callback: v => v+'%' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== PAUVRETÉ =====
+new Chart(document.getElementById('pauvrete'), {
+  type: 'line',
+  data: {
+    labels: ['2001','2007','2014'],
+    datasets: [
+      { label: 'Incidence (%)', data: [31.5, 29.3, 34.1], borderColor: COLORS.red, backgroundColor: 'rgba(192,57,43,0.1)', fill: true, tension: 0.3, borderWidth: 2 },
+      { label: 'Profondeur (%)', data: [23.3, 7.4, 10.0], borderColor: COLORS.gold, tension: 0.3, borderWidth: 2 },
+      { label: 'Sévérité (%)', data: [7.7, 2.6, 4.0], borderColor: COLORS.earth, tension: 0.3, borderWidth: 2 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { ticks: { callback: v => v+'%' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== PAUVRETÉ GENRE =====
+new Chart(document.getElementById('pauvreteGenre'), {
+  type: 'bar',
+  data: {
+    labels: ['Incidence', 'Profondeur', 'Sévérité'],
+    datasets: [
+      { label: 'Femmes', data: [46, 14.6, 5.9], backgroundColor: '#7b4f8a', borderRadius: 2 },
+      { label: 'Hommes', data: [29, 8.0, 3.2], backgroundColor: COLORS.blue, borderRadius: 2 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { ticks: { callback: v => v+'%' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== SALAIRES =====
+new Chart(document.getElementById('salaires'), {
+  type: 'bar',
+  data: {
+    labels: ['Sans diplôme', 'Primaire', '1er cycle sec.', '2e cycle sec.', 'Supérieur'],
+    datasets: [{ label: 'Salaire horaire (FCFA)', data: [659.9, 341.7, 415, 492.5, 1048], backgroundColor: [COLORS.red, COLORS.earthLight, COLORS.gold, COLORS.forestLight, COLORS.forest], borderRadius: 4 }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { title: { display: true, text: 'FCFA/heure' }, grid: { color: '#ede5d4' } } } }
+});
+
+// ===== NAVIGATION =====
+document.querySelectorAll('.nav-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.tab).classList.add('active');
+    // Animate progress bars if any
+    setTimeout(() => {
+      document.querySelectorAll('.progress-bar-fill').forEach(bar => {
+        bar.style.width = bar.dataset.value + '%';
+      });
+    }, 100);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
