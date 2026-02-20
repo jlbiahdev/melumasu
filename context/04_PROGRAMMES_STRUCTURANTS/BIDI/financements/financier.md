@@ -12,7 +12,7 @@ Elle a été initiée dans le cadre de la dynamique territoriale portée par l�
 
 Le projet vise la mise en place d’une plateforme agricole productive de 2 hectares intégrant :
 
-- une dimension pédagogique (partenariat avec le Collège Rural d’Agriculture d’Ebolowa) ;
+- une dimension pédagogique (partenariat avec le Collège Régional d’Agriculture d’Ebolowa) ;
 - une dimension sociale (contribution à l’alimentation de structures locales) ;
 - une structuration économique durable.
 

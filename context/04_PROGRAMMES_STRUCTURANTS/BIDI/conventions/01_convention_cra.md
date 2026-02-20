@@ -2,7 +2,7 @@
 ## ENTRE  
 ## LA COOPÉRATIVE ROMBONE  
 ET  
-## LE COLLÈGE RURAL D’AGRICULTURE D’EBOLOWA (CRA)
+## LE COLLÈGE RÉGIONAL D’AGRICULTURE D’EBOLOWA (CRA)
 
 ---
 
@@ -10,7 +10,7 @@ ET
 
 La coopérative ROMBONE, Société Coopérative avec Conseil d’Administration (SCOOP-CA), implantée à Ebolowa, a pour vocation le développement d’activités agricoles durables intégrant une dimension pédagogique et sociale.
 
-Le Collège Rural d’Agriculture d’Ebolowa (CRA) est un établissement de formation agricole ayant pour mission l’encadrement pédagogique et la professionnalisation des apprenants.
+Le Collège Régional d’Agriculture d’Ebolowa (CRA) est un établissement de formation agricole ayant pour mission l’encadrement pédagogique et la professionnalisation des apprenants.
 
 Les parties conviennent de mettre en place un partenariat agro-pédagogique structuré dans le respect de leurs missions respectives.
 
@@ -174,7 +174,7 @@ Nom :
 Qualité :  
 Signature :
 
-Pour le Collège Rural d’Agriculture d’Ebolowa  
+Pour le Collège Régional d’Agriculture d’Ebolowa  
 Nom :  
 Qualité :  
 Signature :

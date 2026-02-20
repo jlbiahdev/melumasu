@@ -23,7 +23,7 @@ La coopérative ROMBONE, initiée dans la dynamique territoriale portée par NZU
 
 ## 3. Partenariat institutionnel
 
-Un partenariat est engagé avec le Collège Rural d’Agriculture d’Ebolowa pour l’encadrement pédagogique.
+Un partenariat est engagé avec le Collège Régional d’Agriculture d’Ebolowa pour l’encadrement pédagogique.
 
 ---
 

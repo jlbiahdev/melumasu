@@ -1,0 +1,3 @@
+Le projet kissine consiste à proposer aux ADV, dans l'évolution de leur collaboration avec NZUANE, de s'aligner à un certain standard de conditions de travail.
+Il s'agiraît de garantir un cadre de production professionnel : la cuisine Pro de BIDI.
+L'idée serait d'en subventionner la fabrication/installation qui serait réalisée par les établissement d'enseignement technique de la région et subventionnée par NZUANE avec remboursement sous forme de crédit par l'ADV. 

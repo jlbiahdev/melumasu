@@ -1,5 +1,5 @@
 # PROJET DE PARTENARIAT AGRO-PÉDAGOGIQUE  
-## ROMBONE × Collège Rural d’Agriculture d’Ebolowa
+## ROMBONE × Collège Régional d’Agriculture d’Ebolowa
 
 ---
 

@@ -7,6 +7,14 @@
 
 ---
 
+## Statut du document
+
+EBWA 2035 est un projet d’étude territoriale réalisé dans le cadre de la structuration de la réflexion stratégique portée par NZUANE.
+
+Cette étude vise à objectiver, documenter et confirmer des constats de terrain préexistants ayant contribué à la naissance de NZUANE.
+
+Elle constitue une base d’appui scientifique mobilisable dans les échanges institutionnels et partenariaux, permettant d’ancrer les orientations de l’association dans une analyse factuelle et structurée du territoire.
+
 ## 1. Nature du projet
 
 **NZUANE** est une **association à but non lucratif**, créée pour **porter des actions concrètes de développement local à Ebolowa** et dans ses environs.
