@@ -96,6 +96,8 @@ L’association se compose de :
 
 Peut devenir membre toute personne adhérant aux présents statuts et à la vision portée par NZUANE Cameroun.
 
+L’adhésion est validée par le Conseil d’Administration.
+
 ---
 
 ## Article 10 – Perte de qualité de membre
@@ -104,7 +106,7 @@ La qualité de membre se perd par :
 
 - démission ;
 - décès ;
-- radiation pour motif grave.
+- radiation pour motif grave prononcée par le Conseil d’Administration.
 
 ---
 
@@ -116,13 +118,26 @@ L’Assemblée Générale est l’organe souverain de l’association.
 
 Elle se réunit au moins une fois par an.
 
+Elle est convoquée par le Président ou à la demande du tiers des membres.
+
+Les décisions sont prises à la majorité simple des membres présents ou représentés, sauf disposition contraire prévue par les présents statuts.
+
 ---
 
 ## Article 12 – Conseil d’Administration
 
 Le Conseil d’Administration assure la gestion stratégique.
 
-Il est composé de 3 à 9 membres élus pour trois ans.
+Il est composé de 3 à 9 membres élus pour trois ans renouvelables.
+
+Il se réunit au moins deux fois par an.
+
+Le Conseil d’Administration :
+
+- valide les adhésions ;
+- supervise la gestion financière ;
+- propose les orientations stratégiques ;
+- peut créer ou dissoudre des commissions internes.
 
 ---
 
@@ -134,11 +149,37 @@ Le Bureau comprend au minimum :
 - un Secrétaire ;
 - un Trésorier.
 
+Le Bureau assure la gestion quotidienne de l’association.
+
+---
+
+## Article 14 – Chapitres pays
+
+NZUANE International peut créer des chapitres pays afin de faciliter la mobilisation locale des membres et partenaires.
+
+Les chapitres pays :
+
+- ne disposent pas de personnalité juridique propre ;
+- agissent sous l’autorité de NZUANE International ;
+- ne peuvent engager juridiquement l’association ;
+- sont tenus de respecter les orientations stratégiques définies par NZUANE Cameroun.
+
+La création d’un chapitre pays est soumise :
+
+- à une décision du Conseil d’Administration ;
+- et à l’avis conforme du Président d’honneur.
+
+Chaque chapitre élit localement un coordinateur.
+
+La désignation du coordinateur est soumise à validation du Conseil d’Administration.
+
+La suspension ou la dissolution d’un chapitre pays relève du Conseil d’Administration.
+
 ---
 
 # TITRE IV – FINANCES
 
-## Article 14 – Ressources
+## Article 15 – Ressources
 
 Les ressources de l’association comprennent :
 
@@ -150,7 +191,7 @@ Les ressources de l’association comprennent :
 
 ---
 
-## Article 15 – Comptabilité
+## Article 16 – Comptabilité
 
 Une comptabilité régulière est tenue conformément aux obligations légales françaises.
 
@@ -160,7 +201,7 @@ Les comptes sont présentés annuellement à l’Assemblée Générale.
 
 # TITRE V – LICENCE D’USAGE DE LA MARQUE
 
-## Article 16 – Licence
+## Article 17 – Licence
 
 L’usage du nom « NZUANE », du logo et des éléments graphiques est accordé par NZUANE Cameroun à titre révocable.
 
@@ -168,11 +209,21 @@ En cas de retrait de licence, NZUANE International devra modifier sa dénominati
 
 ---
 
-# TITRE VI – DISSOLUTION
+# TITRE VI – RÈGLEMENT INTÉRIEUR
 
-## Article 17 – Dissolution
+## Article 18 – Règlement intérieur
 
-La dissolution ne peut être prononcée qu’en Assemblée Générale extraordinaire.
+Un règlement intérieur peut préciser les modalités pratiques de fonctionnement, notamment l’organisation des chapitres pays.
+
+Il est adopté et modifié par le Conseil d’Administration.
+
+---
+
+# TITRE VII – DISSOLUTION
+
+## Article 19 – Dissolution
+
+La dissolution ne peut être prononcée qu’en Assemblée Générale extraordinaire statuant à la majorité des deux tiers.
 
 Elle est soumise à l’avis conforme du Président d’honneur.
 
