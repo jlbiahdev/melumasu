@@ -48,6 +48,25 @@ Les éventuels revenus issus de ces participations doivent être intégralement 
 
 ---
 
+## Article 2 ter – Déploiement international et représentations extérieures
+
+L’association NZUANE peut créer, autoriser ou reconnaître des structures d’appui à l’international.
+
+Ces structures agissent en soutien à NZUANE Cameroun et dans le respect de ses orientations stratégiques.
+
+Toute création de structure internationale, représentation extérieure ou chapitre utilisant le nom, le logo ou l’identité NZUANE est soumise :
+
+- à une décision de l’Assemblée Générale ;
+- et à la validation préalable obligatoire du Collège des Créateurs.
+
+La révocation d’une autorisation accordée à une structure internationale relève de la compétence de l’Assemblée Générale.
+
+NZUANE Cameroun demeure propriétaire exclusif du nom, du logo et de l’identité visuelle « NZUANE ».
+
+L’usage de ces éléments à l’international fait l’objet d’une autorisation formelle et révocable.
+
+---
+
 ## Article 3 – Siège social
 
 Le siège social est fixé à :
@@ -153,7 +172,8 @@ Validation préalable obligatoire pour :
 - changement de nom,
 - transfert siège hors Ebolowa,
 - modification substantielle de l’objet,
-- fusion ou transformation majeure.
+- fusion ou transformation majeure,
+- création de structures internationales.
 
 ### 10.4 – Indépendance
 
@@ -187,7 +207,9 @@ Cotisations, dons, subventions, mécénat, financements ONG, revenus liés aux p
 
 ## Article 15 – Comptabilité
 
-Comptabilité régulière et transparente.
+Une comptabilité régulière et transparente est tenue conformément aux dispositions légales en vigueur.
+
+Les comptes peuvent être soumis à vérification interne ou externe selon les décisions de l’Assemblée Générale.
 
 ---
 
@@ -195,12 +217,34 @@ Comptabilité régulière et transparente.
 
 ## Article 16 – Modifications
 
-Majorité des 2/3 en AG + validation Collège.
+Les statuts ne peuvent être modifiés que par l’Assemblée Générale à la majorité des deux tiers (2/3) des membres présents ou représentés.
+
+Toute modification doit faire l’objet d’une validation préalable obligatoire du Collège des Créateurs.
+
+---
 
 ## Article 17 – Dissolution
 
-AG + validation Collège.
+La dissolution de l’association ne peut être prononcée que par l’Assemblée Générale convoquée à cet effet et statuant à la majorité des deux tiers (2/3).
+
+Elle doit être validée par le Collège des Créateurs.
+
+En cas de dissolution, l’actif net est dévolu à une structure poursuivant des objectifs similaires.
+
+---
 
 ## Article 18 – Règlement intérieur
 
-Précise modalités pratiques.
+Un règlement intérieur précise les modalités pratiques de fonctionnement non prévues par les présents statuts.
+
+Il est adopté et modifié par l’Assemblée Générale.
+
+---
+
+## Article 19 – Propriété intellectuelle
+
+Le nom « NZUANE », son logo, sa charte graphique et tout signe distinctif associé constituent des actifs immatériels appartenant à l’association NZUANE Cameroun.
+
+Toute utilisation par une structure extérieure ou internationale est soumise à autorisation écrite.
+
+L’autorisation peut être retirée en cas de non-respect des orientations stratégiques.
