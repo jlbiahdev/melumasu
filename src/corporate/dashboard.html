@@ -6,542 +6,19 @@
 <title>NZUANE — Base de Connaissance Scientifique · Région du Sud, Cameroun</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --forest: #1a3a2a;
-    --forest-mid: #2d5a3d;
-    --forest-light: #4a8c5c;
-    --earth: #8b5e3c;
-    --earth-light: #c4956a;
-    --cream: #f5f0e8;
-    --cream-dark: #ede5d4;
-    --gold: #c9a84c;
-    --gold-light: #e8c97a;
-    --text-dark: #1a1a1a;
-    --text-mid: #3d3d3d;
-    --text-light: #6b6b6b;
-    --red-alert: #c0392b;
-    --blue-data: #2980b9;
-    --white: #ffffff;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'DM Mono', monospace;
-    background: var(--cream);
-    color: var(--text-dark);
-    overflow-x: hidden;
-  }
-
-  /* ===== HEADER ===== */
-  header {
-    background: var(--forest);
-    color: var(--cream);
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .header-pattern {
-    position: absolute;
-    inset: 0;
-    background-image: 
-      repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(201,168,76,0.04) 40px, rgba(201,168,76,0.04) 41px),
-      repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(201,168,76,0.04) 40px, rgba(201,168,76,0.04) 41px);
-  }
-
-  .header-content {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: end;
-    padding: 3rem 3rem 0;
-    gap: 2rem;
-  }
-
-  .header-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .brand-tag {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--gold);
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .brand-tag::before {
-    content: '';
-    display: block;
-    width: 2rem;
-    height: 1px;
-    background: var(--gold);
-  }
-
-  h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 300;
-    line-height: 1.05;
-    color: var(--cream);
-    letter-spacing: -0.01em;
-  }
-
-  h1 em {
-    font-style: italic;
-    color: var(--gold-light);
-  }
-
-  .header-subtitle {
-    font-size: 0.75rem;
-    color: rgba(245,240,232,0.55);
-    letter-spacing: 0.1em;
-    margin-top: 0.5rem;
-  }
-
-  .header-stats-row {
-    display: flex;
-    gap: 0;
-    border-top: 1px solid rgba(201,168,76,0.2);
-    margin-top: 2.5rem;
-  }
-
-  .header-stat {
-    flex: 1;
-    padding: 1.25rem 1.5rem;
-    border-right: 1px solid rgba(201,168,76,0.15);
-    transition: background 0.3s;
-  }
-
-  .header-stat:last-child { border-right: none; }
-  .header-stat:hover { background: rgba(201,168,76,0.06); }
-
-  .header-stat-value {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--gold-light);
-    line-height: 1;
-  }
-
-  .header-stat-label {
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(245,240,232,0.5);
-    margin-top: 0.3rem;
-  }
-
-  /* ===== NAV TABS ===== */
-  .nav-container {
-    background: var(--forest-mid);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
-  }
-
-  .nav-tabs {
-    display: flex;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .nav-tabs::-webkit-scrollbar { display: none; }
-
-  .nav-tab {
-    padding: 1rem 1.5rem;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(245,240,232,0.5);
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    white-space: nowrap;
-    transition: all 0.25s;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: none;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-  }
-
-  .nav-tab:hover { color: var(--cream); background: rgba(255,255,255,0.05); }
-
-  .nav-tab.active {
-    color: var(--gold-light);
-    border-bottom-color: var(--gold);
-    background: rgba(201,168,76,0.08);
-  }
-
-  .nav-tab .icon { font-size: 0.9rem; }
-
-  /* ===== MAIN LAYOUT ===== */
-  main {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2.5rem 2rem;
-  }
-
-  .section { display: none; }
-  .section.active { display: block; }
-
-  /* ===== SECTION HEADER ===== */
-  .section-header {
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--cream-dark);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
-    font-weight: 400;
-    color: var(--forest);
-    line-height: 1.1;
-  }
-
-  .section-title span {
-    display: block;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-light);
-    font-weight: 400;
-    margin-bottom: 0.3rem;
-  }
-
-  .source-tag {
-    font-size: 0.6rem;
-    color: var(--text-light);
-    letter-spacing: 0.08em;
-    background: var(--cream-dark);
-    padding: 0.3rem 0.75rem;
-    border-radius: 2px;
-  }
-
-  /* ===== KPI CARDS ===== */
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .kpi-card {
-    background: var(--white);
-    border: 1px solid var(--cream-dark);
-    padding: 1.5rem;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .kpi-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px;
-    height: 100%;
-    background: var(--forest-light);
-  }
-
-  .kpi-card.alert::before { background: var(--red-alert); }
-  .kpi-card.gold::before { background: var(--gold); }
-  .kpi-card.earth::before { background: var(--earth-light); }
-
-  .kpi-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
-
-  .kpi-label {
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-light);
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
-  }
-
-  .kpi-value {
-    font-family: 'Syne', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--forest);
-    line-height: 1;
-  }
-
-  .kpi-unit {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--text-light);
-    font-weight: 400;
-    margin-left: 0.2rem;
-  }
-
-  .kpi-sub {
-    font-size: 0.65rem;
-    color: var(--text-light);
-    margin-top: 0.5rem;
-  }
-
-  /* ===== CHART GRID ===== */
-  .chart-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .chart-grid.cols-3 {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .chart-card {
-    background: var(--white);
-    border: 1px solid var(--cream-dark);
-    padding: 1.75rem;
-  }
-
-  .chart-card.wide {
-    grid-column: 1 / -1;
-  }
-
-  .chart-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--forest);
-    margin-bottom: 0.35rem;
-  }
-
-  .chart-subtitle {
-    font-size: 0.62rem;
-    color: var(--text-light);
-    letter-spacing: 0.05em;
-    margin-bottom: 1.25rem;
-  }
-
-  .chart-wrap {
-    position: relative;
-    height: 240px;
-  }
-
-  .chart-wrap.tall { height: 320px; }
-  .chart-wrap.short { height: 180px; }
-
-  /* ===== INSIGHT BOX ===== */
-  .insight-box {
-    background: var(--forest);
-    color: var(--cream);
-    padding: 1.5rem 2rem;
-    margin: 2rem 0;
-    border-left: 4px solid var(--gold);
-    display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
-  }
-
-  .insight-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
-
-  .insight-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
-    font-weight: 300;
-    line-height: 1.6;
-    font-style: italic;
-  }
-
-  .insight-text strong {
-    font-weight: 600;
-    font-style: normal;
-    color: var(--gold-light);
-  }
-
-  /* ===== TABLE STYLE ===== */
-  .data-table-wrap {
-    overflow-x: auto;
-    background: var(--white);
-    border: 1px solid var(--cream-dark);
-    margin-bottom: 1.5rem;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.7rem;
-  }
-
-  thead { background: var(--forest); }
-  thead th {
-    color: var(--cream);
-    padding: 0.75rem 1rem;
-    text-align: left;
-    font-family: 'DM Mono', monospace;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    font-size: 0.62rem;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-
-  tbody tr { border-bottom: 1px solid var(--cream-dark); }
-  tbody tr:hover { background: rgba(26,58,42,0.03); }
-
-  tbody td {
-    padding: 0.65rem 1rem;
-    color: var(--text-mid);
-    font-size: 0.7rem;
-  }
-
-  tbody td.num {
-    font-family: 'DM Mono', monospace;
-    text-align: right;
-    font-weight: 500;
-    color: var(--forest);
-  }
-
-  tbody td.highlight { color: var(--red-alert); font-weight: 500; }
-  tbody td.good { color: var(--forest-light); font-weight: 500; }
-
-  /* ===== PROGRESS BARS ===== */
-  .progress-list { display: flex; flex-direction: column; gap: 0.75rem; }
-
-  .progress-item { }
-
-  .progress-label {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.65rem;
-    color: var(--text-mid);
-    margin-bottom: 0.25rem;
-    letter-spacing: 0.04em;
-  }
-
-  .progress-bar-track {
-    height: 6px;
-    background: var(--cream-dark);
-    border-radius: 0;
-    overflow: hidden;
-  }
-
-  .progress-bar-fill {
-    height: 100%;
-    background: var(--forest-light);
-    transition: width 1.5s cubic-bezier(0.4,0,0.2,1);
-    width: 0;
-  }
-
-  .progress-bar-fill.red { background: var(--red-alert); }
-  .progress-bar-fill.gold { background: var(--gold); }
-  .progress-bar-fill.earth { background: var(--earth-light); }
-
-  /* ===== COMPARISON BADGE ===== */
-  .compare-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    margin-top: 0.75rem;
-  }
-
-  .compare-item {
-    padding: 0.75rem;
-    background: var(--cream);
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-
-  .compare-item .clabel {
-    font-size: 0.58rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-light);
-  }
-
-  .compare-item .cval {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--forest);
-  }
-
-  .compare-item.female .cval { color: #7b4f8a; }
-  .compare-item.male .cval { color: #2c6b9a; }
-
-  /* ===== FOOTER ===== */
-  footer {
-    background: var(--forest);
-    color: rgba(245,240,232,0.4);
-    padding: 1.5rem 3rem;
-    font-size: 0.6rem;
-    letter-spacing: 0.08em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 3rem;
-  }
-
-  footer span { color: var(--gold); }
-
-  /* ===== ANIMATIONS ===== */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .section.active .kpi-card,
-  .section.active .chart-card,
-  .section.active .insight-box {
-    animation: fadeUp 0.4s ease both;
-  }
-
-  .section.active .kpi-card:nth-child(1) { animation-delay: 0.05s; }
-  .section.active .kpi-card:nth-child(2) { animation-delay: 0.10s; }
-  .section.active .kpi-card:nth-child(3) { animation-delay: 0.15s; }
-  .section.active .kpi-card:nth-child(4) { animation-delay: 0.20s; }
-  .section.active .kpi-card:nth-child(5) { animation-delay: 0.25s; }
-  .section.active .kpi-card:nth-child(6) { animation-delay: 0.30s; }
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 768px) {
-    .header-content { grid-template-columns: 1fr; padding: 2rem; }
-    .chart-grid { grid-template-columns: 1fr; }
-    main { padding: 1.5rem 1rem; }
-    .header-stats-row { flex-wrap: wrap; }
-    .header-stat { flex: 1 1 140px; }
-    footer { padding: 1.5rem; flex-direction: column; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Lato:wght@300;400;700;900&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="dashboard-page">
 
 <!-- ===== HEADER ===== -->
 <header>
   <div class="header-pattern"></div>
   <div class="header-content">
     <div class="header-brand">
+      <a href="index.html" aria-label="Retour à l'index">
+        <img src="assets/img/logo.png" alt="Logo NZUANE" class="dashboard-logo">
+      </a>
       <div class="brand-tag">NZUANE · Région du Sud · Cameroun</div>
       <h1>Base de <em>Connaissance</em><br>Scientifique</h1>
       <p class="header-subtitle">Données probantes fondant les actions et projets de NZUANE · Sources : Open Data for Africa / INS Cameroun · 2001–2023</p>
@@ -577,6 +54,9 @@
 
 <!-- ===== NAVIGATION ===== -->
 <div class="nav-container">
+  <div class="dashboard-back-wrap">
+    <a href="index.html" class="dashboard-back-link">← Retour à l'index</a>
+  </div>
   <div class="nav-tabs">
     <button class="nav-tab active" data-tab="population"><span class="icon">👥</span> Population</button>
     <button class="nav-tab" data-tab="education"><span class="icon">📚</span> Éducation</button>
@@ -1117,9 +597,49 @@
 
 </main>
 
-<footer>
-  <div>© 2025 <span>NZUANE</span> — Tous droits réservés · Données : Open Data for Africa / INS Cameroun</div>
-  <div>Base de Connaissance Scientifique · Région du Sud · Programme <span>ROMBONE / BIDI</span></div>
+<footer id="contact">
+  <div class="section-eyebrow">Nous Rejoindre</div>
+  <h2 class="section-title">Partenaires.<br><em>Bailleurs. Diaspora.</em></h2>
+  <p class="section-lead">NZUANE est ouvert à toute forme de collaboration alignée avec sa mission : partenariats institutionnels, appuis techniques, contributions diasporiques ou soutien financier.</p>
+
+  <div class="contact-grid">
+    <div class="contact-entity contact-logo-card">
+      <a href="index.html" aria-label="Retour à l'index">
+        <img src="assets/img/logo.png" alt="Logo NZUANE" class="contact-logo-image">
+      </a>
+    </div>
+    <div class="contact-entity">
+      <div class="entity-country">🇫🇷 France · Siège International</div>
+      <div class="entity-name">NZUANE International</div>
+      <div class="entity-detail">
+        5 Avenue P.B<br>
+        59280 Armentières<br>
+        <a href="tel:+33643000000">+33 643 XXX XXX</a><br>
+        <a href="mailto:contact@nzuane.org">contact@nzuane.org</a><br>
+        <a href="https://world.nzuane.org" target="_blank">world.nzuane.org</a>
+      </div>
+    </div>
+    <div class="contact-entity">
+      <div class="entity-country">🇨🇲 Cameroun · Antenne Opérationnelle</div>
+      <div class="entity-name">NZUANE CM / ROMBONE</div>
+      <div class="entity-detail">
+        15 Rue Mvondo Mebounou<br>
+        BP 12 Ebolowa, Sud Cameroun<br>
+        <a href="tel:+237656025282">+237 656 025 282</a><br>
+        <a href="mailto:cameroun@nzuane.org">cameroun@nzuane.org</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      © 2026 <span>NZUANE International</span> — Association Loi 1901 · France ·
+      <span>Tous droits réservés</span>
+    </div>
+    <div class="footer-copy">
+      Site institutionnel · world.nzuane.org · Base de données : Open Data for Africa / INS Cameroun
+    </div>
+  </div>
 </footer>
 
 <script>
