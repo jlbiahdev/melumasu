@@ -2,6 +2,25 @@
 ## NZUANE  
 Ebolowa – Cameroun
 
+## Introduction
+
+Le présent Plan Décennal 2025–2035 est porté par **NZUANE**, structure associative de développement territorial, et s’appuie sur l’expérience opérationnelle déployée depuis 2019 à Ebolowa à travers son outil économique d’implémentation : **ROMBONE**.
+
+Entre 2019 et 2024, une phase préparatoire a permis :
+
+- l’ancrage foncier et territorial,
+- la structuration progressive des activités agricoles,
+- l’expérimentation productive locale,
+- la consolidation infrastructurelle,
+- la production d’une base documentaire stratégique (EBWA2035).
+
+Cette phase a permis de confronter la vision initiale aux réalités du terrain, d’en confirmer la pertinence et d’en affiner les orientations.
+
+L’année 2025 marque le démarrage officiel du Plan Décennal, non comme un point de départ abstrait, mais comme l’entrée dans une phase structurée et assumée de déploiement à long terme.
+
+À travers ce plan, NZUANE fixe le cap stratégique.  
+ROMBONE en constitue le levier opérationnel principal.
+
 ---
 
 ## 1. Objectif stratégique à 10 ans
@@ -103,6 +122,11 @@ Les plans triennaux successifs en assurent la traduction progressive et opérati
 Le Plan Triennal 2025–2028 constitue la première phase de mise en œuvre, centrée sur l’installation du levier productif et alimentaire structurant.
 
 ---
+## Conclusion
 
-Statut : Document stratégique long terme  
-Version : 1.0
+Le Plan Décennal 2025–2035 fixe un cap structurant pour le développement territorial porté par NZUANE à Ebolowa.
+
+Il s’appuie sur une phase préparatoire éprouvée et engage une dynamique organisée à long terme, fondée sur l’autonomie productive, la structuration sociale et l’élévation qualitative du territoire.
+
+Ce plan constitue un cadre stratégique de référence.  
+Sa mise en œuvre progressive à travers des plans triennaux successifs en assurera la cohérence, la mesure et l’impact.

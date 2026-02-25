@@ -3,44 +3,48 @@
 
 Entre 2019 et 2025, les initiatives engagées sous l’impulsion de **NZUANE** ont mobilisé un total de **24 424 623 XAF**, intégralement issus de ressources propres.
 
-Ces investissements ont été réalisés dans une logique progressive de structuration territoriale visant à créer les bases matérielles et économiques nécessaires au développement local durable.
+Ces ressources ont été investies de manière progressive afin de structurer les bases matérielles, productives et organisationnelles d’un projet territorial ancré à Ebolowa.
 
 ---
 
-## Une trajectoire en cinq étapes
+## Répartition progressive des engagements
 
-### 1. Ancrage territorial (2019–2020)  
-Sécurisation d’actifs fonciers et lancement des premières dynamiques locales, constituant le socle matériel du projet territorial.
+### 2019–2020 : Ancrage territorial
+- Sécurisation d’actifs fonciers
+- Premiers investissements structurants
+- Mise en place des bases matérielles du projet
 
-### 2. Structuration opérationnelle (2021–2022)  
-Organisation des activités agricoles et mise en place d’un modèle local d’exploitation à travers ROMBONE, outil économique d’implémentation.
+### 2021–2022 : Structuration opérationnelle
+- Organisation des activités agricoles
+- Mise en place de ROMBONE comme outil d’implémentation économique
+- Stabilisation des premières dynamiques productives
 
-### 3. Consolidation infrastructurelle (2023)  
-Renforcement des infrastructures immobilières nécessaires à l’accueil et à la structuration des activités productives locales.
+### 2023 : Consolidation infrastructurelle
+- Renforcement des infrastructures nécessaires aux activités
+- Lancement d’une expérimentation productive locale (Fabrique Angonne)
 
-### 4. Stabilisation des structures (2024)  
-Maintien des espaces opérationnels et consolidation budgétaire des acquis.
+### 2024 : Stabilisation budgétaire
+- Maintien des locaux opérationnels
+- Maîtrise des charges de fonctionnement
+- Consolidation des structures existantes
 
-### 5. Orientation agricole affirmée (2025)  
-Concentration des ressources vers une exploitation agricole structurée, inscrite dans une logique de production locale et de valorisation territoriale.
+### 2025 : Orientation agricole affirmée
+- Concentration des ressources vers la production agricole
+- Structuration progressive de l’exploitation
 
 ---
 
-## Lecture institutionnelle
+## Indicateurs clés (2019–2025)
 
-Cette trajectoire financière démontre :
-
-- un engagement continu sur sept exercices,
-- une capacité d’autofinancement significative,
-- une progression cohérente vers un modèle de développement local intégré,
-- une articulation claire entre vision associative (NZUANE) et outils opérationnels (ROMBONE).
-
-L’appui sollicité s’inscrit dans une logique de **renforcement d’une dynamique territoriale déjà engagée**, afin d’amplifier son impact social, économique et local.
+- **24 424 623 XAF mobilisés en fonds propres**
+- **7 exercices consécutifs d’engagement financier**
+- Maintien autonome des structures sans financement externe
+- Investissements matériels et productifs continus
 
 ---
 
 ## Conclusion
 
-Depuis 2019, NZUANE a posé les bases matérielles, foncières et productives d’un modèle de développement territorial progressif.
+La trajectoire financière 2019–2025 démontre un engagement constant, structuré et autofinancé.
 
-L’engagement financier personnel constitue aujourd’hui un levier de crédibilité pour entrer dans une phase d’accompagnement institutionnel structurée et partenariale.
+Elle constitue aujourd’hui un socle de crédibilité solide pour toute démarche partenariale ou institutionnelle.
