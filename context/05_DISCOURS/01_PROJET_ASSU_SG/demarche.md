@@ -17,6 +17,7 @@ Si cette démarche retient votre attention, je m'adapterai volontiers à vos dis
 ## 1.2 La réaction escomptée
 à la lecture de mon message, il pourrait se poser les questions suivantes :
 
+
 ### a. Qu'est-ce que NZUANE exactement ?
 
 **Réponse :**
