@@ -17,9 +17,10 @@ Si cette démarche retient votre attention, je m'adapterai volontiers à vos dis
 ## 1.2 La réaction escomptée
 à la lecture de mon message, il pourrait se poser les questions suivantes :
 
-### a. Qu'est-ce que NZUANE exactement ?
+### a) Qu'est-ce que NZUANE exactement ?
 
 **Réponse :**
+
 NZUANE est une organisation de développement territorial centrée sur la ville d'Ebolowa au Cameroun.
 NZUANE est un écosystème fruit de dix (10) années d'expérimentation consacrées au développement de la ville d'Ebolowa, au Cameroun.
 Au cours de cette période, nous avons :
@@ -37,74 +38,94 @@ Les projets que nous développons (ROMBONE, BIDI, FEMMESADV, etc.) ne sont pas d
 Aujourd'hui, ce modèle entre dans une nouvelle phase : celle de son accélération. Après dix années de structuration et d'expérimentation, notre ambition est désormais de nous entourer de partenaires capables d'en amplifier l'impact et d'en accélérer le déploiement.
 
 
-### b. Pourquoi pense-t-il que SG est concernée ?
+### b) Pourquoi pense-t-il que SG est concernée ?
 
 **Réponse :**
-Parce que votre stratégie RSE exprime une ambition claire : accompagner le développement des territoires, soutenir l'économie sociale, développer les PME et construire des solutions avec des partenaires.
-En découvrant cette stratégie, j'ai réalisé que nous étions en train de construire exactement le type d'organisation capable de mettre concrètement en œuvre ces ambitions sur un territoire.
+
+Parce que votre stratégie RSE exprime une ambition claire : accompagner le développement des territoires, soutenir l'économie sociale, favoriser l'autonomisation des femmes, développer les PME et construire des solutions avec des partenaires.
+
+En découvrant cette stratégie, j'ai réalisé que nous étions en train de construire exactement le type d'organisation capable de traduire ces ambitions en actions concrètes sur un territoire.
+
+Lorsque Société Générale parle de développement des territoires, nous avons conçu un modèle qui structure un territoire.
+
+Lorsqu'elle soutient l'économie sociale, nous structurons les acteurs qui la composent.
+
+Lorsqu'elle favorise l'autonomisation des femmes, nous développons des programmes dédiés.
+
+Lorsqu'elle accompagne les PME, nous créons les conditions de leur émergence.
+
+Enfin, lorsqu'elle affirme vouloir construire des solutions avec des partenaires, c'est précisément la logique sur laquelle NZUANE s'est développé depuis dix ans.
+
+En lisant votre stratégie RSE, je n'ai pas eu le sentiment de découvrir une stratégie différente de la nôtre ; j'ai eu le sentiment que nos deux organisations poursuivaient naturellement les mêmes ambitions, chacune avec son rôle. C'est cette convergence qui m'a conduit à solliciter cet échange avec vous.
 
 
-### c. À quel niveau est cette organisation ?
+### c) À quel niveau est cette organisation ?
 - Association ?
 - ONG ?
 - Fondation ?
 - Entreprise sociale ?
 
 **Réponse :**
+
 Juridiquement, NZUANE est une association.
 Mais fonctionnellement, nous sommes une plateforme de développement territorial.
 L'association n'est que le véhicule juridique permettant de porter une stratégie beaucoup plus large.
 
 
-### d. Qu'attend-il réellement de moi ?
+### d) Qu'attend-il réellement de moi ?
 
 Parce qu'il dit ne pas demander d'argent.
 Alors...
 Qu'attend-il ?
 
 **Réponse :**
+
 Aujourd'hui, je ne viens pas solliciter un financement.
 Je viens chercher votre regard.
 Vous connaissez mieux que moi les dispositifs du Groupe.
 Si vous considérez que cette démarche présente un intérêt pour Société Générale, j'aimerais comprendre avec vous sous quelle forme une collaboration pourrait être envisagée.
 
 
-### e. Pourquoi vient-il me voir maintenant ?
+### e) Pourquoi vient-il me voir maintenant ?
 Pourquoi pas il y a deux ans ?
 Pourquoi pas dans deux ans ?
 
 **Réponse :**
+
 Parce que je considère que NZUANE a atteint un niveau de maturité suffisant.
 Pendant près de dix ans, nous avons travaillé sur la vision, la gouvernance, les programmes, la documentation et la crédibilité du projet.
 Aujourd'hui, il est temps de confronter ce travail à de grands partenaires.
 
 
-### f. Pourquoi est-il salarié SG ?
+### f) Pourquoi est-il salarié SG ?
 Question étonnante.
 Je pense que je lui demanderais :
 Depuis combien de temps êtes-vous chez SG ?
 Parce que ça me permet de comprendre le lien.
 
 **Réponse :**
+
 Je suis Chef de Projet au sein d'ASSU.
 Mon expérience chez Société Générale m'a aussi permis de mieux comprendre les exigences d'une grande organisation : gouvernance, pilotage, indicateurs, gestion des risques, transparence...
 Ces exigences ont influencé la manière dont nous avons construit NZUANE.
 
 
-### g. Combien de personnes travaillent sur ce projet ?
+### g) Combien de personnes travaillent sur ce projet ?
 Très probablement.
 
 **Réponse :**
+
 Hormis les mêmbres du bureau, nous avons à temps plein 3 salariés
 Le noyau opérationnel est volontairement réduit.
 Nous avons privilégié la structuration avant la croissance.
 Notre objectif n'était pas de réunir beaucoup de personnes, mais de construire un modèle robuste avant son déploiement.
 
 
-### h. Quel est le niveau de maturité ?
+### h) Quel est le niveau de maturité ?
 Très important.
 
 **Réponse :**
+
 Nous disposons aujourd'hui :
 
 - d'une vision décennale ;
@@ -118,20 +139,22 @@ Nous disposons aujourd'hui :
 Nous sommes désormais dans une phase de lancement et de recherche de partenaires.
 
 
-### i. Pourquoi Ebolowa ?
+### i) Pourquoi Ebolowa ?
 Même si tu ne l'as pas mentionnée.
 Je découvrirai rapidement.
 
 **Réponse :**
+
 Parce que c'est notre territoire d'origine.
 Nous y possédons une connaissance fine du terrain, des acteurs et des besoins.
 Nous avons fait le choix de démontrer notre méthode sur un premier territoire avant d'envisager sa reproductibilité ailleurs.
 
 
-### j. En quoi cela est-il différent des centaines d'ONG que je vois ?
+### j) En quoi cela est-il différent des centaines d'ONG que je vois ?
 Probablement la question centrale.
 
 **Réponse :**
+
 La plupart des organisations commencent par un projet.
 Nous avons commencé par un territoire.
 Nous avons étudié ce territoire, construit un référentiel, élaboré une stratégie de développement, puis seulement identifié les programmes nécessaires.
