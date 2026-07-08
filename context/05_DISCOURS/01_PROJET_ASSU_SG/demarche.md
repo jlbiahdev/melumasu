@@ -18,6 +18,7 @@ Si cette démarche retient votre attention, je m'adapterai volontiers à vos dis
 à la lecture de mon message, il pourrait se poser les questions suivantes :
 
 ### a. Qu'est-ce que NZUANE exactement ?
+
 **Réponse :**
 NZUANE est une organisation de développement territorial centrée sur la ville d'Ebolowa au Cameroun.
 NZUANE est un écosystème fruit de dix (10) années d'expérimentation consacrées au développement de la ville d'Ebolowa, au Cameroun.
