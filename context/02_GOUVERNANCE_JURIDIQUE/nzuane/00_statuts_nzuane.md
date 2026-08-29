@@ -72,7 +72,7 @@ L’usage de ces éléments à l’international fait l’objet d’une autorisa
 Le siège social est fixé à :
 
 **Ebolowa (Cameroun)**  
-Quartier : *Angonne (Ebolowa 2)*
+Quartier : *Angonne (Ebolowa 1)*
 
 Il peut être transféré par décision du Conseil d’Administration, ratifiée par l’Assemblée Générale et validée par le Collège des Créateurs.
 

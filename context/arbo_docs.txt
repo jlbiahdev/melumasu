@@ -1,110 +1,114 @@
 .
-├── 06_RAPPORTS_FINANCIERS
-│   ├── synthese_financiere_2019_2025.md
-│   ├── rapport_financier_2020.md
-│   ├── rapport_financier_2024.md
-│   ├── rapport_financier_2025.md
-│   ├── plan_triennal-2029_2021.docx
-│   ├── rapport_financier_2021.md
-│   ├── rapport_financier_2022.md
-│   ├── rapport_financier_2023.md
-│   ├── synthese_strategique_2019_2025.md
-│   ├── docx
-│   │   ├── 2022
-│   │   │   ├── rapport_financier_2024.docx
-│   │   │   ├── rapport_financier_2022.docx
-│   │   │   ├── rapport_financier_2023.docx
-│   │   ├── 2025
-│   │   │   ├── rapport_financier_2025.docx
-│   │   ├── .DS_Store
-│   │   ├── synthese_financiere_2019_2025.docx
-│   │   ├── 2019
-│   │   │   ├── rapport_financier_2019.docx
-│   │   │   ├── rapport_financier_2020.docx
-│   │   │   ├── rapport_financier_2021.docx
-│   ├── rapport_financier_2019.md
-├── .DS_Store
-├── 00_REFERENTIEL_TERRITORIAL
-│   ├── EBWA_2035
-│   │   ├── Presentation.md
-│   │   ├── Contexte.md
-│   │   ├── docx
-│   │   ├── tables.txt
-├── 04_PROGRAMMES_STRUCTURANTS
-│   ├── JEPARTICIPE2035
-│   │   ├── notes.md
-│   │   ├── docx
-│   ├── FEMMESADV
-│   │   ├── notes.md
-│   │   ├── docx
-│   ├── BIDI
-│   │   ├── 02_projet_partenariat_cra.md
-│   │   ├── .DS_Store
-│   │   ├── 03_plan_culturel_technique_cra.md
-│   │   ├── images
-│   │   │   ├── 02_surface.png
-│   │   │   ├── 01_surface.png
-│   │   │   ├── 00_surface.jpeg
-│   │   ├── financements
-│   │   │   ├── financement_fondations_religieuses.md
-│   │   │   ├── financier.md
-│   │   │   ├── financement_instit_internationales.md
-│   │   │   ├── financement_instit_cameroun.md
-│   │   │   ├── financement_diaspora.md
-│   │   │   ├── docx
-│   │   ├── conventions
-│   │   │   ├── 03_charte_approvisionnement_adv.md
-│   │   │   ├── 04bis_proces_verbal.md
-│   │   │   ├── 03bis_proces_verbal.md
-│   │   │   ├── 04_proposition_de_collaboration_ape.md
-│   │   │   ├── 01_convention_cra.md
-│   │   │   ├── 02_protocole_technique_complementaire.md
-│   │   │   ├── docx
-│   │   ├── 01_cadre_institutionnel.md
-│   ├── ROMBONE
-│   │   ├── notes.md
-│   │   ├── docx
-│   ├── KISSIN
-│   │   ├── note.md
-│   │   ├── docx
-│   ├── FEMMEKMR2035
-│   │   ├── notes.md
-│   │   ├── docx
-├── 01_VISION_ET_STRATEGIE
-│   ├── 04_Plan_Decennal.md
-│   ├── .DS_Store
-│   ├── SND30
-│   │   ├── 02_Positionnement_Institutionnel.md
-│   │   ├── 03_Note_Officielle_Alignement.md
-│   │   ├── 01_Matrice_Alignement_SND30.md
-│   │   ├── docx
-│   ├── 01_Note_de_Synthese_Strategique.md
-│   ├── 00_vision_fondatrice.md
-│   ├── 03_Plan_Triennal.md
-├── 03_ARCHITECTURE_TERRITORIALE
-│   ├── 02_Charte_Reserve_Communication.md
-│   ├── 00_Cartographie_Interlocuteurs.md
-│   ├── 01_Voyage_Ancrage_Territorial.md
-│   ├── docx
-├── 05_DISCOURS
-│   ├── 00_vp.md
-├── arbo_docs.txt
-├── 02_GOUVERNANCE_JURIDIQUE
-│   ├── nzuane
-│   │   ├── 00_statuts_nzuane_international.md
-│   │   ├── 00_statuts_nzuane.md
-│   │   ├── 02_charte.md
-│   │   ├── 03_pv_constitutif.md
-│   │   ├── 01_reglement_interieur.md
-│   │   ├── data
-│   │   │   ├── board.json
-│   │   │   ├── organization_map.json
-│   │   │   ├── strategy.json
-│   │   ├── docx
-│   ├── rombone
-│   │   ├── 04_fiche_institutionnelle.md
-│   │   ├── 00_statuts.md
-│   │   ├── 02_charte.md
-│   │   ├── 03_pv_constitutif.md
-│   │   ├── 01_reglement_interieur.md
-│   │   ├── docx
+|____06_RAPPORTS_FINANCIERS
+| |____synthese_financiere_2019_2025.md
+| |____rapport_financier_2020.md
+| |____rapport_financier_2024.md
+| |____rapport_financier_2025.md
+| |____plan_triennal-2029_2021.docx
+| |____rapport_financier_2021.md
+| |____rapport_financier_2022.md
+| |____rapport_financier_2023.md
+| |____synthese_strategique_2019_2025.md
+| |____docx
+| | |____2022
+| | | |____rapport_financier_2024.docx
+| | | |____rapport_financier_2022.docx
+| | | |____rapport_financier_2023.docx
+| | |____2025
+| | | |____rapport_financier_2025.docx
+| | |____.DS_Store
+| | |____synthese_financiere_2019_2025.docx
+| | |____2019
+| | | |____rapport_financier_2019.docx
+| | | |____rapport_financier_2020.docx
+| | | |____rapport_financier_2021.docx
+| |____rapport_financier_2019.md
+|____.DS_Store
+|____00_REFERENTIEL_TERRITORIAL
+| |____EBWA_2035
+| | |____Presentation.md
+| | |____Contexte.md
+| | |____docx
+| | |____tables.txt
+|____04_PROGRAMMES_STRUCTURANTS
+| |____JEPARTICIPE2035
+| | |____notes.md
+| | |____docx
+| |____FEMMESADV
+| | |____notes.md
+| | |____docx
+| |____BIDI
+| | |____02_projet_partenariat_cra.md
+| | |____.DS_Store
+| | |____03_plan_culturel_technique_cra.md
+| | |____images
+| | | |____02_surface.png
+| | | |____01_surface.png
+| | | |____00_surface.jpeg
+| | |____financements
+| | | |____financement_fondations_religieuses.md
+| | | |____financier.md
+| | | |____financement_instit_internationales.md
+| | | |____financement_instit_cameroun.md
+| | | |____financement_diaspora.md
+| | | |____docx
+| | |____conventions
+| | | |____03_charte_approvisionnement_adv.md
+| | | |____04bis_proces_verbal.md
+| | | |____03bis_proces_verbal.md
+| | | |____04_proposition_de_collaboration_ape.md
+| | | |____01_convention_cra.md
+| | | |____02_protocole_technique_complementaire.md
+| | | |____docx
+| | |____01_cadre_institutionnel.md
+| |____ROMBONE
+| | |____notes.md
+| | |____docx
+| |____KISSIN
+| | |____note.md
+| | |____docx
+| |____FEMMEKMR2035
+| | |____notes.md
+| | |____docx
+|____01_VISION_ET_STRATEGIE
+| |____04_Plan_Decennal.md
+| |____.DS_Store
+| |____SND30
+| | |____02_Positionnement_Institutionnel.md
+| | |____03_Note_Officielle_Alignement.md
+| | |____01_Matrice_Alignement_SND30.md
+| | |____docx
+| |____01_Note_de_Synthese_Strategique.md
+| |____00_vision_fondatrice.md
+| |____03_Plan_Triennal.md
+|____03_ARCHITECTURE_TERRITORIALE
+| |____02_Charte_Reserve_Communication.md
+| |____00_Cartographie_Interlocuteurs.md
+| |____01_Voyage_Ancrage_Territorial.md
+| |____docx
+|____05_DISCOURS
+| |____01_PROJET_ASSU_SG
+| | |____demarche.md
+| |____00_vp.md
+| |____00_Presentation_AG.md
+|____arbo_docs.txt
+|____02_GOUVERNANCE_JURIDIQUE
+| |____nzuane
+| | |____.DS_Store
+| | |____00_statuts_nzuane_international.md
+| | |____00_statuts_nzuane.md
+| | |____02_charte.md
+| | |____03_pv_constitutif.md
+| | |____01_reglement_interieur.md
+| | |____data
+| | | |____board.json
+| | | |____organization_map.json
+| | | |____strategy.json
+| | |____docx
+| |____rombone
+| | |____04_fiche_institutionnelle.md
+| | |____00_statuts.md
+| | |____02_charte.md
+| | |____03_pv_constitutif.md
+| | |____01_reglement_interieur.md
+| | |____docx

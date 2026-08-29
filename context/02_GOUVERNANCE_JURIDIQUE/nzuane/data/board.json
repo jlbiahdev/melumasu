@@ -21,14 +21,22 @@
       ]
     },
     {
+      "full_name": "Jean Noé MINIEMECK NTEP",
+      "photo": null,
+      "profession_expertise": "Finance, comptabilité, gestion de projets",
+      "bio": "Expert en finance et comptabilité avec une solide expérience en gestion de projets. Il assure la rigueur financière et le suivi budgétaire des initiatives.",
+      "roles": [
+        {"organization": "NZUANE CM", "title": "Vice-Président"}
+      ]
+    },
+    {
       "full_name": "Julienne BITA",
       "photo": null,
       "profession_expertise": "Enseignement supérieur, organisation institutionnelle, encadrement académique",
       "bio": "Professeure d’Université à la retraite, elle apporte méthode, rigueur et stabilité institutionnelle. Elle veille à la qualité documentaire, au respect des procédures et à la structuration interne des organisations. Son expérience académique renforce la crédibilité des projets.",
       "roles": [
-        {"organization": "NZUANE INTERNATIONAL", "title": "Secrétaire Générale"},
-        {"organization": "NZUANE CM", "title": "Vice-Présidente"},
-        {"organization": "ROMBONE", "title": "Vice-Présidente"}
+        {"organization": "NZUANE CM", "title": "Secrétaire Générale"},
+        {"organization": "ROMBONE", "title": "Secrétaire Générale"}
       ]
     },
     {
